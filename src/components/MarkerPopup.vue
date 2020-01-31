@@ -3,8 +3,11 @@
     :lat-lng="position"
     :title="title"
     :draggable="false"
+    @click="$emit('set-location', title)"
   >
-    <l-popup :content="text" />
+    <l-popup 
+      :content="text"
+    ></l-popup>
   </l-marker>
 </template>
 

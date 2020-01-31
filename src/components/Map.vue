@@ -13,6 +13,7 @@
         :position="marker"
         :text="text"
         :title="title"
+        v-on:set-location="onSetLocation"
       />
     </l-map>
   </div>
@@ -29,6 +30,11 @@ export default {
     LTileLayer,
     MarkerPopup
   },
+  methods: {
+    onSetLocation: function (location) {
+      this.$emit('set-location', location)
+    }
+  },
   data() {
     return {
       zoom: 6,
@@ -37,8 +43,8 @@ export default {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       marker: latLng(41.521647879517, 26.253697872162),
-      text: "<h3>Fylakio</h3><p>Detention Centre</p>",
-      title: "Onto"
+      text: "<h3>Fylakio</h3><p>Fylakio pre-removal centre.</p><p>Available ontology:</p><ul><li><a>XKA</a></li></ul>",
+      title: "Fylakio"
     };
   }
 };

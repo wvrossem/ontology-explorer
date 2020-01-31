@@ -22,12 +22,21 @@ import config from "../assets/graph-config";
 const elements = [...config.elements];
 delete config.elements;
 
+let resolveCy = null
+export const cyPromise = new Promise(resolve => (resolveCy = resolve))
+
 export default {
   data() {
     return {
       config,
       elements
     };
+  },
+  props: {
+    'showNodes': {
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     /* eslint-disable no-console */
@@ -49,7 +58,19 @@ export default {
       console.log("calling after-created", cy);
       await cy
       cy.layout(config.layout).run()
-    }
+      resolveCy(cy)
+    },
+  },
+  watch: {
+    showNodes: async function (val) {
+      const cy = await cyPromise
+      this.elements = elements.map((el) => {
+        el.classes = 'hidden'
+        return el;
+      })
+      cy.elements = this.elements;
+      cy.layout(this.config.layout).run()
+    } 
   }
 };
 </script>

@@ -7,14 +7,19 @@
       <div style="flex: 70%;">
         <h1>Simple map and ontology explorer</h1>
         <p>Experiment combining Vue.js, Leaflet for map and cytoscape for graph</p>
+        <p>Current set location: {{ currentLocation }}</p>
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <Map />
+        <Map 
+          v-on:set-location="onSetLocation"
+        ></Map>
       </div>
       <div class="column">
-        <Graph />
+        <Graph
+          :showNodes="showNodes"
+        ></Graph>
       </div>
     </div>
   </div>
@@ -30,18 +35,37 @@ export default {
     Map,
     Graph
   },
+  data() {
+    return {
+      showNodes: false
+    }
+  },
+  props: {
+    'currentLocation': String,
+  },
+  methods: {
+    onSetLocation: function (location) {
+      this.currentLocation = location;
+      console.log(location)
+      this.showNodes = true;
+    }
+  }
 }
 </script>
 
 <style>
 @import '../node_modules/leaflet/dist/leaflet.css';
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+#app, footer {
+  font-family: 'Arvo', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #000000;
   margin-top: 0px;
+}
+
+h1 {
+    color: #bf0000;
 }
 
 .row {
@@ -52,6 +76,14 @@ export default {
 .column {
   flex: 50%;
   padding: 10px;
+}
+
+#cytoscape-div {
+  height: 700px;
+}
+
+.leaflet-popup-content {
+  font-family: 'Arvo'
 }
 
 </style>
