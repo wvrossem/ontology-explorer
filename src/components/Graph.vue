@@ -19,6 +19,8 @@
 <script>
 import config from "../assets/graph-config";
 
+import cola from 'cytoscape-cola';
+
 const elements = [...config.elements];
 delete config.elements;
 
@@ -53,6 +55,7 @@ export default {
     },
     preConfig(cytoscape) {
       console.log("calling pre-config", cytoscape);
+      cytoscape.use(cola);
     },
     async afterCreated(cy) {
       console.log("calling after-created", cy);

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "cytoscape-cola": "^2.3.0",
     "leaflet": "^1.6.0",
     "leaflet.icon.glyph": "^0.2.1",
     "vue": "^2.6.10",
