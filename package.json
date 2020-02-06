@@ -11,6 +11,8 @@
     "core-js": "^3.4.4",
     "csv": "^5.3.1",
     "cytoscape-cola": "^2.3.0",
+    "cytoscape-cose-bilkent": "^4.1.0",
+    "cytoscape-expand-collapse": "^3.2.0",
     "get-clean-string": "^2.2.0",
     "leaflet": "^1.6.0",
     "leaflet.icon.glyph": "^0.2.1",
