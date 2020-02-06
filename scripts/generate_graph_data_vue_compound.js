@@ -5,14 +5,15 @@ const clean = require('get-clean-string')()
 // Using the first line of the CSV data to discover the column names
 rs = fs.createReadStream('/Users/woutervanrossem/Desktop/RQ2.1 EU IS AFSJ - Code Manager.csv');
 
-const elements = []
+const nodes = [];
+const edges = [];
 
 let edgeId = 0
 
 const groups = new Set()
 
 function addNode(node) {
-  elements.push(node);
+  nodes.push(node);
 }
 
 function createNode(id, name) {
@@ -34,7 +35,7 @@ function createIfNotExists(group) {
 }
 
 function addEdgeLink(codeName, groupName) {
-  elements.push({
+  edges.push({
     data: {
       id: edgeId++,
       source: codeName,
@@ -59,21 +60,22 @@ parser = parse({
           node.data.parent = groupName;
         }
         addEdgeLink(codeName, groupName);
-        addNode(node)
       }
     })
+
+    addNode(node)
   })
 
   // let elements = elements.slice(0, 100);
 
   let fileContents = `
-const elements = ${JSON.stringify( elements )};
+const elements = ${JSON.stringify( nodes.concat(edges) )};
 
 export default elements;
 `;
 
   // console.log({nodes, edges})
-  fs.writeFile('public/js/graph_data_compound.js', fileContents, 'utf8', () => {});
+  fs.writeFile('src/assets/graph_data_compound.js', fileContents, 'utf8', () => {});
 });
 
 rs.pipe(parser);
