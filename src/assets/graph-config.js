@@ -1,9 +1,4 @@
-import graph_data from './graph_data_compound';
-
-let graph_data_2 = graph_data.map((el) => {
-  el.classes = "visible"
-  return el;
-})
+import graph_data from './graph_data_atlas';
 
 const coseLayout = {
   name: 'cose',
@@ -124,12 +119,17 @@ const config = {
   style: [
     {
       selector: "node",
-      style: { "background-color": "#666", label: "data(id)" }
+      style: { 
+        "background-color": "#666",
+        "label": "data(name)",
+        "width": "10",
+        "height": "10"
+      }
     },
     {
       selector: "edge",
       style: {
-        width: 3,
+        "width": 1,
         "line-color": "#ccc",
         "target-arrow-color": "#ccc",
         "target-arrow-shape": "triangle"
@@ -153,16 +153,10 @@ const config = {
         'background-opacity': 0.333
       }
     },
-    // {
-    //   selector: 'node:parent[[outdegree < 1]]',
-    //   css: {
-    //     'display': 'none'
-    //   }
-    // },
     {
       selector: "node.cy-expand-collapse-collapsed-node",
       style: {
-        "background-color": "darkblue",
+        "background-color": "#D86666",
         "shape": "rectangle"
       }
     },
@@ -184,10 +178,104 @@ const config = {
     //     'display': "none"
     //   }
     // },
+    {
+      selector: ":selected",
+      style: {
+        "with": "5",
+      }
+    },
+    {
+      selector: ".highlight",
+      style: {
+        "background-color": "yellow",
+      }
+    },
+    {
+      selector: ".code",
+      style: {
+        "label": "",
+        "opacity": 0.3,
+        "z-index": 1,
+        "visibility": "visible",
+      }
+    },
+    {
+      selector: ".code-document-link",
+      style: {
+        "visibility": "visible"
+      }
+    },
+    {
+      selector: ".code-group-link",
+      style: {
+        "visibility": "visible"
+      }
+    },
+    {
+      selector: ".document",
+      style: {
+        "label": "",
+        "z-index": 2,
+        "opacity": 0.3,
+        "visibility": "hidden"
+      }
+    },
+    {
+      selector: ".doc-group-link",
+      style: {
+        "label": "",
+        "z-index": 1,
+        "opacity": 0.3,
+        "visibility": "hidden"
+      }
+    },
+    {
+      selector: ".document-group",
+      style: {
+        "label": "data(name)",
+        "z-index": 5,
+        "opacity": 1,
+        "shape": "ellipse",
+        "background-color": "#D86666",
+        "width": "10",
+        "height": "10"
+      }
+    },
+    {
+      selector: ".code-group",
+      style: {
+        "label": "data(name)",
+        "z-index": 3,
+        "opacity": 0.7,
+        "shape": "diamond",
+        "background-color": "#7d90ae",
+      }
+    },
+    // {
+    //   selector: "node[[degree <= 2]]",
+    //   style: {
+    //     'width': '2',
+    //     'height': '2',
+    //   }
+    // },
+    {
+      selector: "node[[degree >= 5]]",
+      style: {
+        'width': '50',
+        'height': '50',
+      }
+    },
+    {
+      selector: "node[[degree >= 10]]",
+      style: {
+        'width': '75',
+        'height': '75',
+      }
+    },
   ],
   boxSelectionEnabled: false,
   autounselectify: true,
-  layout: coseBilkent,
+  layout: coseLayout,
 };
 
 export default config;

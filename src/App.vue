@@ -5,20 +5,16 @@
         <img src="logoPC.jpg" alt="">
       </div>
       <div style="flex: 70%;">
-        <h1>Simple map and ontology explorer</h1>
-        <p>Experiment combining Vue.js, Leaflet for map and cytoscape for graph</p>
-        <p>Current set location: {{ currentLocation }}</p>
+        <h1>Ontology explorer</h1>
+        <p>Experiment combining Vue.js and cytoscape for graph analysis</p>
+        <p>Current selected node: {{ selectedNode }}</p>
       </div>
     </div>
     <div class="row">
       <div class="column">
-        <Map 
-          v-on:set-location="onSetLocation"
-        ></Map>
-      </div>
-      <div class="column">
         <Graph
           :showNodes="showNodes"
+          v-on:set-selected-node="onSetSelectedNode"
         ></Graph>
       </div>
     </div>
@@ -26,27 +22,23 @@
 </template>
 
 <script>
-import Map from './components/Map.vue'
 import Graph from './components/Graph.vue'
 
 export default {
   name: 'app',
   components: {
-    Map,
     Graph
   },
   data() {
     return {
-      showNodes: false
+      showNodes: false,
+      selectedNode: this.initialSelectedNode
     }
   },
-  props: {
-    'currentLocation': String,
-  },
+  props: ["initialSelectedNode"],
   methods: {
-    onSetLocation: function (location) {
-      this.currentLocation = location;
-      console.log(location)
+    onSetSelectedNode: function (node) {
+      this.selectedNode = node;
       this.showNodes = true;
     }
   }
@@ -65,7 +57,7 @@ export default {
 }
 
 h1 {
-    color: #bf0000;
+  color: #bf0000;
 }
 
 .row {

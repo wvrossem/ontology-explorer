@@ -11,7 +11,7 @@
       v-for="def in elements"
       :key="`${def.data.id}`"
       :definition="def"
-      v-on:mousedown="deleteNode($event, def.data.id)"
+      v-on:click="clickNode"
     />
   </cytoscape>
 </template>
@@ -68,8 +68,11 @@ export default {
       if (event.target === this.$refs.cyRef.instance)
         console.log("adding node", event.target);
     },
-    deleteNode(id) {
-      console.log("node clicked", id);
+    clickNode(event, data) {
+      let name = event.target.data().name;
+
+      console.log("node clicked: ", name);
+      this.$emit('set-selected-node', name)
     },
     updateNode(event) {
       console.log("right click node", event);
