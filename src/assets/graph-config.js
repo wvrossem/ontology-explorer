@@ -181,7 +181,7 @@ const config = {
     {
       selector: ":selected",
       style: {
-        "with": "5",
+        "width": "5",
       }
     },
     {

@@ -10,7 +10,7 @@ const edges = [];
 
 let edgeId = 0
 
-const groups = new Set()
+const groups = new Set();
 
 function addNode(node) {
   nodes.push(node);
