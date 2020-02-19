@@ -1,6 +1,7 @@
 const parser = require('fast-xml-parser');
 const fs = require('fs');
 const he = require('he');
+const _ = require('lodash');
 
 const xmlData = fs.readFileSync("/Users/woutervanrossem/Workspace/onto-graph-vue/scripts/RQ2.1 EU IS AFSJ.xml").toString();
 
@@ -39,7 +40,20 @@ const docGroups = [];
 function processPrimDoc(primDoc) {
   if (primDoc.quotations['@_size'] <= 1) {
     // FIXME case when only one quotation
-    return;
+    if (primDoc.quotations['@_size'] == 1) {
+      const docQuotation = {
+        name: primDoc.quotations.q["@_name"],
+        id: primDoc.quotations.q["@_id"],
+        doc: primDoc["@_id"]
+      }
+
+      quotations.set(primDoc.quotations.q["@_id"], docQuotation);
+    }
+
+    return {
+      name: primDoc["@_name"],
+      id: primDoc["@_id"],
+    };
   }
 
   const docQuotations = primDoc.quotations.q.map(element => {
@@ -89,6 +103,14 @@ function processCodeGroup(codeGroup) {
 
 function processDocGroup(docGroup) {
   if (!Array.isArray(docGroup.item)) {
+    return {
+      name: docGroup["@_name"],
+      id: docGroup["@_id"],
+      linkedDocs: [
+        docGroup.item["@_id"]
+      ]
+    };
+  } else if (!docGroup.item) {
     return;
   }
 
@@ -139,16 +161,21 @@ jsonObj.storedHU.links.objectSegmentLinks.codings.iLink.forEach(element => {
   const code = codes.get(element["@_obj"]);
   const quote = quotations.get(element["@_qRef"]);
 
-  if (code && quote) {
+  if (!_.isNil(code) && !_.isNil(quote)) {
     code.documents.add(quote.doc);
     code.quotes.add(quote.id);
   }
 });
 
+
+// 
+
+
 const nodes = [];
 const edges = [];
 
 const groups = new Set();
+const docIds = new Set();
 
 function addNode(node) {
   nodes.push(node);
@@ -163,14 +190,6 @@ function createNode(id, name, classes) {
     group: "nodes",
     classes
   };
-}
-
-function createIfNotExists(group) {
-  if (group && !groups.has(group)) {
-    groups.add(group)
-    let node = createNode(group, group);
-    addNode(node);
-  }
 }
 
 function addEdgeLink(edgeId, source, target, classes) {
@@ -191,6 +210,7 @@ function createDocumentNodes(documents) {
     name
   }) => {
     const docNode = createNode(id, name, ["document"])
+    docIds.add(id);
 
     addNode(docNode);
   });
@@ -235,8 +255,11 @@ function createDocumentLinks(codes) {
     documents
   }) => {
     documents.forEach((documentId) => {
-      const edgeId = id + "_" + documentId
-      addEdgeLink(edgeId, id, documentId, ["code-document-link"])
+      if (documentId == undefined) {
+        return;
+      }
+      const edgeId = id + "_" + documentId;
+      addEdgeLink(edgeId, id, documentId, ["code-document-link"]);
     })
   });
 }
@@ -253,26 +276,51 @@ function createCodeGroupLinks(codeGroups) {
   });
 }
 
-function createDocumentGroupLinks(docGroups) {
-  docGroups.forEach(({
-    id,
-    linkedDocs
-  }) => {
-        linkedDocs.forEach((linkedDocId) => {
-      const edgeId = id + "_" + linkedDocId
-      addEdgeLink(edgeId, id, linkedDocId, ["doc-group-link"])
-    })
-  });
-}
+const docToGroup = new Map();
+
+function rememberDocGroupLink(docId, docGroupId) {
+  let docGroups = docToGroup.get(docId);
+  if (!docGroups) {
+    docGroups = new Set();
+    docToGroup.set(docId, docGroups);
+  } 
+  docGroups.add(docGroupId);
+};
 
 function createDocumentGroupLinks(docGroups) {
   docGroups.forEach(({
     id,
     linkedDocs
   }) => {
+    if (!linkedDocs) {
+      return;
+    }
     linkedDocs.forEach((linkedDocId) => {
+      if (!docIds.has(linkedDocId)) {
+        return;
+      }
       const edgeId = id + "_" + linkedDocId
       addEdgeLink(edgeId, id, linkedDocId, ["doc-group-link"])
+      rememberDocGroupLink(linkedDocId, id);
+    })
+  });
+}
+
+const createdCodeToDocGroupLinks = new Set();
+
+function createCodeToDocGroupsLinks(codes) {
+  codes.forEach((element) => {
+    element.documents.forEach((documentId) => {
+      const linkedDocGroups = docToGroup.get(documentId);
+      if (linkedDocGroups) {
+        linkedDocGroups.forEach((docGroupId) => {
+          const edgeId = element.id + "_" + docGroupId;
+          if (!createdCodeToDocGroupLinks.has(edgeId)) {
+            addEdgeLink(edgeId, element.id, docGroupId, ["code-document-group-link"]);
+            createdCodeToDocGroupLinks.add(edgeId);
+          }
+        })
+      }   
     })
   });
 }
@@ -284,10 +332,11 @@ createCodeNodes(codes);
 createDocumentLinks(codes);
 createDocumentGroupLinks(docGroups);
 createCodeGroupLinks(codeGroups);
+createCodeToDocGroupsLinks(codes)
 
 const elements = nodes.concat(edges);
 
-  let fileContents = `
+let fileContents = `
 const elements = ${JSON.stringify( elements )};
 
 export default elements;

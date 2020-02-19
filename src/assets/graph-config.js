@@ -71,7 +71,7 @@ const coseBilkent = {
   // - 'draft' fast cooling rate 
   // - 'default' moderate cooling rate 
   // - "proof" slow cooling rate
-  quality: 'default',
+  quality: 'draft',
   // Whether to include labels in node dimensions. Useful for avoiding label overlap
   nodeDimensionsIncludeLabels: true,
   // number of ticks per frame; higher is faster but more jerky
@@ -79,7 +79,7 @@ const coseBilkent = {
   // Whether to fit the network view after when done
   fit: true,
   // Padding on fit
-  padding: 10,
+  padding: 0,
   // Whether to enable incremental mode
   randomize: true,
   // Node repulsion (non overlapping) multiplier
@@ -97,9 +97,9 @@ const coseBilkent = {
   // Whether to tile disconnected nodes
   tile: true,
   // Type of layout animation. The option set is {'during', 'end', false}
-  animate: 'end',
+  animate: 'false',
   // Duration for animate:end
-  animationDuration: 500,
+  animationDuration: 300,
   // Amount of vertical space to put between degree zero nodes during tiling (can also be a function)
   tilingPaddingVertical: 10,
   // Amount of horizontal space to put between degree zero nodes during tiling (can also be a function)
@@ -163,21 +163,9 @@ const config = {
     {
       selector: "node[[indegree = 0]][[outdegree = 0]]",
       style: {
-        'display': "none"
+        'display': "element"
       }
     },
-    // {
-    //   selector: "node[[indegree > 5]]",
-    //   style: {
-    //     'display': "none"
-    //   }
-    // },
-    // {
-    //   selector: "node:  ",
-    //   style: {
-    //     'display': "none"
-    //   }
-    // },
     {
       selector: ":selected",
       style: {
@@ -197,12 +185,14 @@ const config = {
         "opacity": 0.3,
         "z-index": 1,
         "visibility": "visible",
+        // "display": "none",
       }
     },
     {
       selector: ".code-document-link",
       style: {
-        "visibility": "visible"
+        // "visibility": "hidden"
+        "display": "none",
       }
     },
     {
@@ -233,12 +223,18 @@ const config = {
       selector: ".document-group",
       style: {
         "label": "data(name)",
-        "z-index": 5,
-        "opacity": 1,
+        "text-opacity": 1,
+        "font-weight": "bold",
+        "text-valign": "center",
+        "text-background-color": "white",
+        "text-border-style": "solid",
+        "text-border-color": "black",
+        "z-index": 0,
+        "background-opacity": 0.2,
         "shape": "ellipse",
         "background-color": "#D86666",
-        "width": "10",
-        "height": "10"
+        "width": "100",
+        "height": "100"
       }
     },
     {
@@ -249,6 +245,7 @@ const config = {
         "opacity": 0.7,
         "shape": "diamond",
         "background-color": "#7d90ae",
+        "visibility": "visible"
       }
     },
     // {
@@ -258,24 +255,32 @@ const config = {
     //     'height': '2',
     //   }
     // },
+    // {
+    //   selector: "node[[degree >= 5]]",
+    //   style: {
+    //     'width': '50',
+    //     'height': '50',
+    //   }
+    // },
+    // {
+    //   selector: "node[[degree >= 10]]",
+    //   style: {
+    //     'width': '50',
+    //     'height': '50',
+    //   }
+    // },
+    // FIXME, IO: IOM - MiMOSA - interviews has no coded docs so hide it
     {
-      selector: "node[[degree >= 5]]",
+      selector: "#df_13",
       style: {
-        'width': '50',
-        'height': '50',
-      }
-    },
-    {
-      selector: "node[[degree >= 10]]",
-      style: {
-        'width': '75',
-        'height': '75',
+        'display': 'none',
       }
     },
   ],
   boxSelectionEnabled: false,
   autounselectify: true,
-  layout: coseLayout,
+  // coseLayout colaLayout coseBilkent
+  layout: coseBilkent,
 };
 
 export default config;
