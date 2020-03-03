@@ -47,9 +47,24 @@ export default {
     },
     clickNode(event, data) {
       let name = event.target.data().name;
+      let node = event.target.data();
 
-      console.log("node clicked: ", name);
-      this.$emit('set-selected-node', name)
+      const cy = this.$refs.cyRef.instance;
+
+      let neighborhood = cy.$(`#${node.id}`).closedNeighborhood();
+
+      neighborhood = neighborhood.map((el) => {
+        return {
+          name: el.data().name,
+          classes: el.classes(),
+          group: el.group()
+        }
+      });
+      neighborhood = neighborhood.filter((el) => el.group === "nodes");
+
+      node.neighborhood = neighborhood;
+
+      this.$emit('set-selected-node', node)
     },
     updateNode(event) {
       console.log("right click node", event);
