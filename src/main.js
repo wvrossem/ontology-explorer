@@ -3,6 +3,7 @@ import VueCytoscape from "vue-cytoscape"
 import App from "./App";
 import { Icon } from "leaflet";
 import "leaflet.icon.glyph";
+import Buefy from 'buefy'
 
 delete Icon.Default.prototype._getIconUrl;
 
@@ -13,7 +14,9 @@ Icon.Default.mergeOptions({
 });
 
 Vue.use(VueCytoscape);
+Vue.use(Buefy);
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  devtool: 'source-map',
 }).$mount("#app");

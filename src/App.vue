@@ -1,21 +1,17 @@
 <template>
-  <div id="app">
-    <div class="row">
-      <div style="flex: 30%; text-align:center">
-        <img src="logoPC.jpg" alt="">
-      </div>
-      <div style="flex: 70%;">
-        <h1>Ontology explorer</h1>
-        <p>Experiment combining Vue.js and cytoscape for graph analysis</p>
-        <p>Current selected node: {{ selectedNode }}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <Graph
-          :showNodes="showNodes"
-          v-on:set-selected-node="onSetSelectedNode"
-        ></Graph>
+  <div id="app" class="level">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <Graph
+            v-on:set-selected-node="onSetSelectedNode"
+          ></Graph>
+        </div>
+        <div class="column">
+          <NodeInfo
+            v-bind:node="selectedNode"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -79,3 +75,17 @@ h1 {
 }
 
 </style>
+
+<style lang="scss">
+@import "~bulma/sass/utilities/_all";
+
+$body-family: 'Arvo', 'Avenir', Helvetica, Arial, sans-serif;
+
+$title-color: #bf0000;
+
+$hero-body-padding: 1rem 1rem;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+</style>  
