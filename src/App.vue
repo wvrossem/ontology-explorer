@@ -23,55 +23,55 @@
 
 <script>
 import Graph from './components/Graph.vue'
+import NodeInfo from './components/NodeInfo.vue'
+import clone from 'lodash/clone';
 
 export default {
   name: 'app',
   components: {
-    Graph
+    Graph,
+    NodeInfo
   },
   data() {
     return {
-      showNodes: false,
       selectedNode: this.initialSelectedNode
     }
   },
-  props: ["initialSelectedNode"],
+  props: {
+    initialSelectedNode: {
+      type: Object,
+      default: () => {
+        return {
+          "name": "",
+          "neighborhood": []
+        }
+      }
+    }
+  },
   methods: {
     onSetSelectedNode: function (node) {
-      this.selectedNode = node;
-      this.showNodes = true;
+      // let nodeClone = clone(node);
+      // let neighborhood = node.neighborhood.filter((el) => el.group === "nodes").map((el) => el.data.name);
+      let nodeClone = {
+        "name": node.name,
+        "neighborhood": node.neighborhood
+      };
+      console.log("test", nodeClone)
+      this.selectedNode = nodeClone;
     }
   }
 }
 </script>
 
 <style>
-@import '../node_modules/leaflet/dist/leaflet.css';
-
-#app, footer {
-  font-family: 'Arvo', 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #000000;
-  margin-top: 0px;
-}
 
 h1 {
   color: #bf0000;
 }
 
-.row {
-  display: flex;
-	padding: 10px;
-}
-
-.column {
-  flex: 50%;
-  padding: 10px;
-}
-
 #cytoscape-div {
-  height: 700px;
+  min-height: 600px;
+  height: 600px;
 }
 
 .leaflet-popup-content {
