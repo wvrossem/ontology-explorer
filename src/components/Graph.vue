@@ -53,6 +53,11 @@ export default {
 
       const cy = this.$refs.cyRef.instance;
 
+      cy.zoom({
+        level: 1.5,
+        position: cy.getElementById(node.id).position()
+      });
+
       let neighborhood = cy.$(`#${node.id}`).closedNeighborhood();
 
       neighborhood = neighborhood.map((el) => {
@@ -84,6 +89,11 @@ export default {
       await cy;
 
       cy.layout(config.layout).run();
+
+      cy.zoom({
+        level: 1.0, // the zoom level
+        position: { x: 0, y: 0 }
+      });
 
       resolveCy(cy);
     },
