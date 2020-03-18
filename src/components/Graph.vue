@@ -22,6 +22,8 @@ import config from "../assets/graph-config";
 import cola from 'cytoscape-cola';
 import coseBilkent from 'cytoscape-cose-bilkent';
 import expandCollapse from 'cytoscape-expand-collapse';
+import klay from 'cytoscape-klay';
+import cise from 'cytoscape-cise';
 
 const elements = [...config.elements];
 delete config.elements;
@@ -71,9 +73,11 @@ export default {
     },
     preConfig(cytoscape) {
       console.log("calling pre-config", cytoscape);
-      cytoscape.use(cola);
-      cytoscape.use(coseBilkent);
-      cytoscape.use(expandCollapse);
+      cytoscape.use( cola );
+      cytoscape.use( coseBilkent );
+      cytoscape.use( expandCollapse );
+      cytoscape.use( klay );
+      cytoscape.use( cise );
     },
     async afterCreated(cy) {
       console.log("calling after-created", cy);
