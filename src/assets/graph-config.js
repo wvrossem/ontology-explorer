@@ -97,7 +97,7 @@ const coseBilkent = {
   // Whether to tile disconnected nodes
   tile: true,
   // Type of layout animation. The option set is {'during', 'end', false}
-  animate: 'false',
+  animate: 'end',
   // Duration for animate:end
   animationDuration: 300,
   // Amount of vertical space to put between degree zero nodes during tiling (can also be a function)
@@ -322,7 +322,9 @@ const config = {
         "opacity": 0.7,
         "shape": "diamond",
         "background-color": "#7d90ae",
-        "visibility": "visible"
+        "visibility": "visible",
+        "width": "30",
+        "height": "30"
       }
     },
     // {
