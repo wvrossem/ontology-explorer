@@ -77,7 +77,7 @@ const coseBilkent = {
   // number of ticks per frame; higher is faster but more jerky
   refresh: 50,
   // Whether to fit the network view after when done
-  fit: true,
+  fit: false,
   // Padding on fit
   padding: 0,
   // Whether to enable incremental mode
@@ -197,6 +197,7 @@ const config = {
   style: [{
       selector: "node",
       style: {
+        "opacity": 0.3,
         "background-color": "#666",
         "label": "data(name)",
         "width": "10",
@@ -206,22 +207,11 @@ const config = {
     {
       selector: "edge",
       style: {
+        "opacity": 0.3,
         "width": 1,
         "line-color": "#ccc",
         "target-arrow-color": "#ccc",
         "target-arrow-shape": "triangle"
-      }
-    },
-    {
-      selector: ".hidden",
-      style: {
-        "display": "none"
-      }
-    },
-    {
-      selector: ".visible",
-      style: {
-        "display": "element"
       }
     },
     {
@@ -276,6 +266,21 @@ const config = {
       selector: ".code-group-link",
       style: {
         "visibility": "visible"
+        // "display": "none"
+      }
+    },
+    {
+      selector: ".code-document-group-link",
+      style: {
+        "visibility": "visible"
+        // "display": "none"
+      }
+    },
+    {
+      selector: ".code-group-document-group-link",
+      style: {
+        "visibility": "visible"
+        // "display": "none"
       }
     },
     {
@@ -284,7 +289,8 @@ const config = {
         "label": "",
         "z-index": 2,
         "opacity": 0.3,
-        "visibility": "hidden"
+        // "visibility": "hidden",
+        "display": "none",
       }
     },
     {
@@ -293,7 +299,8 @@ const config = {
         "label": "",
         "z-index": 1,
         "opacity": 0.3,
-        "visibility": "hidden"
+        "visibility": "visible",
+        // "display": "none",
       }
     },
     {
@@ -319,7 +326,6 @@ const config = {
       style: {
         "label": "data(name)",
         "z-index": 3,
-        "opacity": 0.7,
         "shape": "diamond",
         "background-color": "#7d90ae",
         "visibility": "visible",
@@ -355,11 +361,18 @@ const config = {
         'display': 'none',
       }
     },
+    {
+      selector: ".selected",
+      style: {
+        "opacity": 1,
+        "label": "data(name)",
+      }
+    }
   ],
   boxSelectionEnabled: false,
   autounselectify: true,
   // coseLayout colaLayout coseBilkent clay cise
-  layout: coseBilkent,
+  layout: coseLayout,
 };
 
 export default config;
