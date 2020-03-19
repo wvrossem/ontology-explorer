@@ -18,6 +18,11 @@ To do:
   - Possible to make nodes with more connections larger?
   - Different colour between attributes and attr. values?
 
+## Load data
+
+```
+npm run load-data "./scripts/RQ2.1 EU IS AFSJ.xml"
+```
 
 ## Running the project
 

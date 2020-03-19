@@ -1,11 +1,30 @@
-const parser = require('fast-xml-parser');
+const xmlParser = require('fast-xml-parser');
 const fs = require('fs');
 const he = require('he');
-const _ = require('lodash');
+const isNil = require('lodash/isNil');
+const isEmpty = require('lodash/isEmpty');
+const atlas = require('./atlasti_classes.js');
+const cyto = require('./cytoscape_classes.js');
 
-const xmlData = fs.readFileSync("/Users/woutervanrossem/Workspace/onto-graph-vue/scripts/RQ2.1 EU IS AFSJ.xml").toString();
+// Check and get the path to the Atlas.ti file from command line arguments
+if (process.argv.length === 2) {
+  console.error('Second argument needs to be path to the Atlas.ti XML file!');
+  process.exit(1);
+}
 
-var options = {
+const atlasXmlFilePath = process.argv[2];
+
+try {
+  fs.accessSync(atlasXmlFilePath, fs.constants.R_OK);
+} catch (err) {
+  console.error('Cannot read file!');
+  process.exit(1);
+}
+
+// Read the file contents and convert to a String
+const xmlDataString = fs.readFileSync(atlasXmlFilePath).toString();
+
+const xmlParserOptions = {
   attributeNamePrefix: "@_",
   attrNodeName: false, //default is 'false'
   ignoreAttributes: false,
@@ -23,66 +42,55 @@ var options = {
   stopNodes: ["parse-me-as-string"]
 };
 
-if (parser.validate(xmlData) === true) { //optional (it'll return an object in case it's not valid)
-  var jsonObj = parser.parse(xmlData, options);
+if (xmlParser.validate(xmlDataString) === true) { //optional (it'll return an object in case it's not valid)
+  let jsonObj = xmlParser.parse(xmlDataString, xmlParserOptions);
 }
 
 // Intermediate obj
-var tObj = parser.getTraversalObj(xmlData, options);
-var jsonObj = parser.convertToJson(tObj, options);
+let tObj = xmlParser.getTraversalObj(xmlDataString, xmlParserOptions);
+let jsonObj = xmlParser.convertToJson(tObj, xmlParserOptions);
 
-const documents = [];
-const quotations = new Map();
-const codes = new Map();
-const codeGroups = [];
-const docGroups = [];
+const documents = new atlas.Documents();
+const quotations = new atlas.Quotations();
+const codes = new atlas.Codes();
+const codeGroups = new atlas.CodeGroups;
+const docGroups = new atlas.DocumentGroups;
 
 function processPrimDoc(primDoc) {
+  const newDocument = new atlas.Document(primDoc["@_id"], primDoc["@_name"]);
+
   if (primDoc.quotations['@_size'] <= 1) {
     // FIXME case when only one quotation
     if (primDoc.quotations['@_size'] == 1) {
-      const docQuotation = {
-        name: primDoc.quotations.q["@_name"],
-        id: primDoc.quotations.q["@_id"],
-        doc: primDoc["@_id"]
-      }
-
-      quotations.set(primDoc.quotations.q["@_id"], docQuotation);
+      const docQuotation = new atlas.Quotation(
+        primDoc.quotations.q["@_id"],
+        primDoc.quotations.q["@_name"],
+        primDoc["@_id"]
+      )
+      quotations.addQuotation(docQuotation)
     }
 
-    return {
-      name: primDoc["@_name"],
-      id: primDoc["@_id"],
-    };
+    return newDocument;
   }
 
-  const docQuotations = primDoc.quotations.q.map(element => {
-    const docQuotation = {
-      name: element["@_name"],
-      id: element["@_id"],
-      doc: primDoc["@_id"]
-    }
+  primDoc.quotations.q.map(element => {
+    const docQuotation = new atlas.Quotation(
+      element["@_id"],
+      element["@_name"],
+      primDoc["@_id"]
+    );
 
-    quotations.set(element["@_id"], docQuotation);
+    newDocument.linkQuotation(docQuotation.id);
+    quotations.addQuotation(docQuotation);
 
     return docQuotation;
   })
 
-  return {
-    name: primDoc["@_name"],
-    id: primDoc["@_id"],
-    // quotations: docQuotations
-  };
+  return newDocument;
 }
 
 function processCode(code) {
-
-  return {
-    name: code["@_name"],
-    id: code["@_id"],
-    documents: new Set(),
-    quotes: new Set()
-  };
+  return new atlas.Code(code["@_id"], code["@_name"]);
 }
 
 function processCodeGroup(codeGroup) {
@@ -94,22 +102,20 @@ function processCodeGroup(codeGroup) {
     return code["@_id"];
   })
 
-  return {
-    name: codeGroup["@_name"],
-    id: codeGroup["@_id"],
-    linkedCodes
-  };
+  const newCodeGroup = new atlas.CodeGroup(codeGroup["@_id"], codeGroup["@_name"]);
+
+  linkedCodes.forEach((codeId) => newCodeGroup.linkCode(codeId));
+
+  return newCodeGroup;
 }
 
 function processDocGroup(docGroup) {
+  const newDocGroup = new atlas.DocumentGroup(docGroup["@_id"], docGroup["@_name"]);
+
+  // FIXME Handle special cases more elegantly
   if (!Array.isArray(docGroup.item)) {
-    return {
-      name: docGroup["@_name"],
-      id: docGroup["@_id"],
-      linkedDocs: [
-        docGroup.item["@_id"]
-      ]
-    };
+    newDocGroup.linkDocument(docGroup.item["@_id"]);
+    return newDocGroup;
   } else if (!docGroup.item) {
     return;
   }
@@ -118,26 +124,25 @@ function processDocGroup(docGroup) {
     return code["@_id"];
   })
 
-  return {
-    name: docGroup["@_name"],
-    id: docGroup["@_id"],
-    linkedDocs
-  };
+  linkedDocs.forEach((docId) => newDocGroup.linkDocument(docId));
+
+  return newDocGroup;
 }
 
 jsonObj.storedHU.primDocs.primDoc.forEach(element => {
   const document = processPrimDoc(element);
 
   if (document) {
-    documents.push(document);
+    documents.addDocument(document);
   }
 });
 
 jsonObj.storedHU.codes.code.forEach(element => {
+
   const code = processCode(element);
 
   if (code) {
-    codes.set(code.id, code);
+    codes.addCode(code);
   }
 });
 
@@ -145,7 +150,7 @@ jsonObj.storedHU.families.codeFamilies.codeFamily.forEach(element => {
   const codeGroup = processCodeGroup(element);
 
   if (codeGroup) {
-    codeGroups.push(codeGroup);
+    codeGroups.addCodeGroup(codeGroup);
   }
 });
 
@@ -153,28 +158,24 @@ jsonObj.storedHU.families.primDocFamilies.primDocFamily.forEach(element => {
   const docGroup = processDocGroup(element);
 
   if (docGroup) {
-    docGroups.push(docGroup);
+    docGroups.addDocumentGroup(docGroup);
   }
 });
 
 jsonObj.storedHU.links.objectSegmentLinks.codings.iLink.forEach(element => {
-  const code = codes.get(element["@_obj"]);
-  const quote = quotations.get(element["@_qRef"]);
-
-  if (!_.isNil(code) && !_.isNil(quote)) {
-    code.documents.add(quote.doc);
-    code.quotes.add(quote.id);
+  const code = codes.getCode(element["@_obj"]);
+  const quotation = quotations.getQuotation(element["@_qRef"]);
+  
+  
+  if (!isNil(code) && !isNil(quotation)) {
+    code.linkDocument(quotation.linkedDocumentId);
+    code.linkQuotation(quotation.id);
   }
 });
-
-
-// 
-
 
 const nodes = [];
 const edges = [];
 
-const groups = new Set();
 const docIds = new Set();
 
 function addNode(node) {
@@ -182,147 +183,134 @@ function addNode(node) {
 }
 
 function createNode(id, name, classes) {
-  return {
-    data: {
-      id,
-      name
-    },
-    group: "nodes",
-    classes
-  };
+  return new cyto.Node(id, name, classes);
 }
 
-function addEdgeLink(edgeId, source, target, classes) {
-  edges.push({
-    data: {
-      id: edgeId,
-      source,
-      target
-    },
-    group: "edges",
-    classes
-  })
+function addEdgeLink(id, source, target, classes) {
+  edges.push(new cyto.Edge(id, source, target, classes));
 }
 
-function createDocumentNodes(documents) {
-  documents.forEach(({
-    id,
-    name
-  }) => {
-    const docNode = createNode(id, name, ["document"])
-    docIds.add(id);
+function createDocumentNodes(documentsObj) {
+  documentsObj.documents.forEach((doc) => {
+    const docNode = createNode(doc.id, doc.name, [cyto.NODE_TYPES.DOCUMENT])
+    docIds.add(doc.id);
 
     addNode(docNode);
   });
 }
 
-function createDocumentGroupNodes(docGroups) {
-  docGroups.forEach(({
-    id,
-    name
-  }) => {
-    const docNode = createNode(id, name, ["document-group"])
+function createDocumentGroupNodes(docGroupsObj) {
+  docGroupsObj.documentGroups.forEach((docGroup) => {
+    const docNode = createNode(docGroup.id, docGroup.name, [cyto.NODE_TYPES.DOCUMENT_GROUP])
 
     addNode(docNode);
   });
 }
 
-function createCodeGroupNodes(codeGroups) {
-  codeGroups.forEach(({
-    id,
-    name
-  }) => {
-    const codeGroupNode = createNode(id, name, ["code-group"])
+function createCodeGroupNodes(codeGroupsObj) {
+  codeGroupsObj.codeGroups.forEach((codeGroup) => {
+    const codeGroupNode = createNode(codeGroup.id, codeGroup.name, [cyto.NODE_TYPES.CODE_GROUP])
 
     addNode(codeGroupNode);
   });
 }
 
-function createCodeNodes(codes) {
-  codes.forEach(({
-    id,
-    name
-  }) => {
-    const codeNode = createNode(id, name, ["code"])
+function createCodeNodes(codesObj) {
+  codesObj.codes.forEach((code) => {
+    const codeNode = createNode(code.id, code.name, [cyto.NODE_TYPES.CODE])
 
     addNode(codeNode);
   });
 }
 
-function createDocumentLinks(codes) {
-  codes.forEach(({
-    id,
-    documents
-  }) => {
-    documents.forEach((documentId) => {
+function createDocumentLinks(codesObj) {
+  codesObj.codes.forEach((code) => {
+    code.linkedDocumentIds.forEach((documentId) => {
+      // FIXME
       if (documentId == undefined) {
         return;
       }
-      const edgeId = id + "_" + documentId;
-      addEdgeLink(edgeId, id, documentId, ["code-document-link"]);
+      const edgeId = code.id + "_" + documentId;
+      addEdgeLink(edgeId, code.id, documentId, [cyto.LINK_TYPES.CODE_DOCUMENT_LINK]);
     })
   });
 }
 
-function createCodeGroupLinks(codeGroups) {
-  codeGroups.forEach(({
-    id,
-    linkedCodes
-  }) => {
-    linkedCodes.forEach((linkedCodeId) => {
-      const edgeId = id + "_" + linkedCodeId
-      addEdgeLink(edgeId, id, linkedCodeId, ["code-group-link"])
-    })
+function createCodeGroupLinks(codeGroupsObj) {
+  codeGroupsObj.codeGroups.forEach((codeGroup) => {
+    codeGroup.linkedCodeIds.forEach((linkedCodeId) => {
+      const edgeId = codeGroup.id + "_" + linkedCodeId
+      addEdgeLink(edgeId, codeGroup.id, linkedCodeId, [cyto.LINK_TYPES.CODE_GROUP_LINK])
+    });
   });
 }
-
-const docToGroup = new Map();
 
 function rememberDocGroupLink(docId, docGroupId) {
-  let docGroups = docToGroup.get(docId);
-  if (!docGroups) {
-    docGroups = new Set();
-    docToGroup.set(docId, docGroups);
-  } 
-  docGroups.add(docGroupId);
+  const document = documents.getDocument(docId);
+
+  document.linkDocumentGroup(docGroupId);
 };
 
-function createDocumentGroupLinks(docGroups) {
-  docGroups.forEach(({
-    id,
-    linkedDocs
-  }) => {
-    if (!linkedDocs) {
+function createDocumentGroupLinks(docGroupsObj) {
+  docGroupsObj.documentGroups.forEach((docGroup) => {
+    if (docGroup.isEmpty()) {
       return;
     }
-    linkedDocs.forEach((linkedDocId) => {
+    docGroup.linkedDocumentIds.forEach((linkedDocId) => {
       if (!docIds.has(linkedDocId)) {
         return;
       }
-      const edgeId = id + "_" + linkedDocId
-      addEdgeLink(edgeId, id, linkedDocId, ["doc-group-link"])
-      rememberDocGroupLink(linkedDocId, id);
+      const edgeId = docGroup.id + "_" + linkedDocId
+      addEdgeLink(edgeId, docGroup.id, linkedDocId, [cyto.LINK_TYPES.DOC_GROUP_LINK])
+      rememberDocGroupLink(linkedDocId, docGroup.id);
     })
   });
 }
 
 const createdCodeToDocGroupLinks = new Set();
 
-function createCodeToDocGroupsLinks(codes) {
-  codes.forEach((element) => {
-    element.documents.forEach((documentId) => {
-      const linkedDocGroups = docToGroup.get(documentId);
-      if (linkedDocGroups) {
-        linkedDocGroups.forEach((docGroupId) => {
-          const edgeId = element.id + "_" + docGroupId;
+function createCodeToDocGroupsLinks(codesObj) {
+  codesObj.codes.forEach((code) => {
+    code.linkedDocumentIds.forEach((documentId) => {
+      const document = documents.getDocument(documentId);
+      
+      if (!isEmpty(document.linkedDocumentGroupIds)) {
+        document.linkedDocumentGroupIds.forEach((docGroupId) => {
+          const edgeId = code.id + "_" + docGroupId;
           if (!createdCodeToDocGroupLinks.has(edgeId)) {
-            addEdgeLink(edgeId, element.id, docGroupId, ["code-document-group-link"]);
+            addEdgeLink(edgeId, code.id, docGroupId, [cyto.LINK_TYPES.CODE_DOCUMENT_GROUP_LINK]);
             createdCodeToDocGroupLinks.add(edgeId);
           }
         })
-      }   
+      }
     })
   });
+}
+
+const createdCodeGroupToDocGroupLinks = new Set();
+
+function createCodeGroupsToDocGroupsLinks(codeGroupsObj) {
+  codeGroupsObj.codeGroups.forEach((codeGroup) => {
+    codeGroup.linkedCodeIds.forEach((codeId) => {
+      const code = codes.getCode(codeId);
+
+      if (!isEmpty(code.linkedDocumentIds)) {
+        code.linkedDocumentIds.forEach((documentId) => {
+          const document = documents.getDocument(documentId);
+
+          if (!isEmpty(document.linkedDocumentGroupIds)) {
+            document.linkedDocumentGroupIds.forEach((docGroupId) => {
+              const edgeId = codeGroup.id + "_" + docGroupId;
+              if (!createdCodeGroupToDocGroupLinks.has(edgeId)) {
+                addEdgeLink(edgeId, codeGroup.id, docGroupId, [cyto.LINK_TYPES.CODE_GROUP_DOCUMENT_GROUP_LINK]);
+                createdCodeGroupToDocGroupLinks.add(edgeId);
+              }
+            })
+          }
+        })
+      }
+    })
+  })
 }
 
 createDocumentGroupNodes(docGroups);
@@ -332,9 +320,12 @@ createCodeNodes(codes);
 createDocumentLinks(codes);
 createDocumentGroupLinks(docGroups);
 createCodeGroupLinks(codeGroups);
-createCodeToDocGroupsLinks(codes)
+createCodeToDocGroupsLinks(codes);
+createCodeGroupsToDocGroupsLinks(codeGroups);
 
-const elements = nodes.concat(edges);
+let elements = nodes.concat(edges);
+
+elements = elements.map((element) => element.toJSON());
 
 let fileContents = `
 const elements = ${JSON.stringify( elements )};
