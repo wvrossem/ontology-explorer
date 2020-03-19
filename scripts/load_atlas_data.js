@@ -287,6 +287,32 @@ function createCodeToDocGroupsLinks(codesObj) {
   });
 }
 
+const createdCodeGroupToDocGroupLinks = new Set();
+
+function createCodeGroupsToDocGroupsLinks(codeGroupsObj) {
+  codeGroupsObj.codeGroups.forEach((codeGroup) => {
+    codeGroup.linkedCodeIds.forEach((codeId) => {
+      const code = codes.getCode(codeId);
+
+      if (!isEmpty(code.linkedDocumentIds)) {
+        code.linkedDocumentIds.forEach((documentId) => {
+          const document = documents.getDocument(documentId);
+
+          if (!isEmpty(document.linkedDocumentGroupIds)) {
+            document.linkedDocumentGroupIds.forEach((docGroupId) => {
+              const edgeId = codeGroup.id + "_" + docGroupId;
+              if (!createdCodeGroupToDocGroupLinks.has(edgeId)) {
+                addEdgeLink(edgeId, codeGroup.id, docGroupId, [cyto.LINK_TYPES.CODE_GROUP_DOCUMENT_GROUP_LINK]);
+                createdCodeGroupToDocGroupLinks.add(edgeId);
+              }
+            })
+          }
+        })
+      }
+    })
+  })
+}
+
 createDocumentGroupNodes(docGroups);
 createDocumentNodes(documents);
 createCodeGroupNodes(codeGroups);
@@ -294,7 +320,8 @@ createCodeNodes(codes);
 createDocumentLinks(codes);
 createDocumentGroupLinks(docGroups);
 createCodeGroupLinks(codeGroups);
-createCodeToDocGroupsLinks(codes)
+createCodeToDocGroupsLinks(codes);
+createCodeGroupsToDocGroupsLinks(codeGroups);
 
 let elements = nodes.concat(edges);
 
