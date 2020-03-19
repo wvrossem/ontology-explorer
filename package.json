@@ -9,7 +9,7 @@
     "load-data": "node ./scripts/load_atlas_data.js"
   },
   "engines": {
-    "node": "12.16.x"
+    "node": "13.11.x"
   },
   "dependencies": {
     "buefy": "^0.8.13",
