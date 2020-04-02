@@ -6,6 +6,7 @@
     v-on:cxttapstart="updateNode"
     :preConfig="preConfig"
     :afterCreated="afterCreated"
+    v-on:start-set-operation="startSetOperation"
   >
     <cy-element
       v-for="def in elements"
@@ -18,6 +19,8 @@
 
 <script>
 import config from "../assets/graph-config";
+
+import head from 'lodash/head';
 
 import cola from "cytoscape-cola";
 import coseBilkent from "cytoscape-cose-bilkent";
@@ -89,6 +92,48 @@ export default {
     },
     updateNode(event) {
       console.log("right click node", event);
+    },
+    startSetOperation(set1, set2, operation) {
+      const cy = this.$refs.cyRef.instance;
+
+      if (this.prevSelected.length > 0) {
+        cy.$(this.prevSelected).removeClass("selected");
+      }
+
+      let neighbourhood1 = cy.$(`#${set1}`).closedNeighborhood();
+      let neighbourhood2 = cy.$(`#${set2}`).closedNeighborhood();
+
+      let result;
+      
+      if (operation == "intersection") {
+        result = neighbourhood1.intersection(neighbourhood2);
+      } else if (operation == "difference") {
+        result = neighbourhood1.difference(neighbourhood2);
+      }
+
+      let ids = result.map(el => `#${el.id()}`).join(', ').concat(`, #${set1}, #${set2}`);
+
+      cy.$(ids).addClass("selected");
+
+      this.prevSelected = ids;
+
+      result = result.map(el => {
+        return {
+          id: el.id(),
+          name: el.data().name,
+          classes: el.classes(),
+          group: el.group()
+        };
+      });
+
+      result = result.filter(el => el.group === "nodes");
+
+      cy.zoom({
+        level: 1,
+        position: cy.getElementById(`${set1}`).position()
+      });
+
+      this.$emit("set-operation-results", result);
     },
     searchNode(node) {
       const cy = this.$refs.cyRef.instance;

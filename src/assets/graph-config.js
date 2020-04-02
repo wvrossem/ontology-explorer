@@ -197,7 +197,7 @@ const config = {
   style: [{
       selector: "node",
       style: {
-        "opacity": 0.3,
+        "opacity": 0.2,
         "background-color": "#666",
         "label": "data(name)",
         "width": "10",
@@ -207,7 +207,7 @@ const config = {
     {
       selector: "edge",
       style: {
-        "opacity": 0.3,
+        "opacity": 0.2,
         "width": 1,
         "line-color": "#ccc",
         "target-arrow-color": "#ccc",
@@ -366,6 +366,7 @@ const config = {
       style: {
         "opacity": 1,
         "label": "data(name)",
+        "z-index": 100,
       }
     }
   ],
