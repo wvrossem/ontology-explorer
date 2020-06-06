@@ -20,7 +20,9 @@
 <script>
 import config from "../assets/graph-config";
 
+import get from 'lodash/get';
 import head from 'lodash/head';
+import join from 'lodash/join';
 
 import cola from "cytoscape-cola";
 import coseBilkent from "cytoscape-cose-bilkent";
@@ -62,13 +64,6 @@ export default {
         cy.$(this.prevSelected).toggleClass("selected");
       }
 
-      // cy.zoom({
-      //   level: 1.5,
-      //   position: cy.getElementById(node.id).position()
-      // });
-
-      // cy.$(`#${node.id}`).toggleClass("selected");
-
       let neighborhood = cy.$(`#${node.id}`).closedNeighborhood();
 
       let ids = neighborhood.map(el => `#${el.id()}`).join(', ');
@@ -93,15 +88,18 @@ export default {
     updateNode(event) {
       console.log("right click node", event);
     },
-    startSetOperation(set1, set2, operation) {
+    startSetOperation(sets1, sets2, operation) {
       const cy = this.$refs.cyRef.instance;
 
       if (this.prevSelected.length > 0) {
         cy.$(this.prevSelected).removeClass("selected");
       }
 
-      let neighbourhood1 = cy.$(`#${set1}`).closedNeighborhood();
-      let neighbourhood2 = cy.$(`#${set2}`).closedNeighborhood();
+      const setIds1 = join(sets1.map(setId => `#${setId}`), ", ");
+      const setIds2 = join(sets2.map(setId => `#${setId}`), ", ");
+
+      let neighbourhood1 = cy.$(setIds1).closedNeighborhood();
+      let neighbourhood2 = cy.$(setIds2).closedNeighborhood();
 
       let result;
       
@@ -111,29 +109,48 @@ export default {
         result = neighbourhood1.difference(neighbourhood2);
       }
 
-      let ids = result.map(el => `#${el.id()}`).join(', ').concat(`, #${set1}, #${set2}`);
+      let ids = result.map(el => `#${el.id()}`).join(', ').concat(`, ${setIds1}, ${setIds2}`);
 
-      cy.$(ids).addClass("selected");
+      cy.$(`${setIds1}, ${setIds2}`).addClass("selected");
 
       this.prevSelected = ids;
+
+      // const dc = cy.elements().degreeCentrality({ directed: true});
+      const ccn = cy.elements().closenessCentralityNormalized();
+      const bc = cy.elements().bc();
+
+      cy.nodes().forEach( n => {
+        n.data({
+          centrality_closeness: ccn.closeness(n),
+          centrality_betweenness: bc.betweenness(n),
+          centrality_degree: cy.elements().degreeCentrality({ root: `#${n.id()}`, directed: true }).degree
+        });
+      });
 
       result = result.map(el => {
         return {
           id: el.id(),
-          name: el.data().name,
+          name: get(el.data(), "name", ""),
           classes: el.classes(),
-          group: el.group()
+          group: el.group(),
+          centrality_closeness: el.data().centrality_closeness,
+          centrality_betweenness: el.data().centrality_betweenness,
+          centrality_degree: el.data().centrality_degree
         };
       });
 
       result = result.filter(el => el.group === "nodes");
 
-      cy.zoom({
-        level: 1,
-        position: cy.getElementById(`${set1}`).position()
-      });
-
       this.$emit("set-operation-results", result);
+    },
+    showNodes(nodes) {
+      const cy = this.$refs.cyRef.instance;
+
+      const ids = nodes.map(el => `#${el.id}`).join(', ');
+
+      let neighborhood = cy.$(ids).closedNeighborhood();
+      neighborhood = neighborhood.filter(n => !n.hasClass("document-group") && !n.hasClass("code-group-document-group-link"))
+      neighborhood.forEach(el => el.addClass("selected"));
     },
     searchNode(node) {
       const cy = this.$refs.cyRef.instance;
@@ -154,9 +171,6 @@ export default {
       const path = dfs.path; // path to found node
       const found = dfs.found; // found node
 
-      console.log(path);
-      console.log(found);
-
       // select the path
       path.select();
     },
@@ -173,11 +187,6 @@ export default {
       await cy;
 
       cy.layout(config.layout).run();
-
-      // cy.zoom({
-      //   level: 1.0, // the zoom level
-      //   position: { x: 0, y: 0 }
-      // });
 
       resolveCy(cy);
     }

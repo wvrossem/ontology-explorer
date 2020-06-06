@@ -1,4 +1,4 @@
-import graph_data from './graph_data_atlas';
+import graph_data from './graph_data_atlas_V2';
 
 const coseLayout = {
   name: 'cose',
@@ -201,7 +201,8 @@ const config = {
         "background-color": "#666",
         "label": "data(name)",
         "width": "10",
-        "height": "10"
+        "height": "10",
+        "visibility": "hidden"
       }
     },
     {
@@ -211,7 +212,8 @@ const config = {
         "width": 1,
         "line-color": "#ccc",
         "target-arrow-color": "#ccc",
-        "target-arrow-shape": "triangle"
+        "target-arrow-shape": "triangle",
+        "visibility": "hidden"
       }
     },
     {
@@ -230,7 +232,7 @@ const config = {
     {
       selector: "node[[indegree = 0]][[outdegree = 0]]",
       style: {
-        'display': "element"
+        // 'display': "element"
       }
     },
     {
@@ -251,7 +253,7 @@ const config = {
         "label": "",
         "opacity": 0.3,
         "z-index": 1,
-        "visibility": "visible",
+        // "visibility": "visible",
         // "display": "none",
       }
     },
@@ -259,27 +261,27 @@ const config = {
       selector: ".code-document-link",
       style: {
         // "visibility": "hidden"
-        "display": "none",
+        // "display": "none",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        "visibility": "visible"
+        // "visibility": "visible"
         // "display": "none"
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "visible"
+        // "visibility": "visible"
         // "display": "none"
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "visibility": "visible"
+        // "visibility": "visible"
         // "display": "none"
       }
     },
@@ -290,7 +292,7 @@ const config = {
         "z-index": 2,
         "opacity": 0.3,
         // "visibility": "hidden",
-        "display": "none",
+        // "display": "none",
       }
     },
     {
@@ -299,7 +301,7 @@ const config = {
         "label": "",
         "z-index": 1,
         "opacity": 0.3,
-        "visibility": "visible",
+        // "visibility": "visible",
         // "display": "none",
       }
     },
@@ -328,7 +330,7 @@ const config = {
         "z-index": 3,
         "shape": "diamond",
         "background-color": "#7d90ae",
-        "visibility": "visible",
+        // "visibility": "visible",
         "width": "30",
         "height": "30"
       }
@@ -355,18 +357,19 @@ const config = {
     //   }
     // },
     // FIXME, IO: IOM - MiMOSA - interviews has no coded docs so hide it
-    {
-      selector: "#df_13",
-      style: {
-        'display': 'none',
-      }
-    },
+    // {
+    //   selector: "#df_13",
+    //   style: {
+    //     'display': 'none',
+    //   }
+    // },
     {
       selector: ".selected",
       style: {
         "opacity": 1,
         "label": "data(name)",
         "z-index": 100,
+        "visibility": "visible"
       }
     }
   ],

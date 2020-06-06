@@ -333,4 +333,4 @@ const elements = ${JSON.stringify( elements )};
 export default elements;
 `;
 
-fs.writeFileSync("src/assets/graph_data_atlas.js", fileContents);
+fs.writeFileSync("src/assets/graph_data_atlas_V2.js", fileContents);
