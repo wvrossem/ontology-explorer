@@ -119,6 +119,7 @@ export default {
     processXMLProject() {
       this.projElements = processXMLProjectString(this.fileContent)
       this.network = transformAtlasToCyto(this.projElements)
+      this.$store.commit("network/setElements", this.network);
     }
   },
 
