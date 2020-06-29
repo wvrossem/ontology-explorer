@@ -1,35 +1,5 @@
 <template>
   <div id="app">
-    <!-- <section class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-narrow">
-              <figure class="image is-128x128">
-                <img src="logoPC.jpg" />
-              </figure>
-            </div>
-            <div class="column">
-              <h1 class="title">Ontology explorer</h1>
-              <h2 class="subtitle">Experiment combining Vue.js and cytoscape for network analysis</h2>
-
-              <div id="nav">
-            <b-navbar>
-              <template slot="start">
-                <router-link class="navbar-item" to="/">Home</router-link>|
-                <router-link class="navbar-item" to="/upload">Upload</router-link>|
-                <router-link class="navbar-item" to="/about">About</router-link>
-              </template>
-            </b-navbar>
-          </div>
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-    </section> -->
-
     <div id="nav">
       <b-navbar 
         spaced
