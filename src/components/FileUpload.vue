@@ -36,11 +36,22 @@
         {{ fileContentPreview }}
       </b-message>
     </div>
+
+    <div class="level" v-if="projElements && network">
+      <b-message title="Successfully parsed XML and generated the network" type="is-success" has-icon >
+        <div class="content">
+          <p>Imported {{projElements.docGroups.size()}} document groups, {{projElements.documents.size()}} documents, {{projElements.codes.size()}} codes, {{projElements.codeGroups.size()}} code groups, and {{projElements.quotations.size()}} quotations.</p>
+          <p>Created a network of {{network.length}} nodes & links.</p>
+        </div>
+      </b-message>
+    </div>
   </section>
 </template>
 
 <script>
 import { isEmpty } from "lodash";
+import { processXMLProjectString } from "../util/load_atlas_xml";
+import { transformAtlasToCyto } from "../util/transform_atlas_to_cyto";
 
 export default {
   data() {
@@ -48,7 +59,9 @@ export default {
       dropFiles: [],
       fileContent: null,
       fileContentPreview: null,
-      isUploadInProgress: false
+      isUploadInProgress: false,
+      projElements: null,
+      network: null
     };
   },
   computed: {
@@ -91,7 +104,8 @@ export default {
             message: 'File processed succesfully!',
             type: 'is-success'
         })
-      }
+        this.processXMLProject();
+      };
       reader.onerror = (e) => {
         this.$buefy.toast.open({
             duration: 5000,
@@ -99,8 +113,12 @@ export default {
             type: 'is-danger'
         })
         this.isUploadInProgress = false;
-      }
+      };
       this.fileContent = reader.readAsText(file);
+    },
+    processXMLProject() {
+      this.projElements = processXMLProjectString(this.fileContent)
+      this.network = transformAtlasToCyto(this.projElements)
     }
   },
 

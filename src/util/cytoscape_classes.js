@@ -12,7 +12,7 @@ const LINK_TYPES = {
   CODE_DOCUMENT_GROUP_LINK: "code-document-group-link",
   DOC_GROUP_LINK: "doc-group-link",
   CODE_GROUP_DOCUMENT_GROUP_LINK: "code-group-document-group-link"
-}
+};
 
 class Node {
 
@@ -32,7 +32,7 @@ class Node {
       classes: this.classes
     };
   }
-};
+}
 
 class Edge {
 
@@ -54,7 +54,7 @@ class Edge {
       classes: this.classes
     }
   }
-};
+}
 
 module.exports = {
   Node,
