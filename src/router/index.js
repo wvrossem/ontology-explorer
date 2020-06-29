@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import NetworkAnalysis from '../views/NetworkAnalysis.vue'
 import Upload from '../views/Upload.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/analysis',
+    name: 'Network Analysis',
+    component: NetworkAnalysis
   },
   {
     path: '/upload',
