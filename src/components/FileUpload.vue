@@ -25,7 +25,7 @@
     <div class="level">
       <b-button type="is-primary" expanded @click="processFiles" 
         v-bind:loading="isUploadInProgress"
-        v-bind:disabled="!dropFiles">
+        v-bind:disabled="isUploadDisabled">
         <b-icon icon="progress-wrench" size="is-small"></b-icon>
         <span>Upload and transform</span>
       </b-button>
@@ -51,6 +51,11 @@ export default {
       isUploadInProgress: false
     };
   },
+  computed: {
+    isUploadDisabled: function () {
+      return isEmpty(this.dropFiles);
+    }
+  },
   methods: {
     deleteDropFile(index) {
       this.dropFiles.splice(index, 1);
@@ -61,6 +66,10 @@ export default {
     },
     processFiles() {
       if (isEmpty(this.dropFiles)) {
+        this.$buefy.toast.open({
+            message: 'Please first select a file to upload',
+            type: 'is-warning'
+        })
         return;
       }
       this.isUploadInProgress = true;
