@@ -118,6 +118,11 @@ export default {
     },
     processXMLProject() {
       this.projElements = processXMLProjectString(this.fileContent)
+      this.$store.commit("project/setDocuments", this.projElements.documents);
+      this.$store.commit("project/setQuotations", this.projElements.quotations);
+      this.$store.commit("project/setCodes", this.projElements.codes);
+      this.$store.commit("project/setCodeGroups", this.projElements.codeGroups);
+      this.$store.commit("project/setDocGroups", this.projElements.docGroups);
       this.network = transformAtlasToCyto(this.projElements)
       this.$store.commit("network/setElements", this.network);
     }
