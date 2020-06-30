@@ -3,7 +3,8 @@ const state = () => ({
   selectedSets1: [],
   selectedSets2: [],
   setOperation: "",
-  showCategoryGroups: true
+  showCodes: true,
+  showCategoryGroups: false
 })
 
 // getters
@@ -24,6 +25,10 @@ const mutations = {
 
   setSetOperation(state, setOperation) {
     state.setOperation = setOperation;
+  },
+
+  setShowCodes(state, showCodes) {
+    state.showCodes = showCodes;
   },
 
   setShowCategoryGroups(state, showCategoryGroups) {

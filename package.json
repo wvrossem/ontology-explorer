@@ -11,6 +11,7 @@
     "buefy": "^0.8.20",
     "core-js": "^3.6.5",
     "csv": "^5.3.2",
+    "cytoscape": "^3.15.1",
     "cytoscape-cise": "^1.0.0",
     "cytoscape-cola": "^2.3.1",
     "cytoscape-cose-bilkent": "^4.1.0",
