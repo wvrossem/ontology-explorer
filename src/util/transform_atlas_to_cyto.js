@@ -3,10 +3,9 @@ const cyto = require('./cytoscape_classes.js');
 
 let documents, codes;
 
-const nodes = [];
-const edges = [];
+let nodes, edges;
 
-const docIds = new Set();
+let docIds;
 
 function addNode(node) {
   nodes.push(node);
@@ -144,6 +143,10 @@ function createCodeGroupsToDocGroupsLinks(codeGroupsObj) {
 }
 
 function transformAtlasToCyto(projElements) {
+  nodes = [];
+  edges = [];
+  docIds = new Set();
+
   documents = projElements.documents;
   codes = projElements.codes;
   createDocumentGroupNodes(projElements.docGroups);
@@ -157,8 +160,9 @@ function transformAtlasToCyto(projElements) {
   createCodeGroupsToDocGroupsLinks(projElements.codeGroups);
 
   const elements = nodes.concat(edges);
+  const cyElements = elements.map((element) => element.toJSON());
 
-  return elements;
+  return cyElements;
 }
 
 module.exports = {
