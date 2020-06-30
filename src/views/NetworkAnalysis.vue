@@ -3,43 +3,7 @@
     <div class="section">
       <div class="columns">
         <div class="column is-half">
-          <div class="field">
-            <label class="label">Select first ontology</label>
-            <b-checkbox v-model="selectedSet1" native-value="df_1">DE: Xauslander</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_4">EU: Eurodac</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_5">EU: SIS</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_6">EU: VIS</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_3">EU: EES</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_2">EU: EU IS JHA</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_9">GR: XKA</b-checkbox>
-            <b-checkbox v-model="selectedSet1" native-value="df_12">IO: IOM - MiMOSA</b-checkbox>
-          </div>
-          <b-field label="Set operation">
-            <b-select placeholder="Select" v-model="selectedOperation">
-              <!-- <option value="union">Union</option> -->
-              <option value="intersection">Intersection</option>
-              <option value="difference">Difference</option>
-            </b-select>
-          </b-field>
-          <div class="field">
-            <label class="label">Select second ontology</label>
-            <b-checkbox v-model="selectedSet2" native-value="df_1">DE: Xauslander</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_4">EU: Eurodac</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_5">EU: SIS</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_6">EU: VIS</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_3">EU: EES</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_2">EU: EU IS JHA</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_9">GR: XKA</b-checkbox>
-            <b-checkbox v-model="selectedSet2" native-value="df_12">IO: IOM - MiMOSA</b-checkbox>
-          </div>
-
-          <b-field label="Only show category groups">
-            <b-switch v-model="showCategoryGroups"></b-switch>
-          </b-field>
-
-          <b-field label="✨✨">
-            <button class="button" v-on:click="startSetOperation()">Submit</button>
-          </b-field>
+          <AnalysisOptions/>
         </div>
 
         <div class="column">
@@ -62,24 +26,22 @@
 import Graph from "@/components/Graph.vue";
 import NodeInfo from "@/components/NodeInfo.vue";
 import NodeTable from "@/components/NodeTable.vue";
+import AnalysisOptions from "@/components/AnalysisOptions.vue";
 import clone from "lodash/clone";
 import head from "lodash/head";
 import round from "lodash/round";
 
 export default {
-  name: "Home",
+  name: "NetworkAnalysis",
   components: {
     Graph,
     // NodeInfo,
-    NodeTable
+    NodeTable,
+    AnalysisOptions
   },
   data() {
     return {
       selectedNode: this.initialSelectedNode,
-      selectedSet1: [],
-      selectedSet2: [],
-      selectedOperation: "",
-      showCategoryGroups: true,
       nodes: []
     };
   },
