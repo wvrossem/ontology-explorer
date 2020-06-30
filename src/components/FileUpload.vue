@@ -45,11 +45,20 @@
         </div>
       </b-message>
     </div>
+
+    <div class="level" v-if="isModelInitialized">
+      <b-message title="Network model" type="is-success" has-icon v-if="isModelInitialized" >
+        <div class="content">
+          <p>Network model is initialized in the graph library and can now be used for further analysis and visualization.</p>
+        </div>
+      </b-message>
+    </div>
   </section>
 </template>
 
 <script>
 import { isEmpty } from "lodash";
+import { mapState, mapGetters } from 'vuex';
 import { processXMLProjectString } from "../util/load_atlas_xml";
 import { transformAtlasToCyto } from "../util/transform_atlas_to_cyto";
 
@@ -67,7 +76,10 @@ export default {
   computed: {
     isUploadDisabled: function () {
       return isEmpty(this.dropFiles);
-    }
+    },
+    ...mapGetters({
+      isModelInitialized: "network/isModelInitialized"
+    }),
   },
   methods: {
     deleteDropFile(index) {
@@ -97,7 +109,7 @@ export default {
         }
         this.$emit("reader-load", e.target.result);
         this.fileContent = e.target.result;
-        this.fileContentPreview = this.fileContent.slice(0, 500);
+        this.fileContentPreview = this.fileContent.slice(0, 250);
         this.dropFiles = [];
         this.isUploadInProgress = false;
         this.$buefy.toast.open({
@@ -125,6 +137,7 @@ export default {
       this.$store.commit("project/setDocGroups", this.projElements.docGroups);
       this.network = transformAtlasToCyto(this.projElements)
       this.$store.commit("network/setElements", this.network);
+      this.$store.dispatch("network/initializeModel");
     }
   },
 
