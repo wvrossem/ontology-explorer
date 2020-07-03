@@ -1,0 +1,564 @@
+<svg id="mermaid-1593547588232" width="100%" xmlns="http://www.w3.org/2000/svg" height="100%" style="max-width:994.7666473388672px;" viewBox="-50 -10 994.7666473388672 850"><style>
+
+
+
+#mermaid-1593547588232 .label {
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  color: #333; }
+
+#mermaid-1593547588232 .label text {
+  fill: #333; }
+
+#mermaid-1593547588232 .node rect,
+#mermaid-1593547588232 .node circle,
+#mermaid-1593547588232 .node ellipse,
+#mermaid-1593547588232 .node polygon,
+#mermaid-1593547588232 .node path {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1px; }
+
+#mermaid-1593547588232 .node .label {
+  text-align: center; }
+
+#mermaid-1593547588232 .node.clickable {
+  cursor: pointer; }
+
+#mermaid-1593547588232 .arrowheadPath {
+  fill: #333333; }
+
+#mermaid-1593547588232 .edgePath .path {
+  stroke: #666;
+  stroke-width: 1.5px; }
+
+#mermaid-1593547588232 .edgeLabel {
+  background-color: white;
+  text-align: center; }
+#mermaid-1593547588232   .edgeLabel rect {
+    opacity: 0.5; }
+
+#mermaid-1593547588232 .cluster rect {
+  fill: #eaf2fb;
+  stroke: #26a;
+  stroke-width: 1px; }
+
+#mermaid-1593547588232 .cluster text {
+  fill: #333; }
+
+#mermaid-1593547588232 div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 12px;
+  background: #eaf2fb;
+  border: 1px solid #26a;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+#mermaid-1593547588232 .actor {
+  stroke: #999;
+  fill: #eee; }
+
+#mermaid-1593547588232 text.actor {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1593547588232 .actor-line {
+  stroke: #666; }
+
+#mermaid-1593547588232 .messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1593547588232 .messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1593547588232 #arrowhead {
+  fill: #333; }
+
+#mermaid-1593547588232 .sequenceNumber {
+  fill: white; }
+
+#mermaid-1593547588232 #sequencenumber {
+  fill: #333; }
+
+#mermaid-1593547588232 #crosshead path {
+  fill: #333 !important;
+  stroke: #333 !important; }
+
+#mermaid-1593547588232 .messageText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1593547588232 .labelBox {
+  stroke: #999;
+  fill: #eee; }
+
+#mermaid-1593547588232 .labelText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1593547588232 .loopText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1593547588232 .loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #999; }
+
+#mermaid-1593547588232 .note {
+  stroke: #777700;
+  fill: #ffa; }
+
+#mermaid-1593547588232 .noteText {
+  fill: black;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 14px; }
+
+#mermaid-1593547588232 .activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1593547588232 .activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1593547588232 .activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+
+#mermaid-1593547588232 .mermaid-main-font {
+  font-family: "trebuchet ms", verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .section {
+  stroke: none;
+  opacity: 0.2; }
+
+#mermaid-1593547588232 .section0 {
+  fill: #80b3e6; }
+
+#mermaid-1593547588232 .section2 {
+  fill: #80b3e6; }
+
+#mermaid-1593547588232 .section1,
+#mermaid-1593547588232 .section3 {
+  fill: white;
+  opacity: 0.2; }
+
+#mermaid-1593547588232 .sectionTitle0 {
+  fill: #333; }
+
+#mermaid-1593547588232 .sectionTitle1 {
+  fill: #333; }
+
+#mermaid-1593547588232 .sectionTitle2 {
+  fill: #333; }
+
+#mermaid-1593547588232 .sectionTitle3 {
+  fill: #333; }
+
+#mermaid-1593547588232 .sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+
+#mermaid-1593547588232 .grid .tick {
+  stroke: #e6e6e6;
+  opacity: 0.8;
+  shape-rendering: crispEdges; }
+#mermaid-1593547588232   .grid .tick text {
+    font-family: 'trebuchet ms', verdana, arial;
+    font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .grid path {
+  stroke-width: 0; }
+
+
+#mermaid-1593547588232 .today {
+  fill: none;
+  stroke: #d42;
+  stroke-width: 2px; }
+
+
+
+#mermaid-1593547588232 .task {
+  stroke-width: 2; }
+
+#mermaid-1593547588232 .taskText {
+  text-anchor: middle;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .taskText:not([font-size]) {
+  font-size: 11px; }
+
+#mermaid-1593547588232 .taskTextOutsideRight {
+  fill: #333;
+  text-anchor: start;
+  font-size: 11px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .taskTextOutsideLeft {
+  fill: #333;
+  text-anchor: end;
+  font-size: 11px; }
+
+
+#mermaid-1593547588232 .task.clickable {
+  cursor: pointer; }
+
+#mermaid-1593547588232 .taskText.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+#mermaid-1593547588232 .taskTextOutsideLeft.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+#mermaid-1593547588232 .taskTextOutsideRight.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+
+#mermaid-1593547588232 .taskText0,
+#mermaid-1593547588232 .taskText1,
+#mermaid-1593547588232 .taskText2,
+#mermaid-1593547588232 .taskText3 {
+  fill: white; }
+
+#mermaid-1593547588232 .task0,
+#mermaid-1593547588232 .task1,
+#mermaid-1593547588232 .task2,
+#mermaid-1593547588232 .task3 {
+  fill: #26a;
+  stroke: #1a4d80; }
+
+#mermaid-1593547588232 .taskTextOutside0,
+#mermaid-1593547588232 .taskTextOutside2 {
+  fill: #333; }
+
+#mermaid-1593547588232 .taskTextOutside1,
+#mermaid-1593547588232 .taskTextOutside3 {
+  fill: #333; }
+
+
+#mermaid-1593547588232 .active0,
+#mermaid-1593547588232 .active1,
+#mermaid-1593547588232 .active2,
+#mermaid-1593547588232 .active3 {
+  fill: #eee;
+  stroke: #1a4d80; }
+
+#mermaid-1593547588232 .activeText0,
+#mermaid-1593547588232 .activeText1,
+#mermaid-1593547588232 .activeText2,
+#mermaid-1593547588232 .activeText3 {
+  fill: #333 !important; }
+
+
+#mermaid-1593547588232 .done0,
+#mermaid-1593547588232 .done1,
+#mermaid-1593547588232 .done2,
+#mermaid-1593547588232 .done3 {
+  stroke: #666;
+  fill: #bbb;
+  stroke-width: 2; }
+
+#mermaid-1593547588232 .doneText0,
+#mermaid-1593547588232 .doneText1,
+#mermaid-1593547588232 .doneText2,
+#mermaid-1593547588232 .doneText3 {
+  fill: #333 !important; }
+
+
+#mermaid-1593547588232 .crit0,
+#mermaid-1593547588232 .crit1,
+#mermaid-1593547588232 .crit2,
+#mermaid-1593547588232 .crit3 {
+  stroke: #b1361b;
+  fill: #d42;
+  stroke-width: 2; }
+
+#mermaid-1593547588232 .activeCrit0,
+#mermaid-1593547588232 .activeCrit1,
+#mermaid-1593547588232 .activeCrit2,
+#mermaid-1593547588232 .activeCrit3 {
+  stroke: #b1361b;
+  fill: #eee;
+  stroke-width: 2; }
+
+#mermaid-1593547588232 .doneCrit0,
+#mermaid-1593547588232 .doneCrit1,
+#mermaid-1593547588232 .doneCrit2,
+#mermaid-1593547588232 .doneCrit3 {
+  stroke: #b1361b;
+  fill: #bbb;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+#mermaid-1593547588232 .milestone {
+  transform: rotate(45deg) scale(0.8, 0.8); }
+
+#mermaid-1593547588232 .milestoneText {
+  font-style: italic; }
+
+#mermaid-1593547588232 .doneCritText0,
+#mermaid-1593547588232 .doneCritText1,
+#mermaid-1593547588232 .doneCritText2,
+#mermaid-1593547588232 .doneCritText3 {
+  fill: #333 !important; }
+
+#mermaid-1593547588232 .activeCritText0,
+#mermaid-1593547588232 .activeCritText1,
+#mermaid-1593547588232 .activeCritText2,
+#mermaid-1593547588232 .activeCritText3 {
+  fill: #333 !important; }
+
+#mermaid-1593547588232 .titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: #333;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 g.classGroup text {
+  fill: #999;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 10px; }
+#mermaid-1593547588232   g.classGroup text .title {
+    font-weight: bolder; }
+
+#mermaid-1593547588232 g.clickable {
+  cursor: pointer; }
+
+#mermaid-1593547588232 g.classGroup rect {
+  fill: #eee;
+  stroke: #999; }
+
+#mermaid-1593547588232 g.classGroup line {
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 .classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #eee;
+  opacity: 0.5; }
+
+#mermaid-1593547588232 .classLabel .label {
+  fill: #999;
+  font-size: 10px; }
+
+#mermaid-1593547588232 .relation {
+  stroke: #999;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1593547588232 .dashed-line {
+  stroke-dasharray: 3; }
+
+#mermaid-1593547588232 #compositionStart {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #compositionEnd {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #aggregationStart {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #aggregationEnd {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #dependencyStart {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #dependencyEnd {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #extensionStart {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 #extensionEnd {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 .commit-id,
+#mermaid-1593547588232 .commit-msg,
+#mermaid-1593547588232 .branch-label {
+  fill: lightgrey;
+  color: lightgrey;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .pieTitleText {
+  text-anchor: middle;
+  font-size: 25px;
+  fill: #333;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .slice {
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 g.stateGroup text {
+  fill: #999;
+  stroke: none;
+  font-size: 10px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 g.stateGroup text {
+  fill: #999;
+  stroke: none;
+  font-size: 10px; }
+
+#mermaid-1593547588232 g.stateGroup .state-title {
+  font-weight: bolder;
+  fill: black; }
+
+#mermaid-1593547588232 g.stateGroup rect {
+  fill: #eee;
+  stroke: #999; }
+
+#mermaid-1593547588232 g.stateGroup line {
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1593547588232 .transition {
+  stroke: #999;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1593547588232 .stateGroup .composit {
+  fill: white;
+  border-bottom: 1px; }
+
+#mermaid-1593547588232 .stateGroup .alt-composit {
+  fill: #e0e0e0;
+  border-bottom: 1px; }
+
+#mermaid-1593547588232 .state-note {
+  stroke: #777700;
+  fill: #ffa; }
+#mermaid-1593547588232   .state-note text {
+    fill: black;
+    stroke: none;
+    font-size: 10px; }
+
+#mermaid-1593547588232 .stateLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #eee;
+  opacity: 0.5; }
+
+#mermaid-1593547588232 .stateLabel text {
+  fill: black;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1593547588232 .node circle.state-start {
+  fill: black;
+  stroke: black; }
+
+#mermaid-1593547588232 .node circle.state-end {
+  fill: black;
+  stroke: white;
+  stroke-width: 1.5; }
+
+#mermaid-1593547588232 #statediagram-barbEnd {
+  fill: #999; }
+
+#mermaid-1593547588232 .statediagram-cluster rect {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1px; }
+
+#mermaid-1593547588232 .statediagram-cluster rect.outer {
+  rx: 5px;
+  ry: 5px; }
+
+#mermaid-1593547588232 .statediagram-state .divider {
+  stroke: #999; }
+
+#mermaid-1593547588232 .statediagram-state .title-state {
+  rx: 5px;
+  ry: 5px; }
+
+#mermaid-1593547588232 .statediagram-cluster.statediagram-cluster .inner {
+  fill: white; }
+
+#mermaid-1593547588232 .statediagram-cluster.statediagram-cluster-alt .inner {
+  fill: #e0e0e0; }
+
+#mermaid-1593547588232 .statediagram-cluster .inner {
+  rx: 0;
+  ry: 0; }
+
+#mermaid-1593547588232 .statediagram-state rect.basic {
+  rx: 5px;
+  ry: 5px; }
+
+#mermaid-1593547588232 .statediagram-state rect.divider {
+  stroke-dasharray: 10,10;
+  fill: #efefef; }
+
+#mermaid-1593547588232 .note-edge {
+  stroke-dasharray: 5; }
+
+#mermaid-1593547588232 .statediagram-note rect {
+  fill: #ffa;
+  stroke: #777700;
+  stroke-width: 1px;
+  rx: 0;
+  ry: 0; }
+
+:root {
+  --mermaid-font-family: '"trebuchet ms", verdana, arial';
+  --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive; }
+
+#mermaid-1593547588232 .node rect { fill: red; }
+:root { --mermaid-font-family: "trebuchet ms", verdana, arial;}</style><style>#mermaid-1593547588232 {
+    color: rgb(0, 0, 0);
+    font: ;
+  }</style><g></g><g><line id="actor222" x1="75" y1="5" x2="75" y2="839" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" style="text-anchor: middle; font-family: &quot;Open-Sans&quot;, &quot;sans-serif&quot;;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">User</tspan></text></g><g><line id="actor223" x1="317.96665954589844" y1="5" x2="317.96665954589844" y2="839" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="242.96665954589844" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="317.96665954589844" y="32.5" style="text-anchor: middle; font-family: &quot;Open-Sans&quot;, &quot;sans-serif&quot;;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="317.96665954589844" dy="0">Atlas</tspan></text></g><g><line id="actor224" x1="517.9666595458984" y1="5" x2="517.9666595458984" y2="839" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="442.96665954589844" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="517.9666595458984" y="32.5" style="text-anchor: middle; font-family: &quot;Open-Sans&quot;, &quot;sans-serif&quot;;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="517.9666595458984" dy="0">Explorer</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" style="stroke-dasharray: 0px, 0px;" stroke-width="1px" d="M 9,2 V 6 L16,4 Z"></path><path fill="none" stroke="#000000" style="stroke-dasharray: 0px, 0px;" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7"></path></marker></defs><defs><marker id="sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto"><circle cx="15" cy="15" r="6"></circle></marker></defs><g><text x="196.48332977294922" y="93" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Export Project to XML</text><line x1="75" y1="100" x2="317.96665954589844" y2="100" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="75" y="104" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">1</text></g><g></g><g><text x="193.98332977294922" y="128" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">project.xml</text><line x1="312.96665954589844" y1="135" x2="75" y2="135" style="stroke-dasharray: 3px, 3px; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="312.96665954589844" y="139" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">2</text></g><g><text x="296.4833297729492" y="163" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Upload project.xml</text><line x1="75" y1="170" x2="517.9666595458984" y2="170" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="75" y="174" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">3</text></g><g></g><g><rect x="517.9666595458984" y="172" fill="#EDF2AE" stroke="#666" width="10" height="255" rx="0" ry="0" class="activation1"></rect></g><g><text x="527.9666595458984" y="223" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Process project.xml</text><path d="M 527.9666595458984,235 C 587.9666595458984,225 587.9666595458984,265 527.9666595458984,255" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></path><text x="527.9666595458984" y="239" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">4</text></g><g><text x="527.9666595458984" y="293" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Create network model</text><path d="M 527.9666595458984,305 C 587.9666595458984,295 587.9666595458984,335 527.9666595458984,325" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></path><text x="527.9666595458984" y="309" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">5</text></g><g><line x1="417.96665954589844" y1="180" x2="637.9666595458984" y2="180" class="loopLine"></line><line x1="637.9666595458984" y1="180" x2="637.9666595458984" y2="350" class="loopLine"></line><line x1="417.96665954589844" y1="350" x2="637.9666595458984" y2="350" class="loopLine"></line><line x1="417.96665954589844" y1="180" x2="417.96665954589844" y2="350" class="loopLine"></line><polygon points="417.96665954589844,180 467.96665954589844,180 467.96665954589844,193 459.56665954589846,200 417.96665954589844,200" class="labelBox"></polygon><text x="425.46665954589844" y="195" class="labelText"><tspan x="425.46665954589844">loop</tspan></text><text x="527.9666595458984" y="195" style="text-anchor: middle;" class="loopText"><tspan x="527.9666595458984">[ CreateNetwork ]</tspan></text></g><g><rect x="542.9666595458984" y="355" fill="#EDF2AE" stroke="#666" width="296.6166687011719" height="37" rx="0" ry="0" class="note"></rect><text x="691.2749938964844" y="373.5" class="noteText" style="text-anchor: middle; font-family: &quot;trebuchet ms&quot;, verdana, arial;" dominant-baseline="central" alignment-baseline="central"><tspan x="691.2749938964844">Stores the network in common state</tspan></text></g><g><text x="293.9833297729492" y="420" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Success message</text><line x1="512.9666595458984" y1="427" x2="75" y2="427" style="stroke-dasharray: 3px, 3px; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="512.9666595458984" y="431" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">6</text></g><g></g><g><text x="293.9833297729492" y="455" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Select analysis options</text><line x1="75" y1="462" x2="512.9666595458984" y2="462" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="75" y="466" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">7</text></g><g></g><g><text x="293.9833297729492" y="490" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Start analysis</text><line x1="75" y1="497" x2="512.9666595458984" y2="497" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="75" y="501" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">8</text></g><g><rect x="527.9666595458984" y="499" fill="#EDF2AE" stroke="#666" width="10" height="185" rx="0" ry="0" class="activation0"></rect></g><g><text x="537.9666595458984" y="550" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Run network analyses</text><path d="M 537.9666595458984,562 C 597.9666595458984,552 597.9666595458984,592 537.9666595458984,582" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></path><text x="537.9666595458984" y="566" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">9</text></g><g><line x1="427.96665954589844" y1="507" x2="647.9666595458984" y2="507" class="loopLine"></line><line x1="647.9666595458984" y1="507" x2="647.9666595458984" y2="607" class="loopLine"></line><line x1="427.96665954589844" y1="607" x2="647.9666595458984" y2="607" class="loopLine"></line><line x1="427.96665954589844" y1="507" x2="427.96665954589844" y2="607" class="loopLine"></line><polygon points="427.96665954589844,507 477.96665954589844,507 477.96665954589844,520 469.56665954589846,527 427.96665954589844,527" class="labelBox"></polygon><text x="435.46665954589844" y="522" class="labelText"><tspan x="435.46665954589844">loop</tspan></text><text x="537.9666595458984" y="522" style="text-anchor: middle;" class="loopText"><tspan x="537.9666595458984">[ RunAnalysis ]</tspan></text></g><g><rect x="542.9666595458984" y="612" fill="#EDF2AE" stroke="#666" width="351.79998779296875" height="37" rx="0" ry="0" class="note"></rect><text x="718.8666534423828" y="630.5" class="noteText" style="text-anchor: middle; font-family: &quot;trebuchet ms&quot;, verdana, arial;" dominant-baseline="central" alignment-baseline="central"><tspan x="718.8666534423828">Runs operations and measures graph library</tspan></text></g><g><text x="293.9833297729492" y="677" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Display results table</text><line x1="512.9666595458984" y1="684" x2="75" y2="684" style="stroke-dasharray: 3px, 3px; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="512.9666595458984" y="688" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">10</text></g><g><text x="293.9833297729492" y="712" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">Explore and download results</text><line x1="75" y1="719" x2="512.9666595458984" y2="719" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="75" y="723" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">11</text></g><g></g><g><rect x="532.9666595458984" y="721" fill="#EDF2AE" stroke="#666" width="10" height="33" rx="0" ry="0" class="activation1"></rect></g><g><text x="293.9833297729492" y="747" style="font-family: &quot;trebuchet ms&quot;, verdana, arial; text-anchor: middle;" class="messageText">data.csv</text><line x1="512.9666595458984" y1="754" x2="75" y2="754" style="stroke-dasharray: 3px, 3px; fill: none;" class="messageLine1" stroke-width="2" stroke="black" marker-end="url(#arrowhead)" marker-start="url(#sequencenumber)"></line><text x="512.9666595458984" y="758" font-family="sans-serif" font-size="12px" text-anchor="middle" textLength="16px" class="sequenceNumber">12</text></g><g><rect x="0" y="774" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="806.5" style="text-anchor: middle; font-family: &quot;Open-Sans&quot;, &quot;sans-serif&quot;;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="75" dy="0">User</tspan></text></g><g><rect x="242.96665954589844" y="774" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="317.96665954589844" y="806.5" style="text-anchor: middle; font-family: &quot;Open-Sans&quot;, &quot;sans-serif&quot;;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="317.96665954589844" dy="0">Atlas</tspan></text></g><g><rect x="442.96665954589844" y="774" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="517.9666595458984" y="806.5" style="text-anchor: middle; font-family: &quot;Open-Sans&quot;, &quot;sans-serif&quot;;" dominant-baseline="central" alignment-baseline="central" class="actor"><tspan x="517.9666595458984" dy="0">Explorer</tspan></text></g></svg>
