@@ -1,12 +1,20 @@
 import cytoscape from "cytoscape";
 import {
-  get, join, size, isEmpty
+  get, join, size, isEmpty, cloneDeep
 } from "lodash";
+
+import config from "@/assets/graph-config";
+import style from "@/assets/graph-config-styles"
+
+// config.style = style.styleShowCodes;
+config.style = style.styleShowCodeGroups;
 
 // initial state
 const state = () => ({
   elements: [],
-  model: null
+  model: null,
+  elementsToVisualize: [],
+  cytoscapeConfig: cloneDeep(config)
 })
 
 // getters
@@ -23,12 +31,11 @@ const getters = {
     const setIds1 = join(sets1.map(setId => `#${setId}`), ", ");
     const setIds2 = join(sets2.map(setId => `#${setId}`), ", ");
 
-    let neighbourhood1 = cy.$(setIds1).neighborhood();
-    let neighbourhood2 = cy.$(setIds2).neighborhood();
+    let neighbourhood1 = cy.$(setIds1).closedNeighborhood();
+    let neighbourhood2 = cy.$(setIds2).closedNeighborhood();
 
-    console.log(join(neighbourhood1.map(el => `#${el.data("id")}`), ", "));
-    console.log(join(neighbourhood2.map(el => `#${el.data("id")}`), ", "));
-    
+    // console.log(join(neighbourhood1.map(el => `#${el.data("id")}`), ", "));
+    // console.log(join(neighbourhood2.map(el => `#${el.data("id")}`), ", "));
 
     let result;
 
@@ -57,6 +64,34 @@ const getters = {
 
       return result;
     }
+
+    const nodes = [];
+    const edges = [];
+
+    result.forEach((el) => {
+      if (el.group() == "nodes") {
+        nodes.push({
+          data: {
+            id: el.id(),
+            name: el.data("name")
+          },
+          group: el.group(),
+          classes: el.classes()
+        })
+      } else if (el.group() == "edges") {
+        edges.push({
+          data: {
+            id: el.id(),
+            source: el.source().id(),
+            target: el.target().id()
+          },
+          group: el.group(),
+          classes: el.classes()
+        })
+      }
+    });
+
+    state.elementsToVisualize = nodes.concat(edges);
     
     const ccn = cy.$(ids).closenessCentralityNormalized({
       directed: false
@@ -91,6 +126,12 @@ const getters = {
 const actions = {
   initializeModel(context) {
     context.commit('initializeModel');
+  },
+  switchShowCodes(context, value) {
+    context.commit('switchShowCodes', value);
+  },
+  switchShowCodeGroups(context, value) {
+    context.commit('switchShowCodeGroups', value);
   }
 }
 
@@ -103,6 +144,20 @@ const mutations = {
     state.model = cytoscape({
       elements: state.elements,
     });
+  },
+  switchShowCodes(state, value) {
+    if(value) {
+      state.cytoscapeConfig.style = style.styleShowCodes;
+    } else {
+      state.cytoscapeConfig.style = style.styleCodeGroups;
+    }
+  },
+  switchShowCodeGroups(state, value) {
+    if (value) {
+      state.cytoscapeConfig.style = style.styleCodeGroups;
+    } else {
+      state.cytoscapeConfig.style = style.styleShowCodes;
+    }
   }
 }
 

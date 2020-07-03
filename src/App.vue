@@ -20,6 +20,8 @@
           <hr class="navbar-divider">
           <router-link class="navbar-item" to="/analysis">Network analysis</router-link>
           <hr class="navbar-divider">
+          <router-link class="navbar-item" to="/visualization">Network visualization</router-link>
+          <hr class="navbar-divider">
           <router-link class="navbar-item" to="/about">About</router-link>
         </template>
       </b-navbar>

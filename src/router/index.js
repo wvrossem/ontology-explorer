@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import NetworkAnalysis from '../views/NetworkAnalysis.vue'
+import NetworkVisualization from '../views/NetworkVisualization.vue'
 import Upload from '../views/Upload.vue'
 
 Vue.use(VueRouter)
@@ -10,6 +11,11 @@ Vue.use(VueRouter)
     path: '/analysis',
     name: 'Network Analysis',
     component: NetworkAnalysis
+  },
+  {
+    path: '/visualization',
+    name: 'Network Visualization',
+    component: NetworkVisualization
   },
   {
     path: '/upload',
