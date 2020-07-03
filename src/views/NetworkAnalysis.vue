@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section column is-10 is-offset-1">
     <div class="container">
       <b-message title="info" type="is-info" has-icon v-if="nrOfElements > 0">
         <div class="content">
@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import Graph from "@/components/Graph.vue";
 import NodeTable from "@/components/NodeTable.vue";
 import AnalysisOptions from "@/components/AnalysisOptions.vue";
 import { mapState, mapGetters } from "vuex";
