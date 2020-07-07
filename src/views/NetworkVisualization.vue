@@ -50,7 +50,7 @@
           </nav>
         </div>
         <div class="column">
-          <Graph />
+          <Graph ref="graphRef" />
         </div>
       </div>
     </div>
@@ -84,10 +84,10 @@ export default {
       'network/switchShowCodeGroups',
     ]),
     onChangeShowCodes(value) {
-      this['network/switchShowCodes'](value);
+      this.$refs.graphRef.switchShowCodes(value);
     },
     onChangeShowCodeGroups(value) {
-      this['network/switchShowCodeGroups'](value);
+      this.$refs.graphRef.switchShowCodeGroups(value);
     }
   }
 };

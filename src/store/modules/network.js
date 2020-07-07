@@ -127,12 +127,6 @@ const actions = {
   initializeModel(context) {
     context.commit('initializeModel');
   },
-  switchShowCodes(context, value) {
-    context.commit('switchShowCodes', value);
-  },
-  switchShowCodeGroups(context, value) {
-    context.commit('switchShowCodeGroups', value);
-  }
 }
 
 // mutations
@@ -145,20 +139,6 @@ const mutations = {
       elements: state.elements,
     });
   },
-  switchShowCodes(state, value) {
-    if(value) {
-      state.cytoscapeConfig.style = style.styleShowCodes;
-    } else {
-      state.cytoscapeConfig.style = style.styleCodeGroups;
-    }
-  },
-  switchShowCodeGroups(state, value) {
-    if (value) {
-      state.cytoscapeConfig.style = style.styleCodeGroups;
-    } else {
-      state.cytoscapeConfig.style = style.styleShowCodes;
-    }
-  }
 }
 
 export default {

@@ -42,7 +42,6 @@ const styles = {
         "z-index": 3,
         "shape": "diamond",
         "background-color": "#7d90ae",
-        // "visibility": "visible",
         "display": "none",
         "width": "30",
         "height": "30"
@@ -55,44 +54,32 @@ const styles = {
         "label": "data(name)",
         "opacity": 0.5,
         "z-index": 1,
-        // "visibility": "visible",
-        // "display": "none",
+        "display": "element"
       }
     },
-
-    // {
-    //   selector: ".code:active",
-    //   style: {
-    //     "label": "data(name)",
-    //   }
-    // },
 
     {
       selector: ".code-document-link",
       style: {
-        // "visibility": "hidden"
         "display": "none",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        // "visibility": "visible"
         "display": "none"
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
@@ -101,7 +88,6 @@ const styles = {
         "label": "",
         "z-index": 2,
         "opacity": 0.3,
-        // "visibility": "hidden",
         "display": "none",
       }
     },
@@ -126,10 +112,9 @@ const styles = {
     {
       selector: ".code",
       style: {
-        // "label": "",
+        "label": "data(name)",
         "opacity": 0.3,
         "z-index": 1,
-        // "visibility": "visible",
         "display": "none",
       }
     },
@@ -160,50 +145,34 @@ const styles = {
         "z-index": 3,
         "shape": "diamond",
         "background-color": "#7d90ae",
-        "visibility": "visible",
-        // "display": "none",
+        "display": "element",
         "width": "30",
         "height": "30"
       }
     },
 
     {
-      selector: ".code",
-      style: {
-        "label": "data(name)",
-        "opacity": 0.5,
-        "z-index": 1,
-        // "visibility": "visible",
-        // "display": "none",
-      }
-    },
-
-    {
       selector: ".code-document-link",
       style: {
-        // "visibility": "hidden"
-        "display": "none",
+        "display": "element",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
@@ -212,7 +181,6 @@ const styles = {
         "label": "",
         "z-index": 2,
         "opacity": 0.3,
-        // "visibility": "hidden",
         "display": "none",
       }
     },
@@ -237,11 +205,10 @@ const styles = {
     {
       selector: ".code",
       style: {
-        // "label": "",
-        "opacity": 0.3,
+        "label": "data(name)",
+        "opacity": 0.5,
         "z-index": 1,
-        // "visibility": "visible",
-        "display": "none",
+        "display": "element",
       }
     },
 
@@ -271,50 +238,34 @@ const styles = {
         "z-index": 3,
         "shape": "diamond",
         "background-color": "#7d90ae",
-        "visibility": "visible",
-        // "display": "none",
+        "display": "element",
         "width": "30",
         "height": "30"
       }
     },
 
     {
-      selector: ".code",
-      style: {
-        "label": "data(name)",
-        "opacity": 0.5,
-        "z-index": 1,
-        // "visibility": "visible",
-        // "display": "none",
-      }
-    },
-
-    {
       selector: ".code-document-link",
       style: {
-        // "visibility": "hidden"
         "display": "none",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "visibility": "visible"
-        // "display": "none"
+        "display": "element"
       }
     },
     {
@@ -323,7 +274,6 @@ const styles = {
         "label": "",
         "z-index": 2,
         "opacity": 0.3,
-        // "visibility": "hidden",
         "display": "none",
       }
     },

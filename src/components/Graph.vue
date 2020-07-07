@@ -17,10 +17,13 @@
 </template>
 
 <script>
+import styles from "@/assets/graph-config-styles";
+
 import { mapState, mapGetters } from "vuex";
 import get from 'lodash/get';
 import head from 'lodash/head';
 import join from 'lodash/join';
+import isBoolean from 'lodash/isBoolean';
 
 import cola from "cytoscape-cola";
 import coseBilkent from "cytoscape-cose-bilkent";
@@ -33,8 +36,9 @@ export const cyPromise = new Promise(resolve => (resolveCy = resolve));
 export default {
   data() {
     return {
-      prevSelected
-    };
+      showCodes: true,
+      showCodeGroups: false
+    }
   },
   computed: {
     ...mapState({
@@ -55,10 +59,30 @@ export default {
     },
     async afterCreated(cy) {
       await cy;
-
       cy.layout(this.config.layout).run();
-
       resolveCy(cy);
+    },
+    switchShowCodes(value) {
+      const cy = this.$refs.cyRef.instance;
+      this.showCodes = value;
+      if (this.showCodes && !this.showCodeGroups) {
+        cy.style(styles.styleShowCodes);
+      } else if (!this.showCodes && this.showCodeGroups) {
+        cy.style(styles.styleShowCodeGroups);
+      } else {
+        cy.style(styles.styleShowAll);
+      }
+    },
+    switchShowCodeGroups(value) {
+      const cy = this.$refs.cyRef.instance;
+      this.showCodeGroups = value;
+      if (this.showCodeGroups && !this.showCodes) {
+        cy.style(styles.styleShowCodeGroups);
+      } else if (!this.showCodeGroups && this.showCodes) {
+        cy.style(styles.styleShowCodes);
+      } else {
+        cy.style(styles.styleShowAll);
+      }
     }
   }
 };
