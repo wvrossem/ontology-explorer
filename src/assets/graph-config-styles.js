@@ -1,307 +1,182 @@
+const defaultStyles = [{
+    selector: "node",
+    style: {
+      "label": "data(name)",
+    }
+  },
+  {
+    selector: "edge",
+    style: {
+      "width": 1,
+      "line-color": "#ccc",
+      "curve-style": "haystack"
+    }
+  },
+
+  {
+    selector: ".code",
+    style: {
+      "label": "data(name)",
+      "opacity": 0.3,
+      "z-index": 1,
+    }
+  },
+
+  {
+    selector: ".document-group",
+    style: {
+      "label": "data(name)",
+      "text-opacity": 1,
+      "font-weight": "bold",
+      "text-valign": "center",
+      "text-background-color": "white",
+      "text-border-style": "solid",
+      "text-border-color": "black",
+      "z-index": 5,
+      "background-opacity": 1,
+      "shape": "ellipse",
+      "background-color": "#E39393",
+      padding: "50px"
+    }
+  },
+
+  {
+    selector: ".code-group",
+    style: {
+      "label": "data(name)",
+      "z-index": 3,
+      "shape": "diamond",
+      "background-color": "#7d90ae",
+      // "padding": "5px"
+      "width": "30",
+      "height": "30"
+    }
+  },
+  {
+    selector: ".document",
+    style: {
+      "label": "",
+      "z-index": 2,
+      "opacity": 0.3,
+      "display": "none",
+    }
+  },
+  {
+    selector: ".code-document-link",
+    style: {
+      "display": "none",
+    }
+  }
+]
+
+const selectedStyle = {
+  selector: ".selected",
+  style: {
+    "label": "data(name)",
+    "visibility": "visible",
+    "opacity": 1,
+  }
+}
+
 const styles = {
-  styleShowCodes: [{
-      selector: "node",
-      style: {
-        "label": "data(name)",
-      }
-    },
-
-    {
-      selector: "edge",
-      style: {
-        "width": 1,
-        "line-color": "#ccc",
-        "target-arrow-color": "#ccc",
-        "target-arrow-shape": "triangle",
-      }
-    },
-
-    {
-      selector: ".document-group",
-      style: {
-        "label": "data(name)",
-        "text-opacity": 1,
-        "font-weight": "bold",
-        "text-valign": "center",
-        "text-background-color": "white",
-        "text-border-style": "solid",
-        "text-border-color": "black",
-        "z-index": 0,
-        "background-opacity": 0.5,
-        "shape": "ellipse",
-        "background-color": "#D86666",
-        "width": "100",
-        "height": "100"
-      }
-    },
-
-    {
-      selector: ".code-group",
-      style: {
-        "label": "data(name)",
-        "z-index": 3,
-        "shape": "diamond",
-        "background-color": "#7d90ae",
-        "display": "none",
-        "width": "30",
-        "height": "30"
-      }
-    },
-
+  styleShowCodes: [
+    ...defaultStyles,
     {
       selector: ".code",
       style: {
-        "label": "data(name)",
-        "opacity": 0.5,
-        "z-index": 1,
-        "display": "element"
+        "visibility": "visible",
       }
-    },
-
-    {
-      selector: ".code-document-link",
+    }, {
+      selector: ".code-group",
       style: {
-        "display": "none",
+        "visibility": "hidden",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        "display": "none"
+        "visibility": "hidden",
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "display": "element"
+        "visibility": "visible",
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "display": "element"
+        "visibility": "hidden",
       }
     },
-    {
-      selector: ".document",
-      style: {
-        "label": "",
-        "z-index": 2,
-        "opacity": 0.3,
-        "display": "none",
-      }
-    },
-    {
-      selector: ".selected",
-      style: {
-        "display": "element",
-        "opacity": 1,
-      }
-    }
+    selectedStyle
   ],
-  styleShowCodeGroups: [{
-      selector: "node",
-      style: {
-        "label": "data(name)",
-      }
-    },
-
-    {
-      selector: "edge",
-      style: {
-        "width": 1,
-        "line-color": "#ccc",
-        "target-arrow-color": "#ccc",
-        "target-arrow-shape": "triangle",
-      }
-    },
-
+  styleShowCodeGroups: [
+    ...defaultStyles,
     {
       selector: ".code",
       style: {
-        "label": "data(name)",
-        "opacity": 0.3,
-        "z-index": 1,
-        "display": "none",
+        "visibility": "hidden",
       }
-    },
-
-    {
-      selector: ".document-group",
-      style: {
-        "label": "data(name)",
-        "text-opacity": 1,
-        "font-weight": "bold",
-        "text-valign": "center",
-        "text-background-color": "white",
-        "text-border-style": "solid",
-        "text-border-color": "black",
-        "z-index": 0,
-        "background-opacity": 0.5,
-        "shape": "ellipse",
-        "background-color": "#D86666",
-        "width": "100",
-        "height": "100"
-      }
-    },
-
-    {
+    }, {
       selector: ".code-group",
       style: {
-        "label": "data(name)",
-        "z-index": 3,
-        "shape": "diamond",
-        "background-color": "#7d90ae",
-        "display": "element",
-        "width": "30",
-        "height": "30"
-      }
-    },
-
-    {
-      selector: ".code-document-link",
-      style: {
-        "display": "element",
+        "visibility": "visible",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        "display": "element"
+        "visibility": "hidden",
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "display": "element"
+        "visibility": "hidden",
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "display": "element"
+        "visibility": "visible",
       }
     },
-    {
-      selector: ".document",
-      style: {
-        "label": "",
-        "z-index": 2,
-        "opacity": 0.3,
-        "display": "none",
-      }
-    },
-    {
-      selector: ".selected",
-      style: {
-        "display": "element",
-        "opacity": 1,
-      }
-    }
+    selectedStyle
   ],
-  styleShowAll: [{
-      selector: "node",
-      style: {
-        "label": "data(name)",
-      }
-    },
-
-    {
-      selector: "edge",
-      style: {
-        "width": 1,
-        "line-color": "#ccc",
-        "target-arrow-color": "#ccc",
-        "target-arrow-shape": "triangle",
-      }
-    },
-
+  styleShowAll: [
+    ...defaultStyles,
     {
       selector: ".code",
       style: {
-        "label": "data(name)",
-        "opacity": 0.5,
-        "z-index": 1,
-        "display": "element",
+        "visibility": "visible",
       }
-    },
-
-    {
-      selector: ".document-group",
-      style: {
-        "label": "data(name)",
-        "text-opacity": 1,
-        "font-weight": "bold",
-        "text-valign": "center",
-        "text-background-color": "white",
-        "text-border-style": "solid",
-        "text-border-color": "black",
-        "z-index": 0,
-        "background-opacity": 0.5,
-        "shape": "ellipse",
-        "background-color": "#D86666",
-        "width": "100",
-        "height": "100"
-      }
-    },
-
-    {
+    }, {
       selector: ".code-group",
       style: {
-        "label": "data(name)",
-        "z-index": 3,
-        "shape": "diamond",
-        "background-color": "#7d90ae",
-        "display": "element",
-        "width": "30",
-        "height": "30"
-      }
-    },
-
-    {
-      selector: ".code-document-link",
-      style: {
-        "display": "none",
+        "visibility": "visible",
       }
     },
     {
       selector: ".code-group-link",
       style: {
-        "display": "element",
-        "opacity": 0.3,
-        "z-index": 1,
+        "visibility": "visible",
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "display": "element",
-        "opacity": 0.3,
-        "z-index": 1,
+        "visibility": "visible",
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "display": "none"
+        "visibility": "visible",
       }
     },
-    {
-      selector: ".document",
-      style: {
-        "label": "",
-        "z-index": 2,
-        "opacity": 0.3,
-        "display": "none",
-      }
-    },
-    {
-      selector: ".selected",
-      style: {
-        "display": "element",
-        "opacity": 1,
-      }
-    }
+    selectedStyle
   ],
 }
 

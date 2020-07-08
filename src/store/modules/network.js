@@ -6,7 +6,6 @@ import {
 import config from "@/assets/graph-config";
 import style from "@/assets/graph-config-styles"
 
-// config.style = style.styleShowCodes;
 config.style = style.styleShowCodeGroups;
 
 // initial state
