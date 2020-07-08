@@ -66,7 +66,7 @@ export default {
     return {
       selectedSets1: [],
       selectedSets2: [],
-      selectedOperation: "intersection",
+      selectedOperation: "union",
       showCodes: true,
       showCategoryGroups: false,
     }
