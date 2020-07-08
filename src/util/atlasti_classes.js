@@ -43,6 +43,10 @@ class Documents {
   getDocument(documentId) {
     return this.documents.get(documentId);
   }
+
+  size() {
+    return this.documents.size;
+  }
 }
 
 class Quotation {
@@ -69,6 +73,10 @@ class Quotations {
 
   getQuotation(quotationId) {
     return this.quotations.get(quotationId);
+  }
+
+  size() {
+    return this.quotations.size;
   }
 }
 
@@ -105,6 +113,10 @@ class Codes {
   getCode(codeId) {
     return this.codes.get(codeId);
   }
+
+  size() {
+    return this.codes.size;
+  }
 }
 
 class CodeGroup {
@@ -130,6 +142,10 @@ class CodeGroups {
     } else {
       throw "Add codeGroup is not of type CodeGroup!";
     }
+  }
+
+  size() {
+    return this.codeGroups.size;
   }
 }
 
@@ -160,6 +176,10 @@ class DocumentGroups {
     } else {
       throw "Add documentGroup is not of type DocumentGroup!";
     }
+  }
+
+  size() {
+    return this.documentGroups.size;
   }
 }
 

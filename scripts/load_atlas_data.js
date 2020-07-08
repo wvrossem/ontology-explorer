@@ -165,8 +165,8 @@ jsonObj.storedHU.families.primDocFamilies.primDocFamily.forEach(element => {
 jsonObj.storedHU.links.objectSegmentLinks.codings.iLink.forEach(element => {
   const code = codes.getCode(element["@_obj"]);
   const quotation = quotations.getQuotation(element["@_qRef"]);
-  
-  
+
+
   if (!isNil(code) && !isNil(quotation)) {
     code.linkDocument(quotation.linkedDocumentId);
     code.linkQuotation(quotation.id);
@@ -273,7 +273,7 @@ function createCodeToDocGroupsLinks(codesObj) {
   codesObj.codes.forEach((code) => {
     code.linkedDocumentIds.forEach((documentId) => {
       const document = documents.getDocument(documentId);
-      
+
       if (!isEmpty(document.linkedDocumentGroupIds)) {
         document.linkedDocumentGroupIds.forEach((docGroupId) => {
           const edgeId = code.id + "_" + docGroupId;
@@ -313,24 +313,26 @@ function createCodeGroupsToDocGroupsLinks(codeGroupsObj) {
   })
 }
 
-createDocumentGroupNodes(docGroups);
-createDocumentNodes(documents);
-createCodeGroupNodes(codeGroups);
-createCodeNodes(codes);
-createDocumentLinks(codes);
-createDocumentGroupLinks(docGroups);
-createCodeGroupLinks(codeGroups);
-createCodeToDocGroupsLinks(codes);
-createCodeGroupsToDocGroupsLinks(codeGroups);
+function name(atlasXmlFilePath) {
+  createDocumentGroupNodes(docGroups);
+  createDocumentNodes(documents);
+  createCodeGroupNodes(codeGroups);
+  createCodeNodes(codes);
+  createDocumentLinks(codes);
+  createDocumentGroupLinks(docGroups);
+  createCodeGroupLinks(codeGroups);
+  createCodeToDocGroupsLinks(codes);
+  createCodeGroupsToDocGroupsLinks(codeGroups);
 
-let elements = nodes.concat(edges);
+  let elements = nodes.concat(edges);
 
-elements = elements.map((element) => element.toJSON());
+  elements = elements.map((element) => element.toJSON());
 
-let fileContents = `
+  let fileContents = `
 const elements = ${JSON.stringify( elements )};
 
 export default elements;
 `;
 
-fs.writeFileSync("src/assets/graph_data_atlas_V2.js", fileContents);
+  fs.writeFileSync("src/assets/graph_data_atlas_V2.js", fileContents);
+}

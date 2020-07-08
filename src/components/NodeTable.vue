@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-table 
       :paginated="true"
       :per-page="10"
