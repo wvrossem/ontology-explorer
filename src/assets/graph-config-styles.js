@@ -91,6 +91,13 @@ const styles = {
         "display": "none",
       }
     },
+    {
+      selector: ".selected",
+      style: {
+        "display": "element",
+        "opacity": 1,
+      }
+    }
   ],
   styleShowCodeGroups: [{
       selector: "node",
@@ -184,6 +191,13 @@ const styles = {
         "display": "none",
       }
     },
+    {
+      selector: ".selected",
+      style: {
+        "display": "element",
+        "opacity": 1,
+      }
+    }
   ],
   styleShowAll: [{
       selector: "node",
@@ -253,19 +267,23 @@ const styles = {
     {
       selector: ".code-group-link",
       style: {
-        "display": "element"
+        "display": "element",
+        "opacity": 0.3,
+        "z-index": 1,
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "display": "element"
+        "display": "element",
+        "opacity": 0.3,
+        "z-index": 1,
       }
     },
     {
       selector: ".code-group-document-group-link",
       style: {
-        "display": "element"
+        "display": "none"
       }
     },
     {
@@ -277,6 +295,13 @@ const styles = {
         "display": "none",
       }
     },
+    {
+      selector: ".selected",
+      style: {
+        "display": "element",
+        "opacity": 1,
+      }
+    }
   ],
 }
 

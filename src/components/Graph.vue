@@ -36,8 +36,9 @@ export const cyPromise = new Promise(resolve => (resolveCy = resolve));
 export default {
   data() {
     return {
-      showCodes: true,
-      showCodeGroups: false
+      prevSelected: [],
+      showCodes: false,
+      showCodeGroups: true
     }
   },
   computed: {
@@ -49,7 +50,23 @@ export default {
   props: {},
   methods: {
     addNode(event) {},
-    clickNode(event, data) {},
+    clickNode(event, data) {
+      let name = event.target.data().name;
+      let node = event.target.data();
+
+      const cy = this.$refs.cyRef.instance;
+
+      if (this.prevSelected.length > 0) {
+        cy.$(this.prevSelected).toggleClass("selected");
+      }
+
+      let neighborhood = cy.$(`#${node.id}`).closedNeighborhood();
+
+      let ids = neighborhood.map(el => `#${el.id()}`).join(', ');
+      cy.$(ids).toggleClass("selected");
+
+      this.prevSelected = ids;
+    },
     updateNode(event) {},
     preConfig(cytoscape) {
       cytoscape.use(cola);

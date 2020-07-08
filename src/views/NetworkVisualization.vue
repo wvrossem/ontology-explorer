@@ -67,8 +67,8 @@ export default {
   },
   data() {
     return {
-      showCodes: true,
-      showCodeGroups: false
+      showCodes: false,
+      showCodeGroups: true
     }
   },
   computed: {

@@ -34,6 +34,25 @@ const getters = {
     let neighbourhood1 = cy.$(setIds1).closedNeighborhood();
     let neighbourhood2 = cy.$(setIds2).closedNeighborhood();
 
+    // Get the "extended neighbourhood" for both set ids
+    // This includes the code - code groups links
+    const neighbourhood1ExtendedCodes = neighbourhood1.filter(".code").closedNeighborhood();
+    const neighbourhood1ExtendedCodeGroups = neighbourhood1.filter(".code-group").closedNeighborhood();
+    const neighbourhood1Extended = neighbourhood1ExtendedCodes.intersection(neighbourhood1ExtendedCodeGroups).filter((el => {
+      return !el.hasClass("document-group");
+    }));
+    const neighbourhood2ExtendedCodes = neighbourhood2.filter(".code").closedNeighborhood();
+    const neighbourhood2ExtendedCodeGroups = neighbourhood2.filter(".code-group").closedNeighborhood();
+    const neighbourhood2Extended = neighbourhood2ExtendedCodes.intersection(neighbourhood2ExtendedCodeGroups).filter((el => {
+      return !el.hasClass("document-group");
+    }));
+    neighbourhood1 = neighbourhood1.union(neighbourhood1Extended).filter((el => {
+      return !el.hasClass("code-document-group-link");
+    }));
+    neighbourhood2 = neighbourhood2.union(neighbourhood2Extended).filter((el => {
+      return !el.hasClass("code-document-group-link");
+    }));
+
     // console.log(join(neighbourhood1.map(el => `#${el.data("id")}`), ", "));
     // console.log(join(neighbourhood2.map(el => `#${el.data("id")}`), ", "));
 
