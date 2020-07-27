@@ -12,7 +12,8 @@
 
     <b-button icon-left="download">
       <download-csv
-        :data = "data">
+        :data = "data"
+        separator-excel=true>
         Download Data
       </download-csv>
     </b-button>
