@@ -66,7 +66,10 @@ function processCode(code) {
 
 function processCodeGroup(codeGroup) {
   if (!Array.isArray(codeGroup.item)) {
-    return;
+    const newCodeGroup = new atlas.CodeGroup(codeGroup["@_id"], codeGroup["@_name"]);
+    newCodeGroup.linkCode(codeGroup.item["@_id"]);
+    
+    return newCodeGroup;
   }
 
   const linkedCodes = codeGroup.item.map(code => {
