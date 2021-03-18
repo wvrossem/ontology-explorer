@@ -124,10 +124,15 @@ class CodeGroup {
     this.id = id;
     this.name = name; 
     this.linkedCodeIds = new Set();
+    this.linkedCodeGroupIds = new Map();
   }
 
   linkCode(codeId) {
     this.linkedCodeIds.add(codeId);
+  }
+
+  linkCodeGroup(codeGroupId, weight = 1) {
+    this.linkedCodeGroupIds.set(codeGroupId, weight);
   }
 }
 
@@ -142,6 +147,10 @@ class CodeGroups {
     } else {
       throw "Add codeGroup is not of type CodeGroup!";
     }
+  }
+
+  getCodeGroupsMap () {
+    return this.codeGroups;
   }
 
   size() {

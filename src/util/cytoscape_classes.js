@@ -9,6 +9,7 @@ const NODE_TYPES = {
 const LINK_TYPES = {
   CODE_DOCUMENT_LINK: "code-document-link",
   CODE_GROUP_LINK: "code-group-link",
+  CODE_GROUP_DISTANCE_LINK: "code-group-distance-link",
   CODE_DOCUMENT_GROUP_LINK: "code-document-group-link",
   DOC_GROUP_LINK: "doc-group-link",
   CODE_GROUP_DOCUMENT_GROUP_LINK: "code-group-document-group-link"

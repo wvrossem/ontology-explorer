@@ -66,7 +66,13 @@ const defaultStyles = [{
     style: {
       "display": "none",
     }
-  }
+  },
+  {
+    selector: ".code-group-distance-link",
+    style: {
+      "visibility": "hidden",
+    }
+  },
 ]
 
 const selectedStyle = {
@@ -84,7 +90,8 @@ const styles = {
     {
       selector: ".code",
       style: {
-        "visibility": "visible",
+        // "visibility": "visible",
+        "display": "none",
       }
     }, {
       selector: ".code-group",
@@ -101,7 +108,8 @@ const styles = {
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "visible",
+        // "visibility": "visible",
+        "display": "none",
       }
     },
     {
@@ -117,7 +125,8 @@ const styles = {
     {
       selector: ".code",
       style: {
-        "visibility": "hidden",
+        // "visibility": "hidden",
+        "display": "none",
       }
     }, {
       selector: ".code-group",
@@ -128,13 +137,15 @@ const styles = {
     {
       selector: ".code-group-link",
       style: {
-        "visibility": "hidden",
+        // "visibility": "hidden",
+        "display": "none",
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "hidden",
+        // "visibility": "hidden",
+        "display": "none",
       }
     },
     {
@@ -150,7 +161,8 @@ const styles = {
     {
       selector: ".code",
       style: {
-        "visibility": "visible",
+        // "visibility": "visible",
+        "display": "none",
       }
     }, {
       selector: ".code-group",
@@ -161,13 +173,15 @@ const styles = {
     {
       selector: ".code-group-link",
       style: {
-        "visibility": "visible",
+        // "visibility": "visible",
+        "display": "none",
       }
     },
     {
       selector: ".code-document-group-link",
       style: {
-        "visibility": "visible",
+        // "visibility": "visible",
+        "display": "none",
       }
     },
     {

@@ -71,6 +71,11 @@ function createCodeGroupLinks(codeGroupsObj) {
       const edgeId = codeGroup.id + "_" + linkedCodeId
       addEdgeLink(edgeId, codeGroup.id, linkedCodeId, [cyto.LINK_TYPES.CODE_GROUP_LINK])
     });
+
+    codeGroup.linkedCodeGroupIds.forEach((weight, linkedCodeGroupId) => {
+      const edgeId = codeGroup.id + "_" + linkedCodeGroupId
+      addEdgeLink(edgeId, codeGroup.id, linkedCodeGroupId, [cyto.LINK_TYPES.CODE_GROUP_DISTANCE_LINK])
+    });
   });
 }
 
