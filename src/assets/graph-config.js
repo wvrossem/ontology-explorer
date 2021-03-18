@@ -1,30 +1,49 @@
 const coseLayout = {
   name: 'cose',
-  idealEdgeLength: 50,
-  nodeOverlap: 20,
-  refresh: 20,
+  // Whether to animate while running the layout
+  animate: true,
+  // Number of iterations between consecutive screen positions update (0 -> only updated on the end)
+  refresh: 4,
+  // Whether to fit the network view after when done
   fit: true,
+  // Padding on fit
   padding: 30,
-  randomize: false,
-  componentSpacing: 100,
-  nodeRepulsion: 400000,
+  // Constrain layout bounds; { x1, y1, x2, y2 } or { x1, y1, w, h }
+  boundingBox: undefined,
+  // Whether to randomize node positions on the beginning
+  randomize: true,
+  // Whether to use the JS console to print debug messages
+  debug: false,
+  // Node repulsion (non overlapping) multiplier
+  nodeRepulsion: 500000,
+  // Node repulsion (overlapping) multiplier
+  nodeOverlap: 10,
+  // Ideal edge (non nested) length
+  idealEdgeLength: 10,
+  // Divisor to compute edge forces
   edgeElasticity: 100,
+  // Nesting factor (multiplier) to compute ideal edge length for nested edges
   nestingFactor: 5,
-  gravity: 80,
-  numIter: 5000,
-  initialTemp: 200,
+  // Gravity force (constant)
+  gravity: 150,
+  // Maximum number of iterations to perform
+  numIter: 10000,
+  // Initial temperature (maximum node displacement)
+  initialTemp: 300,
+  // Cooling factor (how the temperature is reduced between consecutive iterations
   coolingFactor: 0.95,
-  minTemp: 1.0
+  // Lower temperature threshold (below this point the layout will end)
+  minTemp: 0.001
 }
 
 const colaLayout = {
   name: 'cola',
   animate: true, // whether to show the layout as it's running
-  refresh: 10, // number of ticks per frame; higher is faster but more jerky
-  maxSimulationTime: 50000, // max length in ms to run the layout
+  refresh: 5, // number of ticks per frame; higher is faster but more jerky
+  maxSimulationTime: 10000, // max length in ms to run the layout
   ungrabifyWhileSimulating: true, // so you can't drag nodes during layout
   fit: false, // on every layout reposition of nodes, fit the viewport
-  padding: 50, // padding around the simulation
+  padding: 30, // padding around the simulation
   boundingBox: undefined, // constrain layout bounds; { x1, y1, x2, y2 } or { x1, y1, w, h }
   nodeDimensionsIncludeLabels: false, // whether labels should be included in determining the space used by a node
 
@@ -38,10 +57,10 @@ const colaLayout = {
   handleDisconnected: true, // if true, avoids disconnected components from overlapping
   convergenceThreshold: 0.01, // when the alpha value (system energy) falls below this value, the layout stops
   nodeSpacing: function (node) {
-    return 10;
+    return 30;
   }, // extra spacing around nodes
   flow: undefined, // use DAG/tree flow layout if specified, e.g. { axis: 'y', minSeparation: 30 }
-  alignment: undefined, // relative alignment constraints on nodes, e.g. function( node ){ return { x: 0, y: 1 } }
+  alignment: undefined, // relative alignment constraints on nodes, e.g. {vertical: [[{node: node1, offset: 0}, {node: node2, offset: 5}]], horizontal: [[{node: node3}, {node: node4}], [{node: node5}, {node: node6}]]}
   gapInequalities: undefined, // list of inequality constraints for the gap between the nodes, e.g. [{"axis":"y", "left":node1, "right":node2, "gap":25}]
 
   // different methods of specifying edge length
@@ -54,9 +73,6 @@ const colaLayout = {
   unconstrIter: undefined, // unconstrained initial layout iterations
   userConstIter: undefined, // initial layout iterations with user-specified constraints
   allConstIter: undefined, // initial layout iterations with all constraints including non-overlap
-
-  // infinite layout options
-  infinite: false // overrides all other options for a forces-all-the-time mode
 }
 
 const coseBilkent = {
@@ -69,27 +85,27 @@ const coseBilkent = {
   // - 'draft' fast cooling rate 
   // - 'default' moderate cooling rate 
   // - "proof" slow cooling rate
-  quality: 'default',
+  quality: 'proof',
   // Whether to include labels in node dimensions. Useful for avoiding label overlap
-  nodeDimensionsIncludeLabels: true,
+  nodeDimensionsIncludeLabels: false,
   // number of ticks per frame; higher is faster but more jerky
-  refresh: 50,
+  refresh: 5,
   // Whether to fit the network view after when done
-  fit: false,
+  fit: true,
   // Padding on fit
-  padding: 0,
+  padding: 30,
   // Whether to enable incremental mode
-  randomize: false,
+  randomize: true,
   // Node repulsion (non overlapping) multiplier
-  nodeRepulsion: 50000,
+  nodeRepulsion: 500000,
   // Ideal (intra-graph) edge length
-  idealEdgeLength: 100,
+  idealEdgeLength: 10,
   // Divisor to compute edge forces
-  edgeElasticity: 0.45,
+  edgeElasticity: 50,
   // Nesting factor (multiplier) to compute ideal edge length for inter-graph edges
-  nestingFactor: 0.1,
+  nestingFactor: 5,
   // Gravity force (constant)
-  gravity: 0.25,
+  gravity: 150,
   // Maximum number of iterations to perform
   numIter: 100000,
   // Whether to tile disconnected nodes
@@ -191,11 +207,12 @@ const cise = {
   stop: function () {}, // on layoutstop
 }
 
+
 const config = {
   boxSelectionEnabled: false,
   autounselectify: true,
   // coseLayout colaLayout coseBilkent clay cise
-  layout: coseBilkent,
+  layout: coseLayout,
 };
 
 export default config;
