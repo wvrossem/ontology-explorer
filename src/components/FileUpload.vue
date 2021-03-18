@@ -62,6 +62,8 @@ import { mapState, mapGetters } from 'vuex';
 import { processXMLProjectString } from "../util/load_atlas_xml";
 import { transformAtlasToCyto } from "../util/transform_atlas_to_cyto";
 
+import natural from "natural";
+
 export default {
   data() {
     return {
@@ -128,8 +130,46 @@ export default {
       };
       this.fileContent = reader.readAsText(file);
     },
+    // FIXME: move this code to util and import?
+    addStringDistanceLinks(projElements) {
+      // A set of hashes to avoid duplicate calculations
+      // The set includes a hash of the code group Ids already processed
+      const calculatedDistances = new Set();
+
+      // Reference to the map for code legibility
+      const codeGroupsMap = projElements.codeGroups.getCodeGroupsMap();
+
+      // Cartesian product of the set of code groups to itself
+      codeGroupsMap.forEach((codeGroup1, codeGroupId1) => {
+        codeGroupsMap.forEach((codeGroup2, codeGroupId2) => {
+          if (codeGroupId1 != codeGroupId2) {
+            // If not same code groups, check if distance already calculated
+            const hash1 = codeGroupId1 + codeGroupId2;
+            const hash2 = codeGroupId2 + codeGroupId1;
+            if (!(calculatedDistances.has(hash1) || calculatedDistances.has(hash2))) {
+            // Calculate the distance between names and add a link to first code group
+            // Ref: <https://naturalnode.github.io/natural/string_distance.html>
+            // FIXME: this only works for symmetrical distance measures
+            const distance = natural.JaroWinklerDistance(codeGroup1.name, codeGroup2.name);
+            // Filter out less relevant similar strings. The number was chosen after some tests.
+            if (distance > 0.82) {
+              console.info(`Added a link between "${codeGroup1.name}" and "${codeGroup2.name}". Distance = ${distance}`)
+              codeGroup1.linkCodeGroup(codeGroupId2, distance);
+            }
+            // Add hashes to set so we don't recalculate again
+            // Assumes that distance(id1, id2) (approx) equal to distance(id2, id1)
+            calculatedDistances.add(hash1);
+            calculatedDistances.add(hash2);
+            }
+          }
+        }) 
+      });
+    },
     processXMLProject() {
       this.projElements = processXMLProjectString(this.fileContent)
+
+      this.addStringDistanceLinks(this.projElements);
+
       this.$store.commit("project/setDocuments", this.projElements.documents);
       this.$store.commit("project/setQuotations", this.projElements.quotations);
       this.$store.commit("project/setCodes", this.projElements.codes);

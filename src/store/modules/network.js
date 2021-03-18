@@ -40,15 +40,21 @@ const getters = {
     const neighbourhood1Extended = neighbourhood1ExtendedCodes.intersection(neighbourhood1ExtendedCodeGroups).filter((el => {
       return !el.hasClass("document-group");
     }));
+    const codeGroupDistances1 = neighbourhood1ExtendedCodeGroups.filter(".code-group-distance-link");
+
     const neighbourhood2ExtendedCodes = neighbourhood2.filter(".code").closedNeighborhood();
     const neighbourhood2ExtendedCodeGroups = neighbourhood2.filter(".code-group").closedNeighborhood();
     const neighbourhood2Extended = neighbourhood2ExtendedCodes.intersection(neighbourhood2ExtendedCodeGroups).filter((el => {
       return !el.hasClass("document-group");
     }));
-    neighbourhood1 = neighbourhood1.union(neighbourhood1Extended).filter((el => {
+    const codeGroupDistances2 = neighbourhood2ExtendedCodeGroups.filter(".code-group-distance-link");
+
+    const codeGroupDistanesAll = codeGroupDistances1.intersection(codeGroupDistances2);
+
+    neighbourhood1 = neighbourhood1.union(neighbourhood1Extended).union(codeGroupDistances1).filter((el => {
       return !el.hasClass("code-document-group-link");
     }));
-    neighbourhood2 = neighbourhood2.union(neighbourhood2Extended).filter((el => {
+    neighbourhood2 = neighbourhood2.union(neighbourhood2Extended).union(codeGroupDistances2).filter((el => {
       return !el.hasClass("code-document-group-link");
     }));
 
@@ -110,14 +116,19 @@ const getters = {
     });
 
     state.elementsToVisualize = nodes.concat(edges);
+
+    // Select only the code groups and document groups
+    const elementsWithoutCodes = cy.$(ids).filter((el) => {
+      return !(el.classes().includes("code") || el.classes().includes("code-group-link") || el.classes().includes("code-group-distance-link"))
+    });
     
-    const ccn = cy.$(ids).closenessCentralityNormalized({
+    const ccn = elementsWithoutCodes.closenessCentralityNormalized({
       directed: false
     });
-    const bc = cy.$(ids).betweennessCentrality({
+    const bc = elementsWithoutCodes.betweennessCentrality({
       directed: false
     });
-    const dcn = cy.$(ids).degreeCentralityNormalized({
+    const dcn = elementsWithoutCodes.degreeCentralityNormalized({
       directed: false
     });
     
