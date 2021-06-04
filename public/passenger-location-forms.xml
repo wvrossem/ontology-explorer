@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<storedHU xmlns:aml="http://www.atlasti.com/hu/ns2003" lastSaved="2021-05-12T22:39:25" creator="ATLAS.ti" method="AML (ATLAS Markup Language)" version="7.1.5" mode="complete">
+    <hermUnit name="covid-declaration-form" au="Wouter Van Rossem" cDate="2021-05-12T11:24:58" mDate="2021-05-12T11:25:07" lastPD="" prot="private"/>
+    <coAuthors/>
+    <dataSources size="5">
+        <dataSource id="doc_1" loc="" mime="text/pdf" renderer=""/>
+        <dataSource id="doc_2" loc="" mime="bmp" renderer=""/>
+        <dataSource id="doc_3" loc="" mime="text/pdf" renderer=""/>
+        <dataSource id="doc_4" loc="" mime="text/pdf" renderer=""/>
+        <dataSource id="doc_5" loc="" mime="text/pdf" renderer=""/>
+    </dataSources>
+    <primDocs size="5">
+        <primDoc name="NL: Traveller+public+health+declaration+(English)" id="pd_2_1" loc="doc_1" au="Wouter Van Rossem" cDate="2021-05-12T11:25:57" mDate="2021-05-12T11:26:38" qIndex="">
+            <comment type="text/html" size="149">
+                <p>https://www.government.nl/topics/coronavirus-covid-19/documents/publications/2020/07/07/information-for-passengers-flying-to-and-from-the-netherlands</p>
+            </comment>
+            <quotations size="12">
+                <q name="Flight number" id="q2_1_1" au="Wouter Van Rossem" cDate="2021-05-12T16:27:52" mDate="2021-05-12T16:27:52" loc="1:1317:1:1330">
+                    <content size="13">
+                        <p>Flight number</p>
+                    </content>
+                </q>
+                <q name="Seat number" id="q2_2_2" au="Wouter Van Rossem" cDate="2021-05-12T16:27:56" mDate="2021-05-12T16:27:56" loc="1:1335:1:1346">
+                    <content size="11">
+                        <p>Seat number</p>
+                    </content>
+                </q>
+                <q name="Surname" id="q2_3_3" au="Wouter Van Rossem" cDate="2021-05-12T16:28:00" mDate="2021-05-12T16:28:00" loc="1:1351:1:1358">
+                    <content size="7">
+                        <p>Surname</p>
+                    </content>
+                </q>
+                <q name="Date of birth" id="q2_4_4" au="Wouter Van Rossem" cDate="2021-05-12T16:28:05" mDate="2021-05-12T16:28:05" loc="1:1363:1:1376">
+                    <content size="13">
+                        <p>Date of birth</p>
+                    </content>
+                </q>
+                <q name="Signature" id="q2_5_5" au="Wouter Van Rossem" cDate="2021-05-12T16:28:16" mDate="2021-05-12T16:28:16" loc="1:1431:1:1440">
+                    <content size="9">
+                        <p>Signature</p>
+                    </content>
+                </q>
+                <q name="Fever" id="q2_7_6" au="Wouter Van Rossem" cDate="2021-05-12T16:28:44" mDate="2021-05-12T16:28:44" loc="1:1092:1:1097">
+                    <content size="5">
+                        <p>Fever</p>
+                    </content>
+                </q>
+                <q name="Cough" id="q2_8_7" au="Wouter Van Rossem" cDate="2021-05-12T16:28:48" mDate="2021-05-12T16:28:48" loc="1:1098:1:1103">
+                    <content size="5">
+                        <p>Cough</p>
+                    </content>
+                </q>
+                <q name="Runny nose" id="q2_9_8" au="Wouter Van Rossem" cDate="2021-05-12T16:28:53" mDate="2021-05-12T16:28:53" loc="1:1104:1:1114">
+                    <content size="10">
+                        <p>Runny nose</p>
+                    </content>
+                </q>
+                <q name="Sore throat" id="q2_10_9" au="Wouter Van Rossem" cDate="2021-05-12T16:29:04" mDate="2021-05-12T16:29:04" loc="1:1115:1:1126">
+                    <content size="11">
+                        <p>Sore throat</p>
+                    </content>
+                </q>
+                <q name="Shortness of breath" id="q2_11_10" au="Wouter Van Rossem" cDate="2021-05-12T16:29:08" mDate="2021-05-12T16:29:08" loc="1:1127:1:1146">
+                    <content size="19">
+                        <p>Shortness of breath</p>
+                    </content>
+                </q>
+                <q name="In the past 10 days, have you (or the person for whom you are completing this form) been in contact&#8230;" id="q2_12_11" au="Wouter Van Rossem" cDate="2021-05-12T16:31:51" mDate="2021-05-12T16:31:51" loc="1:809:1:967">
+                    <content size="158">
+                        <p>In the past 10 days, have you (or the person for whom you are completing this form) been in contact with someone who is or could be infected with coronavirus?</p>
+                    </content>
+                </q>
+                <q name="Do you (or the person for whom you are completing this form) currently have symptoms of, or have you&#8230;" id="q2_13_12" au="Wouter Van Rossem" cDate="2021-05-12T16:32:03" mDate="2021-05-12T16:32:03" loc="1:638:1:804">
+                    <content size="166">
+                        <p>Do you (or the person for whom you are completing this form) currently have symptoms of, or have</p>
+                        <p>you been diagnosed with, pneumonia or coronavirus disease (COVID-19)?</p>
+                    </content>
+                </q>
+            </quotations>
+        </primDoc>
+        <primDoc name="BE: Passenger Locator Form" id="pd_4_2" loc="doc_2" au="Wouter Van Rossem" cDate="2021-05-12T11:29:53" mDate="2021-05-12T11:30:28" qIndex="">
+            <quotations size="33">
+                <q name="Quotation 4:1" id="q4_1_13" au="Wouter Van Rossem" cDate="2021-05-12T18:50:29" mDate="2021-05-12T18:50:29" loc="1:260:719:98:14"/>
+                <q name="Quotation 4:2" id="q4_2_14" au="Wouter Van Rossem" cDate="2021-05-12T18:50:46" mDate="2021-05-12T18:50:46" loc="1:597:710:119:35"/>
+                <q name="Quotation 4:3" id="q4_3_15" au="Wouter Van Rossem" cDate="2021-05-12T18:50:57" mDate="2021-05-12T18:50:57" loc="1:956:723:82:23"/>
+                <q name="Quotation 4:4" id="q4_4_16" au="Wouter Van Rossem" cDate="2021-05-12T18:51:09" mDate="2021-05-12T18:51:09" loc="1:978:754:55:27"/>
+                <q name="Quotation 4:5" id="q4_5_17" au="Wouter Van Rossem" cDate="2021-05-12T18:51:21" mDate="2021-05-12T18:51:21" loc="1:1048:752:80:27"/>
+                <q name="Quotation 4:6" id="q4_6_18" au="Wouter Van Rossem" cDate="2021-05-12T18:51:36" mDate="2021-05-12T18:51:36" loc="1:1137:754:72:25"/>
+                <q name="Quotation 4:7" id="q4_7_19" au="Wouter Van Rossem" cDate="2021-05-12T18:51:49" mDate="2021-05-12T18:51:49" loc="1:235:815:220:30"/>
+                <q name="Quotation 4:8" id="q4_8_20" au="Wouter Van Rossem" cDate="2021-05-12T18:51:58" mDate="2021-05-12T18:51:58" loc="1:594:817:119:26"/>
+                <q name="Quotation 4:9" id="q4_9_21" au="Wouter Van Rossem" cDate="2021-05-12T18:52:15" mDate="2021-05-12T18:52:15" loc="1:980:828:227:18"/>
+                <q name="Quotation 4:10" id="q4_10_22" au="Wouter Van Rossem" cDate="2021-05-12T18:52:34" mDate="2021-05-12T18:52:34" loc="1:237:919:320:23"/>
+                <q name="Quotation 4:11" id="q4_11_23" au="Wouter Van Rossem" cDate="2021-05-12T18:52:48" mDate="2021-05-12T18:52:48" loc="1:617:921:209:21"/>
+                <q name="Quotation 4:12" id="q4_12_24" au="Wouter Van Rossem" cDate="2021-05-12T18:52:58" mDate="2021-05-12T18:52:58" loc="1:236:1040:120:28"/>
+                <q name="Quotation 4:13" id="q4_13_25" au="Wouter Van Rossem" cDate="2021-05-12T18:53:18" mDate="2021-05-12T18:53:18" loc="1:238:1169:129:22"/>
+                <q name="Quotation 4:14" id="q4_14_26" au="Wouter Van Rossem" cDate="2021-05-12T18:53:27" mDate="2021-05-12T18:53:27" loc="1:599:1043:159:23"/>
+                <q name="Quotation 4:15" id="q4_15_27" au="Wouter Van Rossem" cDate="2021-05-12T18:53:38" mDate="2021-05-12T18:53:38" loc="1:596:1170:126:25"/>
+                <q name="Quotation 4:16" id="q4_16_28" au="Wouter Van Rossem" cDate="2021-05-12T18:53:52" mDate="2021-05-12T18:53:52" loc="1:236:1293:139:24"/>
+                <q name="Quotation 4:17" id="q4_17_29" au="Wouter Van Rossem" cDate="2021-05-12T18:54:13" mDate="2021-05-12T18:54:13" loc="1:239:1496:330:22"/>
+                <q name="Quotation 4:18" id="q4_18_30" au="Wouter Van Rossem" cDate="2021-05-12T18:54:49" mDate="2021-05-12T18:54:49" loc="1:240:1993:137:29"/>
+                <q name="Quotation 4:19" id="q4_19_31" au="Wouter Van Rossem" cDate="2021-05-12T18:55:00" mDate="2021-05-12T18:55:00" loc="1:600:1996:258:19"/>
+                <q name="Quotation 4:20" id="q4_20_32" au="Wouter Van Rossem" cDate="2021-05-12T18:55:10" mDate="2021-05-12T18:55:10" loc="1:951:1990:231:30"/>
+                <q name="Quotation 4:21" id="q4_21_33" au="Wouter Van Rossem" cDate="2021-05-12T18:55:45" mDate="2021-05-12T18:55:45" loc="1:239:2292:456:18"/>
+                <q name="Quotation 4:22" id="q4_22_34" au="Wouter Van Rossem" cDate="2021-05-12T18:55:52" mDate="2021-05-12T18:55:52" loc="1:236:2334:69:19"/>
+                <q name="Quotation 4:23" id="q4_23_35" au="Wouter Van Rossem" cDate="2021-05-12T18:56:00" mDate="2021-05-12T18:56:00" loc="1:957:2330:69:21"/>
+                <q name="Quotation 4:24" id="q4_24_36" au="Wouter Van Rossem" cDate="2021-05-12T18:56:08" mDate="2021-05-12T18:56:08" loc="1:1137:2333:50:24"/>
+                <q name="Quotation 4:25" id="q4_25_37" au="Wouter Van Rossem" cDate="2021-05-12T18:56:21" mDate="2021-05-12T18:56:21" loc="1:241:2418:86:26"/>
+                <q name="Quotation 4:26" id="q4_26_38" au="Wouter Van Rossem" cDate="2021-05-12T18:56:34" mDate="2021-05-12T18:56:34" loc="1:502:2410:125:33"/>
+                <q name="Quotation 4:27" id="q4_27_39" au="Wouter Van Rossem" cDate="2021-05-12T18:56:47" mDate="2021-05-12T18:56:47" loc="1:777:2416:133:23"/>
+                <q name="Quotation 4:28" id="q4_28_40" au="Wouter Van Rossem" cDate="2021-05-12T18:56:53" mDate="2021-05-12T18:56:53" loc="1:956:2419:48:23"/>
+                <q name="Quotation 4:29" id="q4_29_41" au="Wouter Van Rossem" cDate="2021-05-12T18:57:21" mDate="2021-05-12T18:57:21" loc="1:236:4091:320:26"/>
+                <q name="Quotation 4:30" id="q4_30_42" au="Wouter Van Rossem" cDate="2021-05-12T18:57:48" mDate="2021-05-12T18:57:48" loc="1:260:2596:292:24"/>
+                <q name="Quotation 4:31" id="q4_31_43" au="Wouter Van Rossem" cDate="2021-05-12T21:26:23" mDate="2021-05-12T21:26:23" loc="1:240:1663:372:19"/>
+                <q name="Quotation 4:32" id="q4_32_44" au="Wouter Van Rossem" cDate="2021-05-12T21:26:53" mDate="2021-05-12T21:26:53" loc="1:243:1848:112:19"/>
+                <q name="Quotation 4:33" id="q4_33_45" au="Wouter Van Rossem" cDate="2021-05-12T21:27:22" mDate="2021-05-12T21:27:22" loc="1:238:2223:313:17"/>
+            </quotations>
+        </primDoc>
+        <primDoc name="IT: modulo_rientro_sintetico_25_aprile_2021_eng.pdf" id="pd_5_3" loc="doc_3" au="Wouter Van Rossem" cDate="2021-05-12T11:34:43" mDate="2021-05-12T11:35:03" qIndex="">
+            <quotations size="17">
+                <q name="full name" id="q5_1_46" au="Wouter Van Rossem" cDate="2021-05-12T18:58:02" mDate="2021-05-12T18:58:02" loc="1:128:1:137">
+                    <content size="9">
+                        <p>full name</p>
+                    </content>
+                </q>
+                <q name="date of birth" id="q5_2_47" au="Wouter Van Rossem" cDate="2021-05-12T18:58:12" mDate="2021-05-12T18:58:12" loc="1:307:1:320">
+                    <content size="13">
+                        <p>date of birth</p>
+                    </content>
+                </q>
+                <q name="place of birth" id="q5_3_48" au="Wouter Van Rossem" cDate="2021-05-12T18:58:17" mDate="2021-05-12T18:58:17" loc="1:143:1:157">
+                    <content size="14">
+                        <p>place of birth</p>
+                    </content>
+                </q>
+                <q name="nationality" id="q5_4_49" au="Wouter Van Rossem" cDate="2021-05-12T18:58:31" mDate="2021-05-12T18:58:31" loc="1:286:1:297">
+                    <content size="11">
+                        <p>nationality</p>
+                    </content>
+                </q>
+                <q name="resident in" id="q5_5_50" au="Wouter Van Rossem" cDate="2021-05-12T18:58:39" mDate="2021-05-12T18:58:39" loc="1:159:1:170">
+                    <content size="11">
+                        <p>resident in</p>
+                    </content>
+                </q>
+                <q name="address" id="q5_6_51" au="Wouter Van Rossem" cDate="2021-05-12T18:58:47" mDate="2021-05-12T18:58:47" loc="1:344:1:351">
+                    <content size="7">
+                        <p>address</p>
+                    </content>
+                </q>
+                <q name="means of transport" id="q5_7_52" au="Wouter Van Rossem" cDate="2021-05-12T18:59:17" mDate="2021-05-12T18:59:17" loc="1:1082:1:1100">
+                    <content size="18">
+                        <p>means of transport</p>
+                    </content>
+                </q>
+                <q name="flight number" id="q5_8_53" au="Wouter Van Rossem" cDate="2021-05-12T18:59:43" mDate="2021-05-12T18:59:43" loc="1:1205:1:1218">
+                    <content size="13">
+                        <p>flight number</p>
+                    </content>
+                </q>
+                <q name="rail or bus service number" id="q5_9_54" au="Wouter Van Rossem" cDate="2021-05-12T18:59:50" mDate="2021-05-12T18:59:50" loc="1:1219:1:1245">
+                    <content size="26">
+                        <p>rail or bus service number</p>
+                    </content>
+                </q>
+                <q name="boat or ferry route" id="q5_10_55" au="Wouter Van Rossem" cDate="2021-05-12T18:59:55" mDate="2021-05-12T18:59:55" loc="1:1246:1:1265">
+                    <content size="19">
+                        <p>boat or ferry route</p>
+                    </content>
+                </q>
+                <q name="type and registration plate" id="q5_11_56" au="Wouter Van Rossem" cDate="2021-05-12T19:00:04" mDate="2021-05-12T19:00:07" loc="1:1139:1:1168">
+                    <content size="29">
+                        <p> type and registration plate;</p>
+                    </content>
+                </q>
+                <q name="stopped over in/transited through the following Countries and territories" id="q5_12_57" au="Wouter Van Rossem" cDate="2021-05-12T19:00:42" mDate="2021-05-12T19:00:42" loc="1:1377:1:1450">
+                    <content size="73">
+                        <p>stopped over in/transited through the following Countries and territories</p>
+                    </content>
+                </q>
+                <q name="I am entering Italy for the following reasons" id="q5_13_58" au="Wouter Van Rossem" cDate="2021-05-12T19:00:51" mDate="2021-05-12T19:00:51" loc="1:1538:1:1583">
+                    <content size="45">
+                        <p>I am entering Italy for the following reasons</p>
+                    </content>
+                </q>
+                <q name="contacted at the following telephone number" id="q5_14_59" au="Wouter Van Rossem" cDate="2021-05-12T21:19:06" mDate="2021-05-12T21:19:06" loc="1:2782:1:2825">
+                    <content size="43">
+                        <p>contacted at the following telephone number</p>
+                    </content>
+                </q>
+                <q name="signature" id="q5_15_60" au="Wouter Van Rossem" cDate="2021-05-12T21:19:14" mDate="2021-05-12T21:19:14" loc="1:3170:1:3179">
+                    <content size="9">
+                        <p>signature</p>
+                    </content>
+                </q>
+                <q name="self-isolate under medical supervision" id="q5_16_61" au="Wouter Van Rossem" cDate="2021-05-12T21:20:15" mDate="2021-05-12T21:20:15" loc="1:2194:1:2232">
+                    <content size="38">
+                        <p>self-isolate under medical supervision</p>
+                    </content>
+                </q>
+                <q name="Care of" id="q5_17_62" au="Wouter Van Rossem" cDate="2021-05-12T21:20:34" mDate="2021-05-12T21:20:34" loc="1:2516:1:2523">
+                    <content size="7">
+                        <p>Care of</p>
+                    </content>
+                </q>
+            </quotations>
+        </primDoc>
+        <primDoc name="DE: ersatzmitteilung-einreise---en-data.pdf" id="pd_6_4" loc="doc_4" au="Wouter Van Rossem" cDate="2021-05-12T11:38:08" mDate="2021-05-12T11:39:24" qIndex="">
+            <quotations size="36">
+                <q name="Name of carrier" id="q6_1_63" au="Wouter Van Rossem" cDate="2021-05-12T19:01:43" mDate="2021-05-12T19:01:43" loc="1:712:1:727">
+                    <content size="15">
+                        <p>Name of carrier</p>
+                    </content>
+                </q>
+                <q name="Route number" id="q6_2_64" au="Wouter Van Rossem" cDate="2021-05-12T19:01:47" mDate="2021-05-12T19:01:47" loc="1:924:1:936">
+                    <content size="12">
+                        <p>Route number</p>
+                    </content>
+                </q>
+                <q name="Seat number" id="q6_3_65" au="Wouter Van Rossem" cDate="2021-05-12T19:01:51" mDate="2021-05-12T19:01:51" loc="1:940:1:951">
+                    <content size="11">
+                        <p>Seat number</p>
+                    </content>
+                </q>
+                <q name="Date of arrival" id="q6_4_66" au="Wouter Van Rossem" cDate="2021-05-12T19:02:00" mDate="2021-05-12T19:02:00" loc="1:971:1:987">
+                    <content size="16">
+                        <p>Date of arrival </p>
+                    </content>
+                </q>
+                <q name="Place of departure (please enter city and country)" id="q6_5_67" au="Wouter Van Rossem" cDate="2021-05-12T19:02:10" mDate="2021-05-12T19:02:10" loc="1:731:1:781">
+                    <content size="50">
+                        <p>Place of departure (please enter city and country)</p>
+                    </content>
+                </q>
+                <q name="Via (please only complete if you have made a transfer during your journey)" id="q6_6_68" au="Wouter Van Rossem" cDate="2021-05-12T19:02:16" mDate="2021-05-12T19:02:16" loc="1:785:1:859">
+                    <content size="74">
+                        <p>Via (please only complete if you have made a transfer during your journey)</p>
+                    </content>
+                </q>
+                <q name="Last name (surname)" id="q6_7_69" au="Wouter Van Rossem" cDate="2021-05-12T19:02:22" mDate="2021-05-12T19:02:22" loc="1:885:1:904">
+                    <content size="19">
+                        <p>Last name (surname)</p>
+                    </content>
+                </q>
+                <q name="First name(s)" id="q6_8_70" au="Wouter Van Rossem" cDate="2021-05-12T19:02:27" mDate="2021-05-12T19:02:27" loc="1:1160:1:1173">
+                    <content size="13">
+                        <p>First name(s)</p>
+                    </content>
+                </q>
+                <q name="NATIONALITY" id="q6_9_71" au="Wouter Van Rossem" cDate="2021-05-12T19:02:31" mDate="2021-05-12T19:02:31" loc="1:909:1:920">
+                    <content size="11">
+                        <p>NATIONALITY</p>
+                    </content>
+                </q>
+                <q name="Date of birth" id="q6_10_72" au="Wouter Van Rossem" cDate="2021-05-12T19:02:37" mDate="2021-05-12T19:02:37" loc="1:1251:1:1264">
+                    <content size="13">
+                        <p>Date of birth</p>
+                    </content>
+                </q>
+                <q name="Sex" id="q6_11_73" au="Wouter Van Rossem" cDate="2021-05-12T19:02:40" mDate="2021-05-12T19:02:40" loc="1:1177:1:1180">
+                    <content size="3">
+                        <p>Sex</p>
+                    </content>
+                </q>
+                <q name="Female" id="q6_12_74" au="Wouter Van Rossem" cDate="2021-05-12T19:02:47" mDate="2021-05-12T19:02:47" loc="1:1181:1:1187">
+                    <content size="6">
+                        <p>Female</p>
+                    </content>
+                </q>
+                <q name="Male" id="q6_13_75" au="Wouter Van Rossem" cDate="2021-05-12T19:02:54" mDate="2021-05-12T19:02:54" loc="1:1190:1:1194">
+                    <content size="4">
+                        <p>Male</p>
+                    </content>
+                </q>
+                <q name="Other" id="q6_14_76" au="Wouter Van Rossem" cDate="2021-05-12T19:03:02" mDate="2021-05-12T19:03:02" loc="1:1197:1:1202">
+                    <content size="5">
+                        <p>Other</p>
+                    </content>
+                </q>
+                <q name="TELEPHONE NUMBER(S)" id="q6_15_77" au="Wouter Van Rossem" cDate="2021-05-12T19:03:11" mDate="2021-05-12T19:03:11" loc="1:1007:1:1026">
+                    <content size="19">
+                        <p>TELEPHONE NUMBER(S)</p>
+                    </content>
+                </q>
+                <q name="Mobile phone" id="q6_16_78" au="Wouter Van Rossem" cDate="2021-05-12T19:03:16" mDate="2021-05-12T19:03:16" loc="1:1113:1:1125">
+                    <content size="12">
+                        <p>Mobile phone</p>
+                    </content>
+                </q>
+                <q name="Private" id="q6_17_79" au="Wouter Van Rossem" cDate="2021-05-12T19:03:20" mDate="2021-05-12T19:03:20" loc="1:1130:1:1137">
+                    <content size="7">
+                        <p>Private</p>
+                    </content>
+                </q>
+                <q name="Work" id="q6_18_80" au="Wouter Van Rossem" cDate="2021-05-12T19:03:23" mDate="2021-05-12T19:03:23" loc="1:1152:1:1156">
+                    <content size="4">
+                        <p>Work</p>
+                    </content>
+                </q>
+                <q name="Email" id="q6_19_81" au="Wouter Van Rossem" cDate="2021-05-12T19:03:29" mDate="2021-05-12T19:03:29" loc="1:1142:1:1147">
+                    <content size="5">
+                        <p>Email</p>
+                    </content>
+                </q>
+                <q name="Hotel name (if applicable)" id="q6_20_82" au="Wouter Van Rossem" cDate="2021-05-12T19:03:42" mDate="2021-05-12T19:03:42" loc="1:1344:1:1370">
+                    <content size="26">
+                        <p>Hotel name (if applicable)</p>
+                    </content>
+                </q>
+                <q name="Street and house number" id="q6_21_83" au="Wouter Van Rossem" cDate="2021-05-12T19:03:46" mDate="2021-05-12T19:03:46" loc="1:1375:1:1398">
+                    <content size="23">
+                        <p>Street and house number</p>
+                    </content>
+                </q>
+                <q name="Apartment number" id="q6_22_84" au="Wouter Van Rossem" cDate="2021-05-12T19:03:51" mDate="2021-05-12T19:03:51" loc="1:1209:1:1225">
+                    <content size="16">
+                        <p>Apartment number</p>
+                    </content>
+                </q>
+                <q name="City" id="q6_23_85" au="Wouter Van Rossem" cDate="2021-05-12T19:03:55" mDate="2021-05-12T19:03:55" loc="1:1467:1:1471">
+                    <content size="4">
+                        <p>City</p>
+                    </content>
+                </q>
+                <q name="State" id="q6_24_86" au="Wouter Van Rossem" cDate="2021-05-12T19:03:58" mDate="2021-05-12T19:03:58" loc="1:1476:1:1481">
+                    <content size="5">
+                        <p>State</p>
+                    </content>
+                </q>
+                <q name="Postcode" id="q6_25_87" au="Wouter Van Rossem" cDate="2021-05-12T19:04:02" mDate="2021-05-12T19:04:02" loc="1:1486:1:1495">
+                    <content size="9">
+                        <p>Postcode</p>
+                    </content>
+                </q>
+                <q name="HOME ADDRESS / ADDRESS WHERE YOU WILL BE STAYING IN GERMANY" id="q6_26_88" au="Wouter Van Rossem" cDate="2021-05-12T19:04:14" mDate="2021-05-12T19:04:14" loc="1:1279:1:1338">
+                    <content size="59">
+                        <p>HOME ADDRESS / ADDRESS WHERE YOU WILL BE STAYING IN GERMANY</p>
+                    </content>
+                </q>
+                <q name="ADDRESS OF ANY FURTHER PLANNED STAYS WITHIN THE NEXT 10 DAYS" id="q6_27_89" au="Wouter Van Rossem" cDate="2021-05-12T19:04:20" mDate="2021-05-12T19:04:20" loc="1:1496:1:1556">
+                    <content size="60">
+                        <p>ADDRESS OF ANY FURTHER PLANNED STAYS WITHIN THE NEXT 10 DAYS</p>
+                    </content>
+                </q>
+                <q name="SIGNATURE" id="q6_28_90" au="Wouter Van Rossem" cDate="2021-05-12T19:04:24" mDate="2021-05-12T19:04:24" loc="1:1713:1:1722">
+                    <content size="9">
+                        <p>SIGNATURE</p>
+                    </content>
+                </q>
+                <q name="Hotel name (if applicable)" id="q6_29_91" au="Wouter Van Rossem" cDate="2021-05-12T21:15:43" mDate="2021-05-12T21:15:43" loc="1:1562:1:1588">
+                    <content size="26">
+                        <p>Hotel name (if applicable)</p>
+                    </content>
+                </q>
+                <q name="Street and house number" id="q6_30_92" au="Wouter Van Rossem" cDate="2021-05-12T21:15:56" mDate="2021-05-12T21:15:56" loc="1:1593:1:1617">
+                    <content size="24">
+                        <p>Street and house number </p>
+                    </content>
+                </q>
+                <q name="Apartment number" id="q6_31_93" au="Wouter Van Rossem" cDate="2021-05-12T21:16:11" mDate="2021-05-12T21:16:11" loc="1:1230:1:1246">
+                    <content size="16">
+                        <p>Apartment number</p>
+                    </content>
+                </q>
+                <q name="City" id="q6_32_94" au="Wouter Van Rossem" cDate="2021-05-12T21:16:18" mDate="2021-05-12T21:16:18" loc="1:1685:1:1689">
+                    <content size="4">
+                        <p>City</p>
+                    </content>
+                </q>
+                <q name="State" id="q6_33_95" au="Wouter Van Rossem" cDate="2021-05-12T21:16:26" mDate="2021-05-12T21:16:26" loc="1:1694:1:1699">
+                    <content size="5">
+                        <p>State</p>
+                    </content>
+                </q>
+                <q name="Postcode" id="q6_34_96" au="Wouter Van Rossem" cDate="2021-05-12T21:16:33" mDate="2021-05-12T21:16:33" loc="1:1704:1:1712">
+                    <content size="8">
+                        <p>Postcode</p>
+                    </content>
+                </q>
+                <q name="TRAVEL INFORMATION" id="q6_35_97" au="Wouter Van Rossem" cDate="2021-05-12T21:16:39" mDate="2021-05-12T21:16:39" loc="1:689:1:707">
+                    <content size="18">
+                        <p>TRAVEL INFORMATION</p>
+                    </content>
+                </q>
+                <q name="PERSONAL INFORMATION" id="q6_36_98" au="Wouter Van Rossem" cDate="2021-05-12T21:16:44" mDate="2021-05-12T21:16:44" loc="1:860:1:880">
+                    <content size="20">
+                        <p>PERSONAL INFORMATION</p>
+                    </content>
+                </q>
+            </quotations>
+        </primDoc>
+        <primDoc name="WHO public-health-passenger-locator-form-1.pdf" id="pd_7_5" loc="doc_5" au="Wouter Van Rossem" cDate="2021-05-12T11:48:41" mDate="2021-05-12T11:48:48" qIndex="">
+            <comment type="text/html" size="138">
+                <p>https://www.who.int/publications/m/item/public-health-passenger-locator-card
+
+https://www.iata.org/en/programs/safety/health/locator-form/</p>
+            </comment>
+            <quotations size="49">
+                <q name="Airline name" id="q7_1_99" au="Wouter Van Rossem" cDate="2021-05-12T11:51:41" mDate="2021-05-12T11:51:41" loc="1:680:1:692">
+                    <content size="12">
+                        <p>Airline name</p>
+                    </content>
+                </q>
+                <q name="Flight number" id="q7_2_100" au="Wouter Van Rossem" cDate="2021-05-12T11:51:45" mDate="2021-05-12T11:51:45" loc="1:696:1:709">
+                    <content size="13">
+                        <p>Flight number</p>
+                    </content>
+                </q>
+                <q name="Seat number" id="q7_3_101" au="Wouter Van Rossem" cDate="2021-05-12T11:51:51" mDate="2021-05-12T11:51:51" loc="1:867:1:878">
+                    <content size="11">
+                        <p>Seat number</p>
+                    </content>
+                </q>
+                <q name="Date of arrival" id="q7_4_102" au="Wouter Van Rossem" cDate="2021-05-12T11:51:59" mDate="2021-05-12T11:51:59" loc="1:882:1:897">
+                    <content size="15">
+                        <p>Date of arrival</p>
+                    </content>
+                </q>
+                <q name="Last (Family) Name" id="q7_5_103" au="Wouter Van Rossem" cDate="2021-05-12T11:53:03" mDate="2021-05-12T11:53:03" loc="1:735:1:753">
+                    <content size="18">
+                        <p>Last (Family) Name</p>
+                    </content>
+                </q>
+                <q name="First (Given) Name" id="q7_6_104" au="Wouter Van Rossem" cDate="2021-05-12T11:53:06" mDate="2021-05-12T11:53:06" loc="1:757:1:775">
+                    <content size="18">
+                        <p>First (Given) Name</p>
+                    </content>
+                </q>
+                <q name="Middle Initial" id="q7_7_105" au="Wouter Van Rossem" cDate="2021-05-12T11:53:12" mDate="2021-05-12T11:53:12" loc="1:924:1:938">
+                    <content size="14">
+                        <p>Middle Initial</p>
+                    </content>
+                </q>
+                <q name="sex" id="q7_8_106" au="Wouter Van Rossem" cDate="2021-05-12T11:53:20" mDate="2021-05-12T11:53:20" loc="1:947:1:950">
+                    <content size="3">
+                        <p>sex</p>
+                    </content>
+                </q>
+                <q name="Male" id="q7_9_107" au="Wouter Van Rossem" cDate="2021-05-12T11:53:28" mDate="2021-05-12T11:53:28" loc="1:951:1:955">
+                    <content size="4">
+                        <p>Male</p>
+                    </content>
+                </q>
+                <q name="Female" id="q7_10_108" au="Wouter Van Rossem" cDate="2021-05-12T11:53:40" mDate="2021-05-12T11:53:40" loc="1:956:1:962">
+                    <content size="6">
+                        <p>Female</p>
+                    </content>
+                </q>
+                <q name="Mobile" id="q7_11_109" au="Wouter Van Rossem" cDate="2021-05-12T11:54:01" mDate="2021-05-12T11:54:01" loc="1:1015:1:1021">
+                    <content size="6">
+                        <p>Mobile</p>
+                    </content>
+                </q>
+                <q name="Home" id="q7_12_110" au="Wouter Van Rossem" cDate="2021-05-12T11:54:04" mDate="2021-05-12T11:54:04" loc="1:1026:1:1030">
+                    <content size="4">
+                        <p>Home</p>
+                    </content>
+                </q>
+                <q name="Business" id="q7_13_111" au="Wouter Van Rossem" cDate="2021-05-12T11:54:08" mDate="2021-05-12T11:54:08" loc="1:1093:1:1101">
+                    <content size="8">
+                        <p>Business</p>
+                    </content>
+                </q>
+                <q name="Other" id="q7_14_112" au="Wouter Van Rossem" cDate="2021-05-12T11:54:11" mDate="2021-05-12T11:54:11" loc="1:1106:1:1111">
+                    <content size="5">
+                        <p>Other</p>
+                    </content>
+                </q>
+                <q name="Email address" id="q7_15_113" au="Wouter Van Rossem" cDate="2021-05-12T11:54:20" mDate="2021-05-12T11:54:20" loc="1:1035:1:1048">
+                    <content size="13">
+                        <p>Email address</p>
+                    </content>
+                </q>
+                <q name="Number and street" id="q7_16_114" au="Wouter Van Rossem" cDate="2021-05-12T19:04:40" mDate="2021-05-12T19:04:40" loc="1:1116:1:1133">
+                    <content size="17">
+                        <p>Number and street</p>
+                    </content>
+                </q>
+                <q name="Apartment number" id="q7_17_115" au="Wouter Van Rossem" cDate="2021-05-12T19:04:44" mDate="2021-05-12T19:04:44" loc="1:967:1:983">
+                    <content size="16">
+                        <p>Apartment number</p>
+                    </content>
+                </q>
+                <q name="City" id="q7_18_116" au="Wouter Van Rossem" cDate="2021-05-12T19:04:47" mDate="2021-05-12T19:04:47" loc="1:1072:1:1076">
+                    <content size="4">
+                        <p>City</p>
+                    </content>
+                </q>
+                <q name="State/Province" id="q7_19_117" au="Wouter Van Rossem" cDate="2021-05-12T19:04:52" mDate="2021-05-12T19:04:52" loc="1:1195:1:1209">
+                    <content size="14">
+                        <p>State/Province</p>
+                    </content>
+                </q>
+                <q name="Country" id="q7_20_118" au="Wouter Van Rossem" cDate="2021-05-12T19:04:55" mDate="2021-05-12T19:04:55" loc="1:1081:1:1088">
+                    <content size="7">
+                        <p>Country</p>
+                    </content>
+                </q>
+                <q name="ZIP/Postal code" id="q7_21_119" au="Wouter Van Rossem" cDate="2021-05-12T19:05:00" mDate="2021-05-12T19:05:00" loc="1:1214:1:1229">
+                    <content size="15">
+                        <p>ZIP/Postal code</p>
+                    </content>
+                </q>
+                <q name="Hotel name (if any)" id="q7_22_120" au="Wouter Van Rossem" cDate="2021-05-12T19:05:08" mDate="2021-05-12T19:05:08" loc="1:1338:1:1357">
+                    <content size="19">
+                        <p>Hotel name (if any)</p>
+                    </content>
+                </q>
+                <q name="PERMANENT ADDRESS" id="q7_23_121" au="Wouter Van Rossem" cDate="2021-05-12T19:05:17" mDate="2021-05-12T19:05:17" loc="1:1049:1:1066">
+                    <content size="17">
+                        <p>PERMANENT ADDRESS</p>
+                    </content>
+                </q>
+                <q name="TEMPORARY ADDRESS" id="q7_24_122" au="Wouter Van Rossem" cDate="2021-05-12T19:05:23" mDate="2021-05-12T19:05:23" loc="1:1239:1:1256">
+                    <content size="17">
+                        <p>TEMPORARY ADDRESS</p>
+                    </content>
+                </q>
+                <q name="Number and street" id="q7_25_123" au="Wouter Van Rossem" cDate="2021-05-12T19:05:28" mDate="2021-05-12T19:05:28" loc="1:1466:1:1484">
+                    <content size="18">
+                        <p>Number and street </p>
+                    </content>
+                </q>
+                <q name="Apartment number" id="q7_26_124" au="Wouter Van Rossem" cDate="2021-05-12T19:05:34" mDate="2021-05-12T19:05:34" loc="1:988:1:1004">
+                    <content size="16">
+                        <p>Apartment number</p>
+                    </content>
+                </q>
+                <q name="City" id="q7_27_125" au="Wouter Van Rossem" cDate="2021-05-12T19:05:37" mDate="2021-05-12T19:05:37" loc="1:1362:1:1366">
+                    <content size="4">
+                        <p>City</p>
+                    </content>
+                </q>
+                <q name="State/Province" id="q7_28_126" au="Wouter Van Rossem" cDate="2021-05-12T19:05:41" mDate="2021-05-12T19:05:41" loc="1:1532:1:1546">
+                    <content size="14">
+                        <p>State/Province</p>
+                    </content>
+                </q>
+                <q name="Country" id="q7_29_127" au="Wouter Van Rossem" cDate="2021-05-12T19:05:47" mDate="2021-05-12T19:05:47" loc="1:1371:1:1378">
+                    <content size="7">
+                        <p>Country</p>
+                    </content>
+                </q>
+                <q name="ZIP/Postal code" id="q7_30_128" au="Wouter Van Rossem" cDate="2021-05-12T19:05:51" mDate="2021-05-12T19:05:51" loc="1:1561:1:1576">
+                    <content size="15">
+                        <p>ZIP/Postal code</p>
+                    </content>
+                </q>
+                <q name="EMERGENCY CONTACT INFORMATION" id="q7_31_129" au="Wouter Van Rossem" cDate="2021-05-12T19:05:58" mDate="2021-05-12T19:05:58" loc="1:1379:1:1409">
+                    <content size="30">
+                        <p>EMERGENCY CONTACT INFORMATION </p>
+                    </content>
+                </q>
+                <q name="Last (Family) Name" id="q7_32_130" au="Wouter Van Rossem" cDate="2021-05-12T19:06:03" mDate="2021-05-12T19:06:03" loc="1:1586:1:1604">
+                    <content size="18">
+                        <p>Last (Family) Name</p>
+                    </content>
+                </q>
+                <q name="First (Given) Name" id="q7_33_131" au="Wouter Van Rossem" cDate="2021-05-12T19:06:07" mDate="2021-05-12T19:06:07" loc="1:1638:1:1656">
+                    <content size="18">
+                        <p>First (Given) Name</p>
+                    </content>
+                </q>
+                <q name="City" id="q7_34_132" au="Wouter Van Rossem" cDate="2021-05-12T19:06:10" mDate="2021-05-12T19:06:10" loc="1:1687:1:1691">
+                    <content size="4">
+                        <p>City</p>
+                    </content>
+                </q>
+                <q name="Country" id="q7_35_133" au="Wouter Van Rossem" cDate="2021-05-12T19:06:13" mDate="2021-05-12T19:06:13" loc="1:1609:1:1616">
+                    <content size="7">
+                        <p>Country</p>
+                    </content>
+                </q>
+                <q name="Email" id="q7_36_134" au="Wouter Van Rossem" cDate="2021-05-12T19:06:17" mDate="2021-05-12T19:06:17" loc="1:1661:1:1666">
+                    <content size="5">
+                        <p>Email</p>
+                    </content>
+                </q>
+                <q name="Mobile phone" id="q7_37_135" au="Wouter Van Rossem" cDate="2021-05-12T19:06:22" mDate="2021-05-12T19:06:22" loc="1:1621:1:1633">
+                    <content size="12">
+                        <p>Mobile phone</p>
+                    </content>
+                </q>
+                <q name="Other phone" id="q7_38_136" au="Wouter Van Rossem" cDate="2021-05-12T19:06:27" mDate="2021-05-12T19:06:27" loc="1:1671:1:1682">
+                    <content size="11">
+                        <p>Other phone</p>
+                    </content>
+                </q>
+                <q name="TRAVEL COMPANIONS &#8211; FAMILY" id="q7_39_137" au="Wouter Van Rossem" cDate="2021-05-12T19:06:39" mDate="2021-05-12T19:06:39" loc="1:1711:1:1737">
+                    <content size="26">
+                        <p>TRAVEL COMPANIONS &#8211; FAMILY</p>
+                    </content>
+                </q>
+                <q name="TRAVEL COMPANIONS &#8211; NON&#8208;FAMIL" id="q7_40_138" au="Wouter Van Rossem" cDate="2021-05-12T19:06:55" mDate="2021-05-12T19:06:55" loc="1:1839:1:1868">
+                    <content size="29">
+                        <p>TRAVEL COMPANIONS &#8211; NON&#8208;FAMIL</p>
+                    </content>
+                </q>
+                <q name="Group (tour, team, business, other)" id="q7_41_139" au="Wouter Van Rossem" cDate="2021-05-12T19:07:05" mDate="2021-05-12T19:07:05" loc="1:1998:1:2033">
+                    <content size="35">
+                        <p>Group (tour, team, business, other)</p>
+                    </content>
+                </q>
+                <q name="Last (Family) Name" id="q7_42_140" au="Wouter Van Rossem" cDate="2021-05-12T19:14:51" mDate="2021-05-12T19:14:51" loc="1:1781:1:1799">
+                    <content size="18">
+                        <p>Last (Family) Name</p>
+                    </content>
+                </q>
+                <q name="First (Given) Name" id="q7_43_141" au="Wouter Van Rossem" cDate="2021-05-12T19:15:32" mDate="2021-05-12T19:15:32" loc="1:1800:1:1818">
+                    <content size="18">
+                        <p>First (Given) Name</p>
+                    </content>
+                </q>
+                <q name="Seat number" id="q7_44_142" au="Wouter Van Rossem" cDate="2021-05-12T19:15:43" mDate="2021-05-12T19:15:43" loc="1:1953:1:1964">
+                    <content size="11">
+                        <p>Seat number</p>
+                    </content>
+                </q>
+                <q name="Age &lt;18" id="q7_45_143" au="Wouter Van Rossem" cDate="2021-05-12T19:15:56" mDate="2021-05-12T19:15:56" loc="1:1965:1:1972">
+                    <content size="7">
+                        <p>Age &lt;18</p>
+                    </content>
+                </q>
+                <q name="Last (Family) Name" id="q7_46_144" au="Wouter Van Rossem" cDate="2021-05-12T19:16:27" mDate="2021-05-12T19:16:27" loc="1:1907:1:1925">
+                    <content size="18">
+                        <p>Last (Family) Name</p>
+                    </content>
+                </q>
+                <q name="First (Given) Name" id="q7_47_145" au="Wouter Van Rossem" cDate="2021-05-12T19:16:39" mDate="2021-05-12T19:16:39" loc="1:1926:1:1944">
+                    <content size="18">
+                        <p>First (Given) Name</p>
+                    </content>
+                </q>
+                <q name="PHONE NUMBER(S)" id="q7_48_146" au="Wouter Van Rossem" cDate="2021-05-12T21:02:10" mDate="2021-05-12T21:02:10" loc="1:776:1:791">
+                    <content size="15">
+                        <p>PHONE NUMBER(S)</p>
+                    </content>
+                </q>
+                <q name="PERSONAL INFORMATION" id="q7_49_147" au="Wouter Van Rossem" cDate="2021-05-12T21:03:12" mDate="2021-05-12T21:03:12" loc="1:710:1:730">
+                    <content size="20">
+                        <p>PERSONAL INFORMATION</p>
+                    </content>
+                </q>
+            </quotations>
+        </primDoc>
+    </primDocs>
+    <codes size="138">
+        <code name="ADDRESS OF ANY FURTHER PLANNED STAYS WITHIN THE NEXT 10 DAYS" id="co_1" au="Wouter Van Rossem" cDate="2021-05-12T19:04:20" mDate="2021-05-12T19:04:20" color="" guid="2FE15B8A-3FA2-4340-A0CE-DC232D83DF4E" cCount="0" qCount="1"/>
+        <code name="Address" id="co_2" au="Wouter Van Rossem" cDate="2021-05-12T18:58:47" mDate="2021-05-12T18:58:52" color="" guid="3F964D80-AC1C-4E63-80AE-A877412B9355" cCount="0" qCount="1"/>
+        <code name="Address for self-isolate under medical supervision" id="co_3" au="Wouter Van Rossem" cDate="2021-05-12T21:20:15" mDate="2021-05-12T21:20:15" color="" guid="58C33F11-9DEC-4AED-B9C9-615C73A8D835" cCount="0" qCount="1"/>
+        <code name="Address further planned: Apartment number" id="co_4" au="Wouter Van Rossem" cDate="2021-05-12T21:16:11" mDate="2021-05-12T21:16:11" color="" guid="EADEC2A3-56EE-4B2C-81D3-17A21AEC12F9" cCount="0" qCount="1"/>
+        <code name="Address further planned: City" id="co_5" au="Wouter Van Rossem" cDate="2021-05-12T21:16:18" mDate="2021-05-12T21:16:18" color="" guid="284AED7E-09B6-4D66-B182-537401DECED2" cCount="0" qCount="1"/>
+        <code name="Address further planned: Hotel name" id="co_6" au="Wouter Van Rossem" cDate="2021-05-12T21:15:43" mDate="2021-05-12T21:15:43" color="" guid="06ED720C-4E37-49ED-95DE-EAE4474ABEDE" cCount="0" qCount="1"/>
+        <code name="Address further planned: Postcode" id="co_7" au="Wouter Van Rossem" cDate="2021-05-12T21:16:33" mDate="2021-05-12T21:16:33" color="" guid="AE507A97-843C-4006-8019-E7DE8C8B755A" cCount="0" qCount="1"/>
+        <code name="Address further planned: State" id="co_8" au="Wouter Van Rossem" cDate="2021-05-12T21:16:26" mDate="2021-05-12T21:16:26" color="" guid="057856DD-CE34-44A8-96D0-0641F6EDD239" cCount="0" qCount="1"/>
+        <code name="Address further planned: Street and house number" id="co_9" au="Wouter Van Rossem" cDate="2021-05-12T21:15:56" mDate="2021-05-12T21:15:56" color="" guid="054CFBD2-6564-42A9-842A-0A8A4FD7668A" cCount="0" qCount="1"/>
+        <code name="Arrival date" id="co_10" au="Wouter Van Rossem" cDate="2021-05-12T18:55:10" mDate="2021-05-12T18:55:10" color="" guid="28EE640B-318A-4870-B596-6306E58C5B87" cCount="0" qCount="1"/>
+        <code name="Belgian national number or SSN-number" id="co_11" au="Wouter Van Rossem" cDate="2021-05-12T18:52:34" mDate="2021-05-12T18:52:34" color="" guid="08CBFC25-B3D2-4306-82C3-3340763DAA07" cCount="0" qCount="1"/>
+        <code name="Boat or ferry route" id="co_12" au="Wouter Van Rossem" cDate="2021-05-12T18:59:55" mDate="2021-05-12T19:00:13" color="" guid="19BDE3B4-CA80-4A23-886B-249302FAE6A0" cCount="0" qCount="1"/>
+        <code name="Box" id="co_13" au="Wouter Van Rossem" cDate="2021-05-12T18:56:08" mDate="2021-05-12T18:56:08" color="" guid="8E7524DE-E3B3-4B41-8B7C-00150962B429" cCount="0" qCount="1"/>
+        <code name="Care of" id="co_14" au="Wouter Van Rossem" cDate="2021-05-12T21:20:34" mDate="2021-05-12T21:20:34" color="" guid="468AA7DC-CDF4-435C-A886-FDD233ED0977" cCount="0" qCount="1"/>
+        <code name="City" id="co_15" au="Wouter Van Rossem" cDate="2021-05-12T18:56:53" mDate="2021-05-12T18:56:53" color="" guid="C131762D-CBE1-4936-A462-2D7741B2C9F4" cCount="0" qCount="1"/>
+        <code name="Confirmation code" id="co_16" au="Wouter Van Rossem" cDate="2021-05-12T18:53:27" mDate="2021-05-12T18:53:27" color="" guid="3C70F7BB-E8CE-4C73-A9F2-90AAE0FAD9EC" cCount="0" qCount="1"/>
+        <code name="Country" id="co_17" au="Wouter Van Rossem" cDate="2021-05-12T18:56:21" mDate="2021-05-12T18:56:21" color="" guid="66DC635C-24D9-49B3-A224-F01EF03C0C4A" cCount="0" qCount="1"/>
+        <code name="Date of birth" id="co_18" au="Wouter Van Rossem" cDate="2021-05-12T16:28:05" mDate="2021-05-12T16:28:05" color="" guid="6B4DB44B-47B0-400E-A0AA-6FB7110552AB" cCount="0" qCount="1"/>
+        <code name="Day of birth" id="co_19" au="Wouter Van Rossem" cDate="2021-05-12T18:51:49" mDate="2021-05-12T18:51:49" color="" guid="AC76A715-3A86-4787-825B-9854BD983FD6" cCount="0" qCount="1"/>
+        <code name="Do you (or the person for whom you are completing this form) currently have symptoms of, or have you been diagnosed with, pneumonia or coronavirus disease (COVID-19)?" id="co_20" au="Wouter Van Rossem" cDate="2021-05-12T16:32:03" mDate="2021-05-12T16:32:03" color="" guid="7CA9C320-BF34-4E6D-8FFB-5C81147763C1" cCount="0" qCount="1"/>
+        <code name="EMERGENCY CONTACT INFORMATION" id="co_21" au="Wouter Van Rossem" cDate="2021-05-12T19:05:58" mDate="2021-05-12T19:05:58" color="" guid="981CD874-0530-47B1-BBF8-260E14C25A17" cCount="0" qCount="1"/>
+        <code name="Email" id="co_22" au="Wouter Van Rossem" cDate="2021-05-12T19:03:29" mDate="2021-05-12T19:03:29" color="" guid="0D5BC9AA-F874-4EC6-A3C7-E7DC12B99007" cCount="0" qCount="1"/>
+        <code name="Email address" id="co_23" au="Wouter Van Rossem" cDate="2021-05-12T11:54:20" mDate="2021-05-12T11:54:20" color="" guid="0113A83D-503F-419D-BEA5-EE60E82D5354" cCount="0" qCount="2"/>
+        <code name="Emergency contact: City" id="co_24" au="Wouter Van Rossem" cDate="2021-05-12T19:13:35" mDate="2021-05-12T19:13:35" color="" guid="560ACAF2-8B74-430D-BDAD-62999D5DDABD" cCount="0" qCount="1"/>
+        <code name="Emergency contact: Country" id="co_25" au="Wouter Van Rossem" cDate="2021-05-12T19:13:47" mDate="2021-05-12T19:13:47" color="" guid="58EEE21A-24DD-4B1A-BB17-8A6F58969891" cCount="0" qCount="1"/>
+        <code name="Emergency contact: Email" id="co_26" au="Wouter Van Rossem" cDate="2021-05-12T19:13:54" mDate="2021-05-12T19:13:54" color="" guid="0E36A2E2-A745-4FC5-BCC9-E8E6AAF45FD3" cCount="0" qCount="1"/>
+        <code name="Emergency contact: First (Given) Name" id="co_27" au="Wouter Van Rossem" cDate="2021-05-12T19:13:27" mDate="2021-05-12T19:13:27" color="" guid="F35089B1-B729-4AE2-891A-75368C9DA01E" cCount="0" qCount="1"/>
+        <code name="Emergency contact: Last (Family) Name" id="co_28" au="Wouter Van Rossem" cDate="2021-05-12T19:13:04" mDate="2021-05-12T19:13:04" color="" guid="DF3A2042-A518-48BD-9DA2-C88895EDAEEA" cCount="0" qCount="1"/>
+        <code name="Emergency contact: Mobile phone" id="co_29" au="Wouter Van Rossem" cDate="2021-05-12T19:14:05" mDate="2021-05-12T19:14:05" color="" guid="8E788224-5754-43CF-98C2-0BC76F5B067B" cCount="0" qCount="1"/>
+        <code name="Emergency contact: Other phone" id="co_30" au="Wouter Van Rossem" cDate="2021-05-12T19:14:13" mDate="2021-05-12T19:14:13" color="" guid="EABA47D7-540C-4FA2-A7E5-C06CC839CE81" cCount="0" qCount="1"/>
+        <code name="Family Name" id="co_31" au="Wouter Van Rossem" cDate="2021-05-12T18:50:29" mDate="2021-05-12T18:50:29" color="" guid="31C63E27-173D-44D4-A3F3-F8E7D91BE8D5" cCount="0" qCount="1"/>
+        <code name="First name" id="co_32" au="Wouter Van Rossem" cDate="2021-05-12T18:50:46" mDate="2021-05-12T18:50:46" color="" guid="7BC67877-2E2C-4CB6-8FA1-C81B9F8DB1F2" cCount="0" qCount="1"/>
+        <code name="Flight information: Airline name" id="co_33" au="Wouter Van Rossem" cDate="2021-05-12T21:05:33" mDate="2021-05-12T21:05:33" color="" guid="0C034F89-6B9B-4A1C-B562-E98861FE5B93" cCount="0" qCount="1"/>
+        <code name="Flight information: Date of arrival" id="co_34" au="Wouter Van Rossem" cDate="2021-05-12T21:06:11" mDate="2021-05-12T21:06:11" color="" guid="F905694F-3D51-4904-870B-350F515934D0" cCount="0" qCount="1"/>
+        <code name="Flight information: Flight number" id="co_35" au="Wouter Van Rossem" cDate="2021-05-12T21:05:46" mDate="2021-05-12T21:05:46" color="" guid="2062D5AE-DC4D-4F55-A543-ACF816D1C61E" cCount="0" qCount="1"/>
+        <code name="Flight information: Seat number" id="co_36" au="Wouter Van Rossem" cDate="2021-05-12T21:05:57" mDate="2021-05-12T21:05:57" color="" guid="910F22DC-C1C6-4B86-864A-016A04E895AA" cCount="0" qCount="1"/>
+        <code name="Flight number" id="co_37" au="Wouter Van Rossem" cDate="2021-05-12T11:51:45" mDate="2021-05-12T11:51:45" color="" guid="AF221FB3-5984-41FD-A479-F9EFAAB577BA" cCount="0" qCount="2"/>
+        <code name="Full name" id="co_38" au="Wouter Van Rossem" cDate="2021-05-12T18:58:02" mDate="2021-05-12T18:58:07" color="" guid="941D22D2-E211-4DDD-A9A9-053699996E6D" cCount="0" qCount="1"/>
+        <code name="Gender" id="co_39" au="Wouter Van Rossem" cDate="2021-05-12T18:50:57" mDate="2021-05-12T18:50:57" color="" guid="F00B8032-88EE-401A-9AA0-AB459D64BE85" cCount="0" qCount="1"/>
+        <code name="Gender: Female" id="co_40" au="Wouter Van Rossem" cDate="2021-05-12T18:51:21" mDate="2021-05-12T18:51:21" color="" guid="FCC7826E-E9F8-4B56-AD34-5769F18D23D0" cCount="0" qCount="1"/>
+        <code name="Gender: Male" id="co_41" au="Wouter Van Rossem" cDate="2021-05-12T18:51:09" mDate="2021-05-12T18:51:09" color="" guid="9DDD2949-E4B9-4160-80EA-8C2EB1B6B8C7" cCount="0" qCount="1"/>
+        <code name="Gender: Other" id="co_42" au="Wouter Van Rossem" cDate="2021-05-12T18:51:36" mDate="2021-05-12T18:51:36" color="" guid="3C9FF49B-5C65-46B9-A45C-401AC744B6A5" cCount="0" qCount="1"/>
+        <code name="HOME ADDRESS / ADDRESS WHERE YOU WILL BE STAYING IN GERMANY" id="co_43" au="Wouter Van Rossem" cDate="2021-05-12T19:04:14" mDate="2021-05-12T19:04:14" color="" guid="C7916A13-98FF-4BAC-ADEC-509EFE17FC69" cCount="0" qCount="1"/>
+        <code name="Home address / staying: Apartment number" id="co_44" au="Wouter Van Rossem" cDate="2021-05-12T21:14:49" mDate="2021-05-12T21:14:49" color="" guid="CA3F4AA3-8B4E-4EB4-8FD4-0A21AD846CE8" cCount="0" qCount="1"/>
+        <code name="Home address / staying: City" id="co_45" au="Wouter Van Rossem" cDate="2021-05-12T21:14:55" mDate="2021-05-12T21:14:55" color="" guid="2FAC33C2-0E77-487C-809C-C1D4F9FFB23D" cCount="0" qCount="1"/>
+        <code name="Home address / staying: Hotel name" id="co_46" au="Wouter Van Rossem" cDate="2021-05-12T21:14:23" mDate="2021-05-12T21:14:23" color="" guid="950B5672-BDBC-4381-BDD5-7E28E1F2977B" cCount="0" qCount="1"/>
+        <code name="Home address / staying: Postcode" id="co_47" au="Wouter Van Rossem" cDate="2021-05-12T21:15:09" mDate="2021-05-12T21:15:09" color="" guid="F27ED9B9-5609-445B-99FE-DE8A02139FEC" cCount="0" qCount="1"/>
+        <code name="Home address / staying: State" id="co_48" au="Wouter Van Rossem" cDate="2021-05-12T21:15:02" mDate="2021-05-12T21:15:02" color="" guid="E1300E7E-3E27-4B45-9E51-1FC7233CE069" cCount="0" qCount="1"/>
+        <code name="Home address / staying: Street and house number" id="co_49" au="Wouter Van Rossem" cDate="2021-05-12T21:14:34" mDate="2021-05-12T21:14:34" color="" guid="CC75E6BB-F16D-45D4-A33D-3690F53D43CC" cCount="0" qCount="1"/>
+        <code name="Home phone" id="co_50" au="Wouter Van Rossem" cDate="2021-05-12T18:53:18" mDate="2021-05-12T18:53:18" color="" guid="4A8E35C4-5342-4AD6-810A-5AB38307E9BA" cCount="0" qCount="1"/>
+        <code name="I am entering Italy for the following reasons" id="co_51" au="Wouter Van Rossem" cDate="2021-05-12T19:00:51" mDate="2021-05-12T19:00:51" color="" guid="E59956E6-EAE8-4BE5-9360-0342AA06299A" cCount="0" qCount="1"/>
+        <code name="I will stay in Belgium longer than 48 hours" id="co_52" au="Wouter Van Rossem" cDate="2021-05-12T21:27:22" mDate="2021-05-12T21:27:22" color="" guid="20651BC4-1D18-40F6-AC8D-D6A68CE61BF0" cCount="0" qCount="1"/>
+        <code name="Mobile phone" id="co_53" au="Wouter Van Rossem" cDate="2021-05-12T18:52:58" mDate="2021-05-12T18:52:58" color="" guid="81E780BD-8B38-40F2-885E-2813173AC08F" cCount="0" qCount="1"/>
+        <code name="Nationality" id="co_54" au="Wouter Van Rossem" cDate="2021-05-12T18:51:58" mDate="2021-05-12T18:51:58" color="" guid="80514C66-3E6A-429A-AD4B-1D4620109156" cCount="0" qCount="3"/>
+        <code name="Number" id="co_55" au="Wouter Van Rossem" cDate="2021-05-12T18:56:00" mDate="2021-05-12T18:56:00" color="" guid="2C1A8D4C-05F2-4E11-ACE7-F185947118BE" cCount="0" qCount="1"/>
+        <code name="Number of children under 16 years" id="co_56" au="Wouter Van Rossem" cDate="2021-05-12T18:57:21" mDate="2021-05-12T18:57:21" color="" guid="4F136FB3-F628-4662-BA4C-50149516452C" cCount="0" qCount="1"/>
+        <code name="Office phone" id="co_57" au="Wouter Van Rossem" cDate="2021-05-12T18:53:38" mDate="2021-05-12T18:53:38" color="" guid="27DDF911-2B8A-4E83-8C3D-E1FD64D1785B" cCount="0" qCount="1"/>
+        <code name="PERMANENT ADDRESS" id="co_58" au="Wouter Van Rossem" cDate="2021-05-12T19:05:17" mDate="2021-05-12T19:05:17" color="" guid="F6796DE6-C800-4CC9-8334-E5108ED2EDDB" cCount="0" qCount="1"/>
+        <code name="PERSONAL INFORMATION" id="co_59" au="Wouter Van Rossem" cDate="2021-05-12T21:03:12" mDate="2021-05-12T21:03:12" color="" guid="53F211C6-88FB-429E-B800-111953F2CB3A" cCount="0" qCount="2"/>
+        <code name="PHONE NUMBER(S)" id="co_60" au="Wouter Van Rossem" cDate="2021-05-12T21:02:10" mDate="2021-05-12T21:02:10" color="" guid="AE49EE03-293A-456B-B897-8F000E956E7E" cCount="0" qCount="1"/>
+        <code name="Passenger information Date of birth" id="co_61" au="Wouter Van Rossem" cDate="2021-05-12T21:25:07" mDate="2021-05-12T21:25:07" color="" guid="19228402-20A9-48C9-AB72-5D7117B170F4" cCount="0" qCount="1"/>
+        <code name="Passenger information: Flight number" id="co_62" au="Wouter Van Rossem" cDate="2021-05-12T21:24:26" mDate="2021-05-12T21:24:26" color="" guid="828DEB4A-4D5D-4584-B3E5-920B4517B7B7" cCount="0" qCount="1"/>
+        <code name="Passenger information: Seat number" id="co_63" au="Wouter Van Rossem" cDate="2021-05-12T21:24:36" mDate="2021-05-12T21:24:36" color="" guid="16CC313A-6B5A-45AC-9F1F-B7F746C8BAD8" cCount="0" qCount="1"/>
+        <code name="Passenger information: Surname" id="co_64" au="Wouter Van Rossem" cDate="2021-05-12T21:24:51" mDate="2021-05-12T21:24:51" color="" guid="1BF76D20-8DAB-42BB-8D93-367E32BABD4C" cCount="0" qCount="1"/>
+        <code name="Passport or ID card number" id="co_65" au="Wouter Van Rossem" cDate="2021-05-12T18:52:48" mDate="2021-05-12T18:52:48" color="" guid="3C520F4F-033F-4B6B-BED2-3071667ED6B9" cCount="0" qCount="1"/>
+        <code name="Permanent address: Apartment number" id="co_66" au="Wouter Van Rossem" cDate="2021-05-12T21:00:14" mDate="2021-05-12T21:00:14" color="" guid="EBD14363-E574-4583-9BB6-DE01CC1C7018" cCount="0" qCount="1"/>
+        <code name="Permanent address: City" id="co_67" au="Wouter Van Rossem" cDate="2021-05-12T21:00:48" mDate="2021-05-12T21:00:48" color="" guid="288F2CD7-4D13-4F87-A613-D934D0A8D59F" cCount="0" qCount="1"/>
+        <code name="Permanent address: Country" id="co_68" au="Wouter Van Rossem" cDate="2021-05-12T21:01:08" mDate="2021-05-12T21:01:08" color="" guid="D86FB147-12EE-45E1-9B6A-0A868C0E65D4" cCount="0" qCount="1"/>
+        <code name="Permanent address: Number and street" id="co_69" au="Wouter Van Rossem" cDate="2021-05-12T20:59:52" mDate="2021-05-12T20:59:52" color="" guid="93341CC4-27CF-452A-A1CE-A4FFA36C89C4" cCount="0" qCount="1"/>
+        <code name="Permanent address: State/Province" id="co_70" au="Wouter Van Rossem" cDate="2021-05-12T21:00:59" mDate="2021-05-12T21:00:59" color="" guid="D2C71D8E-9D75-470A-8DBD-5BE49F95BA40" cCount="0" qCount="1"/>
+        <code name="Permanent address: ZIP/Postal code" id="co_71" au="Wouter Van Rossem" cDate="2021-05-12T21:01:29" mDate="2021-05-12T21:01:29" color="" guid="890AA98F-8192-4B20-8163-7CFF0D43C5C2" cCount="0" qCount="1"/>
+        <code name="Personal information: Date of birth" id="co_72" au="Wouter Van Rossem" cDate="2021-05-12T21:11:15" mDate="2021-05-12T21:11:15" color="" guid="AF5BA54E-FCAF-49F6-B3E6-DC2045760940" cCount="0" qCount="1"/>
+        <code name="Personal information: First (Given) Name" id="co_73" au="Wouter Van Rossem" cDate="2021-05-12T21:04:21" mDate="2021-05-12T21:04:21" color="" guid="92264109-988C-4483-AB65-D4AC21F18252" cCount="0" qCount="1"/>
+        <code name="Personal information: First name(s)" id="co_74" au="Wouter Van Rossem" cDate="2021-05-12T21:10:18" mDate="2021-05-12T21:10:18" color="" guid="1BFB3B35-5EDB-4BBB-9AE9-F0E437C73BFA" cCount="0" qCount="1"/>
+        <code name="Personal information: Last (Family) Name" id="co_75" au="Wouter Van Rossem" cDate="2021-05-12T21:03:49" mDate="2021-05-12T21:03:49" color="" guid="C37BD515-A9BB-4EBB-8230-F98703B504C9" cCount="0" qCount="1"/>
+        <code name="Personal information: Last name (surname)" id="co_76" au="Wouter Van Rossem" cDate="2021-05-12T21:09:58" mDate="2021-05-12T21:09:58" color="" guid="E98A9F10-C5F8-4C8B-9727-31F3EDD0F883" cCount="0" qCount="1"/>
+        <code name="Personal information: Middle Initial" id="co_77" au="Wouter Van Rossem" cDate="2021-05-12T21:04:37" mDate="2021-05-12T21:04:37" color="" guid="E70F4931-F067-4BAD-8589-482186C50DD0" cCount="0" qCount="1"/>
+        <code name="Personal information: Nationality" id="co_78" au="Wouter Van Rossem" cDate="2021-05-12T21:10:49" mDate="2021-05-12T21:10:49" color="" guid="81A68757-16AE-4794-BF4C-27B5B161EE4B" cCount="0" qCount="1"/>
+        <code name="Personal information: Sex" id="co_79" au="Wouter Van Rossem" cDate="2021-05-12T21:04:56" mDate="2021-05-12T21:04:56" color="" guid="A7700E46-321D-4E84-AF49-9F6B39AD2783" cCount="0" qCount="2"/>
+        <code name="Phone number: Business" id="co_80" au="Wouter Van Rossem" cDate="2021-05-12T21:02:56" mDate="2021-05-12T21:02:56" color="" guid="A87CAD1B-88A3-4B40-A33F-3AB4F74B1F51" cCount="0" qCount="1"/>
+        <code name="Phone number: Home" id="co_81" au="Wouter Van Rossem" cDate="2021-05-12T21:02:31" mDate="2021-05-12T21:02:31" color="" guid="59E0A69B-2087-4A73-B6A5-1C8BB6F19955" cCount="0" qCount="1"/>
+        <code name="Phone number: Mobile" id="co_82" au="Wouter Van Rossem" cDate="2021-05-12T21:02:20" mDate="2021-05-12T21:02:47" color="" guid="797C57E3-D832-4B85-8554-2E1E36EE4F6A" cCount="0" qCount="1"/>
+        <code name="Phone number: Other" id="co_83" au="Wouter Van Rossem" cDate="2021-05-12T21:03:02" mDate="2021-05-12T21:03:02" color="" guid="411FF4E8-86C7-4DCC-8FD5-DC7A67DEC218" cCount="0" qCount="1"/>
+        <code name="Place of birth" id="co_84" au="Wouter Van Rossem" cDate="2021-05-12T18:58:17" mDate="2021-05-12T18:58:23" color="" guid="EC578391-8D9A-4458-86E9-F6AF59633D99" cCount="0" qCount="1"/>
+        <code name="Place of residence in Belgium / address in destination country" id="co_85" au="Wouter Van Rossem" cDate="2021-05-12T18:55:45" mDate="2021-05-12T18:55:45" color="" guid="1EA7F342-B5A3-438D-9B5F-A03DAD7E0E36" cCount="0" qCount="1"/>
+        <code name="Previous consecutive stays within last 14 days" id="co_86" au="Wouter Van Rossem" cDate="2021-05-12T21:26:23" mDate="2021-05-12T21:26:23" color="" guid="FB3F6544-7895-482B-8E12-DCEA1300D773" cCount="0" qCount="1"/>
+        <code name="Rail or bus service number" id="co_87" au="Wouter Van Rossem" cDate="2021-05-12T18:59:50" mDate="2021-05-12T19:00:17" color="" guid="19DC3E9F-28E2-4ABB-A53D-DDF4763625FB" cCount="0" qCount="1"/>
+        <code name="Resident in" id="co_88" au="Wouter Van Rossem" cDate="2021-05-12T18:58:39" mDate="2021-05-12T18:58:44" color="" guid="77ED4995-2C9E-4EAE-9165-C920BA35656F" cCount="0" qCount="1"/>
+        <code name="Resident of Belgium" id="co_89" au="Wouter Van Rossem" cDate="2021-05-12T18:52:15" mDate="2021-05-12T18:52:15" color="" guid="DEFB0AFF-8CA7-469F-81F1-2B8090FD7136" cCount="0" qCount="1"/>
+        <code name="Seat occupied during the flight" id="co_90" au="Wouter Van Rossem" cDate="2021-05-12T18:55:00" mDate="2021-05-12T18:55:00" color="" guid="B35DD167-B90B-4B7E-8958-474C8F5B9EA9" cCount="0" qCount="1"/>
+        <code name="Self-assessment questionnaire" id="co_91" au="Wouter Van Rossem" cDate="2021-05-12T18:57:48" mDate="2021-05-12T18:57:48" color="" guid="DBB5C0F2-B55C-4E33-8C27-A2AC1BCAC77F" cCount="0" qCount="1"/>
+        <code name="Sex: Female" id="co_92" au="Wouter Van Rossem" cDate="2021-05-12T11:53:40" mDate="2021-05-12T11:53:49" color="" guid="D2585AF4-9F73-4F10-9766-1FD62AEED9BE" cCount="0" qCount="2"/>
+        <code name="Sex: Male" id="co_93" au="Wouter Van Rossem" cDate="2021-05-12T11:53:28" mDate="2021-05-12T11:53:36" color="" guid="89E6D562-2D51-4D81-B612-9DFDD4DE9C27" cCount="0" qCount="2"/>
+        <code name="Sex: Other" id="co_94" au="Wouter Van Rossem" cDate="2021-05-12T19:03:02" mDate="2021-05-12T19:03:02" color="" guid="1AF71A0C-B7C0-4A90-93A5-320E2BACED57" cCount="0" qCount="1"/>
+        <code name="Signature" id="co_95" au="Wouter Van Rossem" cDate="2021-05-12T16:28:16" mDate="2021-05-12T16:28:16" color="" guid="DF1D5EAF-F728-4F6B-BABF-AEF1F585B33B" cCount="0" qCount="3"/>
+        <code name="State/Province" id="co_96" au="Wouter Van Rossem" cDate="2021-05-12T18:56:34" mDate="2021-05-12T18:56:34" color="" guid="6BA1BF81-ABE6-421D-8882-4888D88FAFD2" cCount="0" qCount="1"/>
+        <code name="Street" id="co_97" au="Wouter Van Rossem" cDate="2021-05-12T18:55:52" mDate="2021-05-12T18:55:52" color="" guid="CE68F019-EEFB-4BC1-BBE7-2E601977BECF" cCount="0" qCount="1"/>
+        <code name="Symptoms past 24h" id="co_98" au="Wouter Van Rossem" cDate="2021-05-12T21:24:00" mDate="2021-05-12T21:24:00" color="" guid="104BE169-4FB3-4590-9596-D12DF74A2530" cCount="0" qCount="1"/>
+        <code name="Symptoms: Cough" id="co_99" au="Wouter Van Rossem" cDate="2021-05-12T16:28:48" mDate="2021-05-12T16:31:11" color="" guid="FC75D139-E744-40F7-9BA5-B0A82B8599E4" cCount="0" qCount="1"/>
+        <code name="Symptoms: Fever" id="co_100" au="Wouter Van Rossem" cDate="2021-05-12T16:28:44" mDate="2021-05-12T16:30:59" color="" guid="0C05AD04-C458-420F-BA7C-A204067B4E87" cCount="0" qCount="1"/>
+        <code name="Symptoms: Runny nose" id="co_101" au="Wouter Van Rossem" cDate="2021-05-12T16:28:53" mDate="2021-05-12T16:31:18" color="" guid="A3DC10B2-87CA-4EC8-97B8-1F576AC63E74" cCount="0" qCount="1"/>
+        <code name="Symptoms: Shortness of breath" id="co_102" au="Wouter Van Rossem" cDate="2021-05-12T16:29:08" mDate="2021-05-12T16:31:26" color="" guid="B9151C87-405C-47BF-BB8F-B9BDE0420AA8" cCount="0" qCount="1"/>
+        <code name="Symptoms: Sore throat" id="co_103" au="Wouter Van Rossem" cDate="2021-05-12T16:29:04" mDate="2021-05-12T16:31:22" color="" guid="2652EFAF-BDD6-47C8-A88C-C6F322B89DE5" cCount="0" qCount="1"/>
+        <code name="TELEPHONE NUMBER(S)" id="co_104" au="Wouter Van Rossem" cDate="2021-05-12T19:03:11" mDate="2021-05-12T19:03:11" color="" guid="049BBAAD-264F-46E4-97C0-7026F12BC673" cCount="0" qCount="1"/>
+        <code name="TEMPORARY ADDRESS" id="co_105" au="Wouter Van Rossem" cDate="2021-05-12T19:05:23" mDate="2021-05-12T19:05:23" color="" guid="356E58A4-EAA5-46CF-838B-66032EE4EB4D" cCount="0" qCount="1"/>
+        <code name="TRAVEL COMPANIONS &#8211; FAMILY" id="co_106" au="Wouter Van Rossem" cDate="2021-05-12T19:06:39" mDate="2021-05-12T19:06:39" color="" guid="BABB7B11-5A8E-4E64-93EF-8F1861ECDF4A" cCount="0" qCount="1"/>
+        <code name="TRAVEL COMPANIONS &#8211; NON&#8208;FAMIL" id="co_107" au="Wouter Van Rossem" cDate="2021-05-12T19:06:55" mDate="2021-05-12T19:06:55" color="" guid="B9BC3016-1C6C-499C-A364-5227C18256A9" cCount="0" qCount="1"/>
+        <code name="TRAVEL INFORMATION" id="co_108" au="Wouter Van Rossem" cDate="2021-05-12T21:16:39" mDate="2021-05-12T21:16:39" color="" guid="3A840497-4B3A-4E18-886F-6B9A66589B3A" cCount="0" qCount="1"/>
+        <code name="Telephone number: Mobile phone" id="co_109" au="Wouter Van Rossem" cDate="2021-05-12T21:12:05" mDate="2021-05-12T21:12:05" color="" guid="451DED7A-BC4A-4477-8588-37068AF97D50" cCount="0" qCount="1"/>
+        <code name="Telephone number: Private" id="co_110" au="Wouter Van Rossem" cDate="2021-05-12T21:13:07" mDate="2021-05-12T21:13:07" color="" guid="8F1FA731-A408-4DEB-9CBB-A2FB6C8B7883" cCount="0" qCount="1"/>
+        <code name="Telephone number: Work" id="co_111" au="Wouter Van Rossem" cDate="2021-05-12T21:12:56" mDate="2021-05-12T21:12:56" color="" guid="C77F0E10-FF8B-487D-BCD2-6D2B838E5F60" cCount="0" qCount="1"/>
+        <code name="Temporary adress: Apartment number" id="co_112" au="Wouter Van Rossem" cDate="2021-05-12T19:11:17" mDate="2021-05-12T19:11:17" color="" guid="547FBE79-EF67-4D7F-91DD-802AB3890B0D" cCount="0" qCount="1"/>
+        <code name="Temporary adress: City" id="co_113" au="Wouter Van Rossem" cDate="2021-05-12T19:11:33" mDate="2021-05-12T19:11:33" color="" guid="4672CBFF-0773-487B-8092-F07D24A4242D" cCount="0" qCount="1"/>
+        <code name="Temporary adress: Country" id="co_114" au="Wouter Van Rossem" cDate="2021-05-12T19:11:57" mDate="2021-05-12T19:11:57" color="" guid="FA6347A0-F4B8-491E-8B01-3487750377C2" cCount="0" qCount="1"/>
+        <code name="Temporary adress: Hotel name (if any)" id="co_115" au="Wouter Van Rossem" cDate="2021-05-12T19:05:08" mDate="2021-05-12T19:10:22" color="" guid="EEC39DBE-B920-42C2-B269-27F56449092E" cCount="0" qCount="1"/>
+        <code name="Temporary adress: Number and street" id="co_116" au="Wouter Van Rossem" cDate="2021-05-12T19:10:55" mDate="2021-05-12T19:10:55" color="" guid="E574D2B7-F1F6-4D7A-BFE2-9D53D1E7E127" cCount="0" qCount="1"/>
+        <code name="Temporary adress: State/Province" id="co_117" au="Wouter Van Rossem" cDate="2021-05-12T19:11:44" mDate="2021-05-12T19:11:44" color="" guid="93E54214-BE26-4F11-A665-C091D3F9B6D2" cCount="0" qCount="1"/>
+        <code name="Temporary adress: ZIP/Postal code" id="co_118" au="Wouter Van Rossem" cDate="2021-05-12T19:12:11" mDate="2021-05-12T19:12:11" color="" guid="E160CC4C-58E2-4AF5-9FEE-D9F6A4BE0198" cCount="0" qCount="1"/>
+        <code name="Travel companions - Family: Age &lt;18" id="co_119" au="Wouter Van Rossem" cDate="2021-05-12T19:15:56" mDate="2021-05-12T19:15:56" color="" guid="341D9D62-0EF0-4D32-BC53-668B1BDAB5A8" cCount="0" qCount="1"/>
+        <code name="Travel companions - Family: First (Given) Name" id="co_120" au="Wouter Van Rossem" cDate="2021-05-12T19:15:32" mDate="2021-05-12T19:15:32" color="" guid="C292CA3F-6B17-4FFC-B795-1ADB127F7D74" cCount="0" qCount="1"/>
+        <code name="Travel companions - Family: Last (Family) Name" id="co_121" au="Wouter Van Rossem" cDate="2021-05-12T19:14:51" mDate="2021-05-12T19:14:51" color="" guid="698051F0-7F38-406B-A8B8-9E28EBB8B365" cCount="0" qCount="1"/>
+        <code name="Travel companions - Family: Seat number" id="co_122" au="Wouter Van Rossem" cDate="2021-05-12T19:15:43" mDate="2021-05-12T19:15:43" color="" guid="A9288F42-98D4-4342-94B0-6D995E591C26" cCount="0" qCount="1"/>
+        <code name="Travel companions - Non-family: First (Given) Name" id="co_123" au="Wouter Van Rossem" cDate="2021-05-12T19:16:39" mDate="2021-05-12T19:16:39" color="" guid="E4EA3C98-A8D3-48A7-9125-93683E82F4C3" cCount="0" qCount="1"/>
+        <code name="Travel companions - Non-family: Group" id="co_124" au="Wouter Van Rossem" cDate="2021-05-12T19:17:01" mDate="2021-05-12T19:17:01" color="" guid="C64EF2A2-BB88-4AD5-BA5A-D6E12E033793" cCount="0" qCount="1"/>
+        <code name="Travel companions - Non-family: Last (Family) Name" id="co_125" au="Wouter Van Rossem" cDate="2021-05-12T19:16:27" mDate="2021-05-12T19:16:27" color="" guid="237A0D69-56E2-42F7-BE56-FF8310A7F8F7" cCount="0" qCount="1"/>
+        <code name="Travel information: Date of arrival" id="co_126" au="Wouter Van Rossem" cDate="2021-05-12T21:07:49" mDate="2021-05-12T21:07:49" color="" guid="E6E71D20-026F-4500-9A9B-712C545CFAAB" cCount="0" qCount="1"/>
+        <code name="Travel information: Name of carrier" id="co_127" au="Wouter Van Rossem" cDate="2021-05-12T21:07:06" mDate="2021-05-12T21:07:06" color="" guid="B44774E2-88F3-45E4-BE00-39E9EC941813" cCount="0" qCount="1"/>
+        <code name="Travel information: Place of departure" id="co_128" au="Wouter Van Rossem" cDate="2021-05-12T21:08:11" mDate="2021-05-12T21:08:11" color="" guid="5C379827-C5D8-49A5-B98D-D47CD0FA1245" cCount="0" qCount="1"/>
+        <code name="Travel information: Route number" id="co_129" au="Wouter Van Rossem" cDate="2021-05-12T21:07:24" mDate="2021-05-12T21:07:24" color="" guid="4EDB109A-8503-4A1E-ABE7-3B286C8BA967" cCount="0" qCount="1"/>
+        <code name="Travel information: Seat number" id="co_130" au="Wouter Van Rossem" cDate="2021-05-12T21:07:36" mDate="2021-05-12T21:07:36" color="" guid="81624F2D-02FE-4320-A766-54616083C84B" cCount="0" qCount="1"/>
+        <code name="Travel information: Via" id="co_131" au="Wouter Van Rossem" cDate="2021-05-12T21:09:24" mDate="2021-05-12T21:09:24" color="" guid="4D6E2D23-CCBE-4914-B68B-32ED910713CC" cCount="0" qCount="1"/>
+        <code name="Travelling by" id="co_132" au="Wouter Van Rossem" cDate="2021-05-12T21:26:53" mDate="2021-05-12T21:26:53" color="" guid="2DC924B5-EA37-46A7-8A05-014A9B2C6790" cCount="0" qCount="1"/>
+        <code name="Travelling purpose" id="co_133" au="Wouter Van Rossem" cDate="2021-05-12T18:54:13" mDate="2021-05-12T18:54:13" color="" guid="A77BA997-66F4-4685-B549-1AC63BF8D1B5" cCount="0" qCount="1"/>
+        <code name="Type and registration plate" id="co_134" au="Wouter Van Rossem" cDate="2021-05-12T19:00:04" mDate="2021-05-12T21:58:08" color="" guid="6A6C126A-2FDF-4534-8394-D2FC65137478" cCount="0" qCount="1"/>
+        <code name="Zip/postal code" id="co_135" au="Wouter Van Rossem" cDate="2021-05-12T18:56:47" mDate="2021-05-12T18:56:47" color="" guid="C51E646C-1CBE-4AB7-8EB3-40C36B8FCE76" cCount="0" qCount="1"/>
+        <code name="contacted at the following telephone number" id="co_136" au="Wouter Van Rossem" cDate="2021-05-12T21:19:06" mDate="2021-05-12T21:19:06" color="" guid="31877339-CA11-427C-92BF-540A848B8108" cCount="0" qCount="1"/>
+        <code name="means of transport" id="co_137" au="Wouter Van Rossem" cDate="2021-05-12T18:59:17" mDate="2021-05-12T18:59:17" color="" guid="6777A120-E927-43B1-B1C1-984A45897B3D" cCount="0" qCount="1"/>
+        <code name="stopped over in/transited through the following Countries and territories" id="co_138" au="Wouter Van Rossem" cDate="2021-05-12T19:00:42" mDate="2021-05-12T19:00:42" color="" guid="D670D7BA-A694-47D8-99D8-2F398A56706F" cCount="0" qCount="1"/>
+    </codes>
+    <superCodes size="0"/>
+    <memos size="0"/>
+    <families>
+        <codeFamilies size="33">
+            <codeFamily name="Contact information: Email" id="cf_1" au="Wouter Van Rossem" cDate="2021-05-12T21:43:09" mDate="2021-05-12T21:49:53" guid="B8B21080-B676-49C1-96AB-247AF18CB1CE">
+                <item id="co_22"/>
+                <item id="co_23"/>
+            </codeFamily>
+            <codeFamily name="Contact information: Telephone" id="cf_2" au="Wouter Van Rossem" cDate="2021-05-12T21:38:39" mDate="2021-05-12T21:49:47" guid="BC4CFFB1-C1F8-4300-8279-ED81B4D92EF0">
+                <item id="co_16"/>
+                <item id="co_50"/>
+                <item id="co_53"/>
+                <item id="co_57"/>
+                <item id="co_60"/>
+                <item id="co_80"/>
+                <item id="co_81"/>
+                <item id="co_82"/>
+                <item id="co_83"/>
+                <item id="co_104"/>
+                <item id="co_109"/>
+                <item id="co_110"/>
+                <item id="co_111"/>
+                <item id="co_136"/>
+            </codeFamily>
+            <codeFamily name="Emergency contact information" id="cf_3" au="Wouter Van Rossem" cDate="2021-05-12T21:31:46" mDate="2021-05-12T21:42:11" guid="0B3E8EB7-113D-4FDD-BE39-D93F9B05D19F">
+                <item id="co_21"/>
+                <item id="co_24"/>
+                <item id="co_25"/>
+                <item id="co_26"/>
+                <item id="co_27"/>
+                <item id="co_28"/>
+                <item id="co_29"/>
+                <item id="co_30"/>
+            </codeFamily>
+            <codeFamily name="Flight Information" id="cf_4" au="Wouter Van Rossem" cDate="2021-05-12T11:52:17" mDate="2021-05-12T21:28:31" guid="B90BEF12-3F2E-43BD-B502-D671504BD9F4">
+                <item id="co_33"/>
+                <item id="co_34"/>
+                <item id="co_35"/>
+                <item id="co_36"/>
+                <item id="co_37"/>
+            </codeFamily>
+            <codeFamily name="Health information: Symptoms" id="cf_5" au="Wouter Van Rossem" cDate="2021-05-12T21:40:59" mDate="2021-05-12T21:47:48" guid="D09C5C18-B2AC-40F2-99D8-F30075E11B4A">
+                <item id="co_20"/>
+                <item id="co_98"/>
+                <item id="co_99"/>
+                <item id="co_100"/>
+                <item id="co_101"/>
+                <item id="co_102"/>
+                <item id="co_103"/>
+            </codeFamily>
+            <codeFamily name="Permanent Address / Residency" id="cf_6" au="Wouter Van Rossem" cDate="2021-05-12T21:37:24" mDate="2021-05-12T21:57:33" guid="333630D9-5056-4D5C-B24D-7D3AD7CD268D">
+                <item id="co_2"/>
+                <item id="co_13"/>
+                <item id="co_15"/>
+                <item id="co_17"/>
+                <item id="co_43"/>
+                <item id="co_44"/>
+                <item id="co_45"/>
+                <item id="co_46"/>
+                <item id="co_47"/>
+                <item id="co_48"/>
+                <item id="co_49"/>
+                <item id="co_55"/>
+                <item id="co_58"/>
+                <item id="co_66"/>
+                <item id="co_67"/>
+                <item id="co_68"/>
+                <item id="co_69"/>
+                <item id="co_70"/>
+                <item id="co_71"/>
+                <item id="co_85"/>
+                <item id="co_88"/>
+                <item id="co_89"/>
+                <item id="co_96"/>
+                <item id="co_97"/>
+                <item id="co_135"/>
+            </codeFamily>
+            <codeFamily name="Personal information: Date of birth" id="cf_7" au="Wouter Van Rossem" cDate="2021-05-12T21:29:14" mDate="2021-05-12T21:50:23" guid="E584982B-F956-44D7-85ED-9537D184DF95">
+                <item id="co_18"/>
+                <item id="co_19"/>
+                <item id="co_61"/>
+                <item id="co_72"/>
+            </codeFamily>
+            <codeFamily name="Personal information: First/Given name(s)" id="cf_8" au="Wouter Van Rossem" cDate="2021-05-12T21:29:21" mDate="2021-05-12T21:56:45" guid="46859B14-2121-4ED1-8E80-3E322A052533">
+                <item id="co_32"/>
+                <item id="co_38"/>
+                <item id="co_73"/>
+                <item id="co_74"/>
+            </codeFamily>
+            <codeFamily name="Personal information: Last/family name (surname)" id="cf_9" au="Wouter Van Rossem" cDate="2021-05-12T21:29:25" mDate="2021-05-12T21:56:51" guid="B6AD9620-5B2D-4D19-A0C2-A2789F750659">
+                <item id="co_31"/>
+                <item id="co_38"/>
+                <item id="co_64"/>
+                <item id="co_75"/>
+                <item id="co_76"/>
+            </codeFamily>
+            <codeFamily name="Personal information: Middle Initial" id="cf_10" au="Wouter Van Rossem" cDate="2021-05-12T21:29:28" mDate="2021-05-12T21:29:28" guid="10DD1993-14F3-4C1B-A175-17CB04AE37EF">
+                <item id="co_77"/>
+            </codeFamily>
+            <codeFamily name="Personal information: Nationality" id="cf_11" au="Wouter Van Rossem" cDate="2021-05-12T21:29:31" mDate="2021-05-12T21:45:10" guid="22BC7812-8F9D-4E19-9F3E-616478AE15A5">
+                <item id="co_54"/>
+                <item id="co_78"/>
+            </codeFamily>
+            <codeFamily name="Personal information: Place of birth" id="cf_12" au="Wouter Van Rossem" cDate="2021-05-12T21:46:11" mDate="2021-05-12T21:46:19" guid="AB1F1968-C991-46C9-BB73-AF7260EDF094">
+                <item id="co_84"/>
+            </codeFamily>
+            <codeFamily name="Personal information: Sex / Gender" id="cf_13" au="Wouter Van Rossem" cDate="2021-05-12T21:29:34" mDate="2021-05-12T21:44:46" guid="DE4C843F-FB04-4079-A33B-19F609C2FDDA">
+                <item id="co_39"/>
+                <item id="co_40"/>
+                <item id="co_41"/>
+                <item id="co_42"/>
+                <item id="co_79"/>
+                <item id="co_92"/>
+                <item id="co_93"/>
+                <item id="co_94"/>
+            </codeFamily>
+            <codeFamily name="Self-assessment questionnaire" id="cf_14" au="Wouter Van Rossem" cDate="2021-05-12T21:42:58" mDate="2021-05-12T21:42:58" guid="82A4E59F-F240-4B9C-9100-CFA1B8E3E404">
+                <item id="co_91"/>
+            </codeFamily>
+            <codeFamily name="Self-isolation: Address" id="cf_15" au="Wouter Van Rossem" cDate="2021-05-12T21:31:18" mDate="2021-05-12T21:54:50" guid="8A80D035-FC7D-4416-BBC9-A218726AD42A">
+                <item id="co_3"/>
+            </codeFamily>
+            <codeFamily name="Self-isolation: Care of" id="cf_16" au="Wouter Van Rossem" cDate="2021-05-12T21:54:26" mDate="2021-05-12T21:54:36" guid="CE36C4C6-8833-414C-A362-D722F6B816A2">
+                <item id="co_14"/>
+            </codeFamily>
+            <codeFamily name="Signature" id="cf_17" au="Wouter Van Rossem" cDate="2021-05-12T21:44:35" mDate="2021-05-12T21:44:35" guid="442E49AB-60CB-4AD1-BE14-521B179C18CC">
+                <item id="co_95"/>
+            </codeFamily>
+            <codeFamily name="Temporary address" id="cf_18" au="Wouter Van Rossem" cDate="2021-05-12T21:34:39" mDate="2021-05-12T21:57:19" guid="3C5F6596-623E-454E-8A3D-388D6BF77BEF">
+                <item id="co_1"/>
+                <item id="co_4"/>
+                <item id="co_5"/>
+                <item id="co_6"/>
+                <item id="co_7"/>
+                <item id="co_8"/>
+                <item id="co_9"/>
+                <item id="co_13"/>
+                <item id="co_15"/>
+                <item id="co_17"/>
+                <item id="co_43"/>
+                <item id="co_44"/>
+                <item id="co_45"/>
+                <item id="co_46"/>
+                <item id="co_47"/>
+                <item id="co_48"/>
+                <item id="co_49"/>
+                <item id="co_55"/>
+                <item id="co_85"/>
+                <item id="co_96"/>
+                <item id="co_97"/>
+                <item id="co_105"/>
+                <item id="co_112"/>
+                <item id="co_113"/>
+                <item id="co_114"/>
+                <item id="co_115"/>
+                <item id="co_116"/>
+                <item id="co_117"/>
+                <item id="co_118"/>
+                <item id="co_135"/>
+            </codeFamily>
+            <codeFamily name="Travel companions: Family" id="cf_19" au="Wouter Van Rossem" cDate="2021-05-12T21:33:28" mDate="2021-05-12T21:43:49" guid="E6969C91-7126-4F7E-AB1B-EB8BB8F3EF83">
+                <item id="co_56"/>
+                <item id="co_106"/>
+                <item id="co_119"/>
+                <item id="co_120"/>
+                <item id="co_121"/>
+                <item id="co_122"/>
+            </codeFamily>
+            <codeFamily name="Travel companions: Non-family" id="cf_20" au="Wouter Van Rossem" cDate="2021-05-12T21:33:48" mDate="2021-05-12T21:44:06" guid="ABA3D887-509F-4695-879F-2FEA643D8A68">
+                <item id="co_56"/>
+                <item id="co_107"/>
+                <item id="co_123"/>
+                <item id="co_124"/>
+                <item id="co_125"/>
+            </codeFamily>
+            <codeFamily name="Travel document information" id="cf_21" au="Wouter Van Rossem" cDate="2021-05-12T21:51:30" mDate="2021-05-12T21:52:16" guid="ACCF5C09-07F5-4DFD-8B05-C66060EA4F22">
+                <item id="co_11"/>
+                <item id="co_65"/>
+            </codeFamily>
+            <codeFamily name="Travel information" id="cf_22" au="Wouter Van Rossem" cDate="2021-05-12T21:34:11" mDate="2021-05-12T21:34:19" guid="FC6A08E1-18F4-4637-BF58-7C9DFF22074A">
+                <item id="co_108"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Boat or ferry route" id="cf_23" au="Wouter Van Rossem" cDate="2021-05-12T21:36:15" mDate="2021-05-12T21:36:22" guid="BFAD0EA4-4105-4839-A39D-383CC6372428">
+                <item id="co_12"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Date of arrival" id="cf_24" au="Wouter Van Rossem" cDate="2021-05-12T21:29:56" mDate="2021-05-12T21:48:30" guid="D4F321C6-0336-4FEF-A97F-69962D10B425">
+                <item id="co_10"/>
+                <item id="co_34"/>
+                <item id="co_126"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Duration of stay" id="cf_25" au="Wouter Van Rossem" cDate="2021-05-12T21:46:41" mDate="2021-05-12T21:50:00" guid="29800B39-AD9C-4301-9BCD-834F1883FDCF">
+                <item id="co_52"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Means of transport" id="cf_26" au="Wouter Van Rossem" cDate="2021-05-12T21:47:15" mDate="2021-05-12T21:58:18" guid="014B9C0D-FFE2-4BA0-A69D-E1D9D55F17BA">
+                <item id="co_132"/>
+                <item id="co_134"/>
+                <item id="co_137"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Name of carrier" id="cf_27" au="Wouter Van Rossem" cDate="2021-05-12T21:29:59" mDate="2021-05-12T21:30:44" guid="816C3885-B4B7-4F84-99FF-DA3ED2B098A8">
+                <item id="co_33"/>
+                <item id="co_127"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Place of departure" id="cf_28" au="Wouter Van Rossem" cDate="2021-05-12T21:30:02" mDate="2021-05-12T21:30:02" guid="738E6C22-80BC-48D5-B5CE-C59DB94BBB49">
+                <item id="co_128"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Registration plate" id="cf_29" au="Wouter Van Rossem" cDate="2021-05-12T21:58:33" mDate="2021-05-12T21:58:53" guid="21AB468A-5F41-4A72-ACCC-D5662D81FDEF">
+                <item id="co_134"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Route number" id="cf_30" au="Wouter Van Rossem" cDate="2021-05-12T21:30:04" mDate="2021-05-12T21:45:45" guid="AF6D7A03-F9F1-4C23-86D4-7EAF209584ED">
+                <item id="co_35"/>
+                <item id="co_37"/>
+                <item id="co_62"/>
+                <item id="co_87"/>
+                <item id="co_129"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Seat number" id="cf_31" au="Wouter Van Rossem" cDate="2021-05-12T21:30:07" mDate="2021-05-12T21:47:07" guid="48B604B4-B19A-4FC4-96BB-6C8F21AFD4E8">
+                <item id="co_36"/>
+                <item id="co_63"/>
+                <item id="co_90"/>
+                <item id="co_130"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Travelling purpose" id="cf_32" au="Wouter Van Rossem" cDate="2021-05-12T21:44:17" mDate="2021-05-12T21:47:36" guid="5FC1FA81-E00A-4091-A8B3-288ED36E15EF">
+                <item id="co_51"/>
+                <item id="co_133"/>
+            </codeFamily>
+            <codeFamily name="Travel information: Via" id="cf_33" au="Wouter Van Rossem" cDate="2021-05-12T21:30:10" mDate="2021-05-12T21:45:52" guid="C466292D-EB8C-4DB6-82CA-654D199F2E48">
+                <item id="co_86"/>
+                <item id="co_131"/>
+                <item id="co_138"/>
+            </codeFamily>
+        </codeFamilies>
+        <superCodeFamilies size="0"/>
+        <memoFamilies size="0"/>
+        <superMemoFamilies size="0"/>
+        <primDocFamilies size="5">
+            <primDocFamily name="Belgium" id="df_1" au="Wouter Van Rossem" cDate="2021-05-12T22:38:33" mDate="2021-05-12T22:38:37" guid="FEAD64DC-AF32-4AE2-BD50-54B679E5B681">
+                <item id="pd_4_2"/>
+            </primDocFamily>
+            <primDocFamily name="Germany" id="df_2" au="Wouter Van Rossem" cDate="2021-05-12T22:39:00" mDate="2021-05-12T22:39:04" guid="52A14837-18B6-4775-9EA3-6992203479A3">
+                <item id="pd_6_4"/>
+            </primDocFamily>
+            <primDocFamily name="Italy" id="df_3" au="Wouter Van Rossem" cDate="2021-05-12T22:38:48" mDate="2021-05-12T22:38:51" guid="7506192D-FA3E-478F-B43F-639939BB6C16">
+                <item id="pd_5_3"/>
+            </primDocFamily>
+            <primDocFamily name="The Netherlands" id="df_4" au="Wouter Van Rossem" cDate="2021-05-12T22:38:25" mDate="2021-05-12T22:38:31" guid="0AE15EFB-830B-4038-A142-974B6F224895">
+                <item id="pd_2_1"/>
+            </primDocFamily>
+            <primDocFamily name="WHO" id="df_5" au="Wouter Van Rossem" cDate="2021-05-12T22:39:08" mDate="2021-05-12T22:39:12" guid="22153406-D452-4BFC-8C68-30BFA67BA8A6">
+                <item id="pd_7_5"/>
+            </primDocFamily>
+        </primDocFamilies>
+        <superPrimDocFamilies size="0"/>
+    </families>
+    <netViews size="0"/>
+    <networkFamilies size="0"/>
+    <superNetworkFamilies size="0"/>
+    <links>
+        <objectSegmentLinks>
+            <codings size="148">
+                <iLink obj="co_1" qRef="q6_27_89"/>
+                <iLink obj="co_2" qRef="q5_6_51"/>
+                <iLink obj="co_3" qRef="q5_16_61"/>
+                <iLink obj="co_4" qRef="q6_31_93"/>
+                <iLink obj="co_5" qRef="q6_32_94"/>
+                <iLink obj="co_6" qRef="q6_29_91"/>
+                <iLink obj="co_7" qRef="q6_34_96"/>
+                <iLink obj="co_8" qRef="q6_33_95"/>
+                <iLink obj="co_9" qRef="q6_30_92"/>
+                <iLink obj="co_10" qRef="q4_20_32"/>
+                <iLink obj="co_11" qRef="q4_10_22"/>
+                <iLink obj="co_12" qRef="q5_10_55"/>
+                <iLink obj="co_13" qRef="q4_24_36"/>
+                <iLink obj="co_14" qRef="q5_17_62"/>
+                <iLink obj="co_15" qRef="q4_28_40"/>
+                <iLink obj="co_16" qRef="q4_14_26"/>
+                <iLink obj="co_17" qRef="q4_25_37"/>
+                <iLink obj="co_18" qRef="q5_2_47"/>
+                <iLink obj="co_19" qRef="q4_7_19"/>
+                <iLink obj="co_20" qRef="q2_13_12"/>
+                <iLink obj="co_21" qRef="q7_31_129"/>
+                <iLink obj="co_22" qRef="q6_19_81"/>
+                <iLink obj="co_23" qRef="q7_15_113"/>
+                <iLink obj="co_23" qRef="q4_16_28"/>
+                <iLink obj="co_24" qRef="q7_34_132"/>
+                <iLink obj="co_25" qRef="q7_35_133"/>
+                <iLink obj="co_26" qRef="q7_36_134"/>
+                <iLink obj="co_27" qRef="q7_33_131"/>
+                <iLink obj="co_28" qRef="q7_32_130"/>
+                <iLink obj="co_29" qRef="q7_37_135"/>
+                <iLink obj="co_30" qRef="q7_38_136"/>
+                <iLink obj="co_31" qRef="q4_1_13"/>
+                <iLink obj="co_32" qRef="q4_2_14"/>
+                <iLink obj="co_33" qRef="q7_1_99"/>
+                <iLink obj="co_34" qRef="q7_4_102"/>
+                <iLink obj="co_35" qRef="q7_2_100"/>
+                <iLink obj="co_36" qRef="q7_3_101"/>
+                <iLink obj="co_37" qRef="q5_8_53"/>
+                <iLink obj="co_37" qRef="q4_18_30"/>
+                <iLink obj="co_38" qRef="q5_1_46"/>
+                <iLink obj="co_39" qRef="q4_3_15"/>
+                <iLink obj="co_40" qRef="q4_5_17"/>
+                <iLink obj="co_41" qRef="q4_4_16"/>
+                <iLink obj="co_42" qRef="q4_6_18"/>
+                <iLink obj="co_43" qRef="q6_26_88"/>
+                <iLink obj="co_44" qRef="q6_22_84"/>
+                <iLink obj="co_45" qRef="q6_23_85"/>
+                <iLink obj="co_46" qRef="q6_20_82"/>
+                <iLink obj="co_47" qRef="q6_25_87"/>
+                <iLink obj="co_48" qRef="q6_24_86"/>
+                <iLink obj="co_49" qRef="q6_21_83"/>
+                <iLink obj="co_50" qRef="q4_13_25"/>
+                <iLink obj="co_51" qRef="q5_13_58"/>
+                <iLink obj="co_52" qRef="q4_33_45"/>
+                <iLink obj="co_53" qRef="q4_12_24"/>
+                <iLink obj="co_54" qRef="q5_4_49"/>
+                <iLink obj="co_54" qRef="q4_8_20"/>
+                <iLink obj="co_54" qRef="q6_9_71"/>
+                <iLink obj="co_55" qRef="q4_23_35"/>
+                <iLink obj="co_56" qRef="q4_29_41"/>
+                <iLink obj="co_57" qRef="q4_15_27"/>
+                <iLink obj="co_58" qRef="q7_23_121"/>
+                <iLink obj="co_59" qRef="q6_36_98"/>
+                <iLink obj="co_59" qRef="q7_49_147"/>
+                <iLink obj="co_60" qRef="q7_48_146"/>
+                <iLink obj="co_61" qRef="q2_4_4"/>
+                <iLink obj="co_62" qRef="q2_1_1"/>
+                <iLink obj="co_63" qRef="q2_2_2"/>
+                <iLink obj="co_64" qRef="q2_3_3"/>
+                <iLink obj="co_65" qRef="q4_11_23"/>
+                <iLink obj="co_66" qRef="q7_17_115"/>
+                <iLink obj="co_67" qRef="q7_18_116"/>
+                <iLink obj="co_68" qRef="q7_20_118"/>
+                <iLink obj="co_69" qRef="q7_16_114"/>
+                <iLink obj="co_70" qRef="q7_19_117"/>
+                <iLink obj="co_71" qRef="q7_21_119"/>
+                <iLink obj="co_72" qRef="q6_10_72"/>
+                <iLink obj="co_73" qRef="q7_6_104"/>
+                <iLink obj="co_74" qRef="q6_8_70"/>
+                <iLink obj="co_75" qRef="q7_5_103"/>
+                <iLink obj="co_76" qRef="q6_7_69"/>
+                <iLink obj="co_77" qRef="q7_7_105"/>
+                <iLink obj="co_78" qRef="q6_9_71"/>
+                <iLink obj="co_79" qRef="q7_8_106"/>
+                <iLink obj="co_79" qRef="q6_11_73"/>
+                <iLink obj="co_80" qRef="q7_13_111"/>
+                <iLink obj="co_81" qRef="q7_12_110"/>
+                <iLink obj="co_82" qRef="q7_11_109"/>
+                <iLink obj="co_83" qRef="q7_14_112"/>
+                <iLink obj="co_84" qRef="q5_3_48"/>
+                <iLink obj="co_85" qRef="q4_21_33"/>
+                <iLink obj="co_86" qRef="q4_31_43"/>
+                <iLink obj="co_87" qRef="q5_9_54"/>
+                <iLink obj="co_88" qRef="q5_5_50"/>
+                <iLink obj="co_89" qRef="q4_9_21"/>
+                <iLink obj="co_90" qRef="q4_19_31"/>
+                <iLink obj="co_91" qRef="q4_30_42"/>
+                <iLink obj="co_92" qRef="q7_10_108"/>
+                <iLink obj="co_92" qRef="q6_12_74"/>
+                <iLink obj="co_93" qRef="q7_9_107"/>
+                <iLink obj="co_93" qRef="q6_13_75"/>
+                <iLink obj="co_94" qRef="q6_14_76"/>
+                <iLink obj="co_95" qRef="q2_5_5"/>
+                <iLink obj="co_95" qRef="q5_15_60"/>
+                <iLink obj="co_95" qRef="q6_28_90"/>
+                <iLink obj="co_96" qRef="q4_26_38"/>
+                <iLink obj="co_97" qRef="q4_22_34"/>
+                <iLink obj="co_98" qRef="q2_12_11"/>
+                <iLink obj="co_99" qRef="q2_8_7"/>
+                <iLink obj="co_100" qRef="q2_7_6"/>
+                <iLink obj="co_101" qRef="q2_9_8"/>
+                <iLink obj="co_102" qRef="q2_11_10"/>
+                <iLink obj="co_103" qRef="q2_10_9"/>
+                <iLink obj="co_104" qRef="q6_15_77"/>
+                <iLink obj="co_105" qRef="q7_24_122"/>
+                <iLink obj="co_106" qRef="q7_39_137"/>
+                <iLink obj="co_107" qRef="q7_40_138"/>
+                <iLink obj="co_108" qRef="q6_35_97"/>
+                <iLink obj="co_109" qRef="q6_16_78"/>
+                <iLink obj="co_110" qRef="q6_17_79"/>
+                <iLink obj="co_111" qRef="q6_18_80"/>
+                <iLink obj="co_112" qRef="q7_26_124"/>
+                <iLink obj="co_113" qRef="q7_27_125"/>
+                <iLink obj="co_114" qRef="q7_29_127"/>
+                <iLink obj="co_115" qRef="q7_22_120"/>
+                <iLink obj="co_116" qRef="q7_25_123"/>
+                <iLink obj="co_117" qRef="q7_28_126"/>
+                <iLink obj="co_118" qRef="q7_30_128"/>
+                <iLink obj="co_119" qRef="q7_45_143"/>
+                <iLink obj="co_120" qRef="q7_43_141"/>
+                <iLink obj="co_121" qRef="q7_42_140"/>
+                <iLink obj="co_122" qRef="q7_44_142"/>
+                <iLink obj="co_123" qRef="q7_47_145"/>
+                <iLink obj="co_124" qRef="q7_41_139"/>
+                <iLink obj="co_125" qRef="q7_46_144"/>
+                <iLink obj="co_126" qRef="q6_4_66"/>
+                <iLink obj="co_127" qRef="q6_1_63"/>
+                <iLink obj="co_128" qRef="q6_5_67"/>
+                <iLink obj="co_129" qRef="q6_2_64"/>
+                <iLink obj="co_130" qRef="q6_3_65"/>
+                <iLink obj="co_131" qRef="q6_6_68"/>
+                <iLink obj="co_132" qRef="q4_32_44"/>
+                <iLink obj="co_133" qRef="q4_17_29"/>
+                <iLink obj="co_134" qRef="q5_11_56"/>
+                <iLink obj="co_135" qRef="q4_27_39"/>
+                <iLink obj="co_136" qRef="q5_14_59"/>
+                <iLink obj="co_137" qRef="q5_7_52"/>
+                <iLink obj="co_138" qRef="q5_12_57"/>
+            </codings>
+            <memoings size="0"/>
+        </objectSegmentLinks>
+        <codeLinkProtos size="7">
+            <codeLinkProto id="CONTRADICTS" label1="&lt;&gt;" label2="A" formalProp="symmetric" layout="U" descr="contradicts" au="ATLAS.ti"/>
+            <codeLinkProto id="IS A" label1="isa" label2="O" formalProp="transitive" layout="U" descr="is a" au="ATLAS.ti"/>
+            <codeLinkProto id="IS ASSOCIATED WITH" label1="==" label2="R" formalProp="symmetric" layout="U" descr="is associated with" au="ATLAS.ti"/>
+            <codeLinkProto id="IS CAUSE OF" label1="=&gt;" label2="N" formalProp="transitive" layout="U" descr="is cause of" au="ATLAS.ti"/>
+            <codeLinkProto id="IS PART OF" label1="[]" label2="G" formalProp="transitive" layout="U" descr="is part of" au="ATLAS.ti"/>
+            <codeLinkProto id="IS PROPERTY OF" label1="*}" label2="P" formalProp="asymmetric" layout="U" descr="is property of" au="ATLAS.ti"/>
+            <codeLinkProto id="NONAME" label1="" label2="" formalProp="symmetric" layout="U" descr="noname" au="ATLAS.ti"/>
+        </codeLinkProtos>
+        <codeLinks size="0"/>
+        <hyperLinkProtos size="8">
+            <hyperLinkProto id="CONTINUED BY" label1="&gt;&gt;&gt;&gt;" label2="cont" formalProp="asymmetric" layout="U" descr="continued by" au="ATLAS.ti"/>
+            <hyperLinkProto id="CONTRADICTS" label1="X&gt;" label2="CO" formalProp="transitive" layout="U" descr="contradicts" au="ATLAS.ti"/>
+            <hyperLinkProto id="CRITICIZES" label1="-&gt;|" label2="crit" formalProp="asymmetric" layout="U" descr="criticizes" au="ATLAS.ti"/>
+            <hyperLinkProto id="DISCUSSES" label1=":&gt;" label2="disc" formalProp="transitive" layout="U" descr="discusses" au="ATLAS.ti"/>
+            <hyperLinkProto id="EXPANDS" label1="?" label2="??" formalProp="transitive" layout="U" descr="expands" au="ATLAS.ti"/>
+            <hyperLinkProto id="EXPLAINS" label1="?&gt;" label2="expl" formalProp="transitive" layout="U" descr="explains" au="ATLAS.ti"/>
+            <hyperLinkProto id="JUSTIFIES" label1="!&gt;" label2="just" formalProp="transitive" layout="U" descr="justifies" au="ATLAS.ti"/>
+            <hyperLinkProto id="SUPPORTS" label1="*&gt;" label2="supp" formalProp="transitive" layout="U" descr="supports" au="ATLAS.ti"/>
+        </hyperLinkProtos>
+        <hyperLinks size="0"/>
+        <memoMemoLinks size="0"/>
+        <memoCodeLinks size="0"/>
+    </links>
+</storedHU>

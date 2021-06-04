@@ -2,7 +2,7 @@
   <div class="container">
     <div class="columns">
       <div class="field column">
-        <label class="label">Select first ontolog(y/ies)</label>
+        <label class="label">Select first data model(s)</label>
         <b-checkbox
           v-for="docGroup in documentGroups"
           :key="docGroup.id + '_1'"
@@ -12,7 +12,7 @@
       </div>
       
       <div class="field column">
-        <label class="label">Select second ontolog(y/ies)</label>
+        <label class="label">Select second data model(s)</label>
         <b-checkbox
           v-for="docGroup in documentGroups"
           :key="docGroup.id + '_2'"

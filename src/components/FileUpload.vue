@@ -53,6 +53,17 @@
         </div>
       </b-message>
     </div>
+
+    <h2 class="title">Or, load a sample project</h2>
+    <div class="content">
+      <p>Click on one of the following two buttons to load a sample project:</p>
+    </div>
+      <div class="content">
+        <b-button type="is-info" expanded @click="loadSampleProject1">
+          <b-icon icon="progress-wrench" size="is-small"></b-icon>
+          <span>Passenger locator forms project</span>
+        </b-button>
+      </div>
   </section>
 </template>
 
@@ -61,6 +72,7 @@ import { isEmpty } from "lodash";
 import { mapState, mapGetters } from 'vuex';
 import { processXMLProjectString } from "../util/load_atlas_xml";
 import { transformAtlasToCyto } from "../util/transform_atlas_to_cyto";
+import fs from "fs";
 
 import natural from "natural";
 
@@ -178,7 +190,17 @@ export default {
       this.network = transformAtlasToCyto(this.projElements)
       this.$store.commit("network/setElements", this.network);
       this.$store.dispatch("network/initializeModel");
-    }
+    },
+    loadSampleProject1() {
+      const that = this;
+      fetch("passenger-location-forms.xml")
+        .then(response => response.text())
+        .then(data => {
+          console.log(data);
+          that.fileContent = data;
+          that.processXMLProject();
+        })
+    },
   },
 
 };
