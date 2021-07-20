@@ -29,6 +29,44 @@
 
     <div class="container" v-if="(nrOfElements > 0) && isModelInitialized">
       <AnalysisOptions v-on:start-analysis="onStartAnalysis" />
+
+      <hr />
+
+      <div class="level-left">
+        <div class="level-item">
+          <b-button
+            icon-left="download"
+            v-bind:disabled="hasAnalysisElements()"
+          >
+            <download-csv
+              :data="selectedNodes()"
+              :separator-excel="false"
+              delimiter=";"
+              encoding="utf8"
+              name="nodes.csv"
+            >
+              Download nodes CSV
+            </download-csv>
+          </b-button>
+        </div>
+
+        <div class="level-item">
+          <b-button
+            icon-left="download"
+            v-bind:disabled="hasAnalysisElements()"
+          >
+            <download-csv
+              :data="selectedEdges()"
+              :separator-excel="false"
+              delimiter=";"
+              encoding="utf8"
+              name="edges.csv"
+            >
+              Download edges CSV
+            </download-csv>
+          </b-button>
+        </div>
+      </div>
     </div>
 
     <hr />
@@ -48,6 +86,7 @@ import { mapState, mapGetters } from "vuex";
 import clone from "lodash/clone";
 import head from "lodash/head";
 import round from "lodash/round";
+import isEmpty from "lodash/isEmpty";
 
 export default {
   name: "NetworkAnalysis",
@@ -88,6 +127,7 @@ export default {
       showCodes: state => state.options.showCodes,
       showCategoryGroups: state => state.options.showCategoryGroups
     })
+      elements: (state) => state.network.elementsToVisualize,
   },
   methods: {
     onSetSelectedNode: function(node) {
@@ -143,7 +183,40 @@ export default {
       });
       this.nodes = resultClone;
       this.isLoading = false;
-    }
-  }
+    },
+    hasAnalysisElements() {
+      return isEmpty(this.elements);
+    },
+    isDocumentOrCodeGoup(node) {
+      return (
+        node.classes.includes("document-group") ||
+        node.classes.includes("code-group")
+      );
+    },
+    isDocumentOrCodeGoupLink(edge) {
+      return edge.classes.includes("code-group-document-group-link");
+    },
+    selectedNodes() {
+      const elements = this.elements;
+      const nodes = elements.filter((ele) => ele.group == "nodes");
+      const filteredNodes = nodes.filter(this.isDocumentOrCodeGoup);
+
+      return filteredNodes.map((node) => ({
+        id: node.data.id,
+        label: node.data.name,
+        type: node.classes[0],
+      }));
+    },
+    selectedEdges() {
+      const elements = this.elements;
+      const edges = elements.filter((ele) => ele.group == "edges");
+      const edgesFiltered = edges.filter(this.isDocumentOrCodeGoupLink);
+
+      return edgesFiltered.map((edge) => ({
+        source: edge.data.source,
+        target: edge.data.target,
+      }));
+    },
+  },
 };
 </script>
