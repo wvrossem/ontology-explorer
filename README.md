@@ -12,6 +12,9 @@
   <a href="https://github.com/wvrossem/ontology-explorer/blob/master/LICENSE" target="_blank">
     <img alt="License: CC--BY--SA--4.0" src="https://img.shields.io/github/license/wvrossem/ontology-explorer" />
   </a>
+  <a href="https://zenodo.org/badge/latestdoi/373784308">
+    <img src="https://zenodo.org/badge/373784308.svg" alt="DOI">
+  </a>
   <a href="https://twitter.com/ProcessCitizens" target="_blank">
     <img alt="Twitter: ProcessCitizens" src="https://img.shields.io/twitter/follow/ProcessCitizens.svg?style=social" />
   </a>
@@ -68,7 +71,7 @@ This project has received funding from the European Research Council (ERC) under
 ## 📝 License
 
 Copyright © 2021 [Processing Citizenship](https://processingcitizenship.eu/).<br />
-This project is [CC--BY--SA--4.0](https://github.com/wvrossem/ontology-explorer/blob/master/LICENSE) licensed.
+This project is [CC-BY-SA-4.0](https://github.com/wvrossem/ontology-explorer/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with the help of [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
