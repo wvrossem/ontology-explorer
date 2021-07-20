@@ -1,10 +1,7 @@
 <template>
-
   <div class="card">
     <header class="card-header">
-      <p class="card-header-title title is-4">
-        Selected Node Info
-      </p>
+      <p class="card-header-title title is-4">Selected Node Info</p>
     </header>
 
     <div class="card-content">
@@ -13,7 +10,7 @@
           <p>Node name</p>
         </div>
         <div class="message-body">
-           <p class="is-family-code">{{ node.name }}</p>
+          <p class="is-family-code">{{ node.name }}</p>
         </div>
       </article>
     </div>
@@ -24,10 +21,12 @@
           <p>Neighborhood</p>
         </div>
         <div class="message-body">
-           <ul class="list">
-            <li 
+          <ul class="list">
+            <li
               class="is-family-code list-item"
-              v-for="el in node.neighborhood" :key="el.name">
+              v-for="el in node.neighborhood"
+              :key="el.name"
+            >
               <small>{{ el.name }} ({{ el.classes[0] }})</small>
             </li>
           </ul>
@@ -35,11 +34,9 @@
       </article>
     </div>
   </div>
-  
 </template>
 
 <script>
-
 export default {
   name: "NodeInfo",
   props: {
@@ -48,5 +45,4 @@ export default {
     },
   },
 };
-
 </script>

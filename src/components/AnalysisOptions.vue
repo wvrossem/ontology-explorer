@@ -8,9 +8,10 @@
           :key="docGroup.id + '_1'"
           :native-value="docGroup.id"
           v-model="selectedSets1"
-        >{{ docGroup.name }}</b-checkbox>
+          >{{ docGroup.name }}</b-checkbox
+        >
       </div>
-      
+
       <div class="field column">
         <label class="label">Select second data model(s)</label>
         <b-checkbox
@@ -18,7 +19,8 @@
           :key="docGroup.id + '_2'"
           :native-value="docGroup.id"
           v-model="selectedSets2"
-        >{{ docGroup.name }}</b-checkbox>
+          >{{ docGroup.name }}</b-checkbox
+        >
       </div>
     </div>
 
@@ -51,14 +53,12 @@
         </b-field>
       </div>
     </div>
-
-    
   </div>
 </template>
 
 <script>
 import { get, isEmpty } from "lodash";
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters } from "vuex";
 
 export default {
   name: "AnalysisOptions",
@@ -69,12 +69,12 @@ export default {
       selectedOperation: "union",
       showCodes: true,
       showCategoryGroups: false,
-    }
+    };
   },
   computed: {
     ...mapGetters({
       documentGroups: "project/documentGroups",
-    })
+    }),
   },
   methods: {
     submitOptions() {
@@ -82,10 +82,13 @@ export default {
       this.$store.commit("options/setSelectedSets2", this.selectedSets2);
       this.$store.commit("options/setSetOperation", this.selectedOperation);
       this.$store.commit("options/setShowCodes", this.showCodes);
-      this.$store.commit("options/setShowCategoryGroups", this.showCategoryGroups);
+      this.$store.commit(
+        "options/setShowCategoryGroups",
+        this.showCategoryGroups
+      );
 
-      this.$emit("start-analysis")
-    }
-  }
+      this.$emit("start-analysis");
+    },
+  },
 };
 </script>

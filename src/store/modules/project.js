@@ -17,7 +17,7 @@ const getters = {
   documentGroups: state => {
     const docGroups = get(state, "docGroups.documentGroups");
     if (!isEmpty(docGroups)) {
-      return [ ...docGroups.values()];
+      return [...docGroups.values()];
     } else {
       return [];
     }
@@ -40,7 +40,7 @@ const mutations = {
   },
   setCodeGroups(state, codeGroups) {
     state.codeGroups = codeGroups;
-  }, 
+  },
   setDocGroups(state, docGroups) {
     state.docGroups = docGroups;
   },

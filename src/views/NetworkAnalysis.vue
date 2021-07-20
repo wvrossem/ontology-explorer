@@ -3,7 +3,7 @@
     <div class="container">
       <b-message title="info" type="is-info" has-icon v-if="nrOfElements > 0">
         <div class="content">
-          <p>Currently have a network of {{nrOfElements}} nodes & links.</p>
+          <p>Currently have a network of {{ nrOfElements }} nodes & links.</p>
         </div>
       </b-message>
       <b-message type="is-danger" has-icon v-if="nrOfElements == 0">
@@ -27,7 +27,7 @@
       </b-message>
     </div>
 
-    <div class="container" v-if="(nrOfElements > 0) && isModelInitialized">
+    <div class="container" v-if="nrOfElements > 0 && isModelInitialized">
       <AnalysisOptions v-on:start-analysis="onStartAnalysis" />
 
       <hr />
@@ -71,10 +71,14 @@
 
     <hr />
 
-    <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true"></b-loading>
+    <b-loading
+      :is-full-page="isFullPage"
+      :active.sync="isLoading"
+      :can-cancel="true"
+    ></b-loading>
 
-    <div v-if="(nrOfElements > 0) && isModelInitialized">
-      <NodeTable v-bind:data="nodes" v-on:show-nodes="onShowNodes"></NodeTable>
+    <div v-if="nrOfElements > 0 && isModelInitialized">
+      <NodeTable v-bind:data="nodes"></NodeTable>
     </div>
   </div>
 </template>
@@ -92,7 +96,7 @@ export default {
   name: "NetworkAnalysis",
   components: {
     NodeTable,
-    AnalysisOptions
+    AnalysisOptions,
   },
   data() {
     return {
@@ -108,36 +112,36 @@ export default {
       default: () => {
         return {
           name: "",
-          neighborhood: []
+          neighborhood: [],
         };
-      }
-    }
+      },
+    },
   },
   computed: {
     ...mapGetters({
       nrOfElements: "network/nrOfElements",
       isModelInitialized: "network/isModelInitialized",
-      getOperationResult: "network/getOperationResult"
+      getOperationResult: "network/getOperationResult",
     }),
     ...mapState({
-      model: state => state.network.model,
-      selectedSets1: state => state.options.selectedSets1,
-      selectedSets2: state => state.options.selectedSets2,
-      setOperation: state => state.options.setOperation,
-      showCodes: state => state.options.showCodes,
-      showCategoryGroups: state => state.options.showCategoryGroups
-    })
       elements: (state) => state.network.elementsToVisualize,
+      model: (state) => state.network.model,
+      selectedSets1: (state) => state.options.selectedSets1,
+      selectedSets2: (state) => state.options.selectedSets2,
+      setOperation: (state) => state.options.setOperation,
+      showCodes: (state) => state.options.showCodes,
+      showCategoryGroups: (state) => state.options.showCategoryGroups,
+    }),
   },
   methods: {
-    onSetSelectedNode: function(node) {
+    onSetSelectedNode: function (node) {
       let nodeClone = {
         name: node.name,
-        neighborhood: node.neighborhood
+        neighborhood: node.neighborhood,
       };
       this.selectedNode = nodeClone;
     },
-    onStartAnalysis: function() {
+    onStartAnalysis: function () {
       this.isLoading = true;
 
       const result = this.getOperationResult(
@@ -148,37 +152,32 @@ export default {
 
       this.onSetOperationResult(result);
     },
-    onShowNodes: function(nodes) {
-      console.log("Test: ", nodes);
-      this.$refs.graph.showNodes(nodes);
-    },
-    onSetOperationResult: function(nodes) {
+    onSetOperationResult: function (nodes) {
       let resultClone = nodes;
 
       if (this.showCategoryGroups && this.showCodes) {
-        resultClone = resultClone.filter(node => {
-            const type = head(node.classes)
-            return (type == "code") || (type == "code-group")
-          }
-        );
+        resultClone = resultClone.filter((node) => {
+          const type = head(node.classes);
+          return type == "code" || type == "code-group";
+        });
       } else if (this.showCodes) {
         resultClone = resultClone.filter(
-          node => head(node.classes) == "code"
+          (node) => head(node.classes) == "code"
         );
       } else if (this.showCategoryGroups) {
         resultClone = resultClone.filter(
-          node => head(node.classes) == "code-group"
-        ); 
+          (node) => head(node.classes) == "code-group"
+        );
       }
 
-      resultClone = resultClone.map(node => {
+      resultClone = resultClone.map((node) => {
         return {
           id: node.id,
           node_name: node.name,
           node_type: head(node.classes),
           node_centrality_closeness: round(node.centrality_closeness, 4),
           node_centrality_betweenness: round(node.centrality_betweenness, 4),
-          node_centrality_degree: round(node.centrality_degree, 4)
+          node_centrality_degree: round(node.centrality_degree, 4),
         };
       });
       this.nodes = resultClone;

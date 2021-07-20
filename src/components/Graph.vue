@@ -20,10 +20,10 @@
 import styles from "@/assets/graph-config-styles";
 
 import { mapState, mapGetters } from "vuex";
-import get from 'lodash/get';
-import head from 'lodash/head';
-import join from 'lodash/join';
-import isBoolean from 'lodash/isBoolean';
+import get from "lodash/get";
+import head from "lodash/head";
+import join from "lodash/join";
+import isBoolean from "lodash/isBoolean";
 
 import cola from "cytoscape-cola";
 import coseBilkent from "cytoscape-cose-bilkent";
@@ -31,20 +31,20 @@ import klay from "cytoscape-klay";
 import cise from "cytoscape-cise";
 
 let resolveCy = null;
-export const cyPromise = new Promise(resolve => (resolveCy = resolve));
+export const cyPromise = new Promise((resolve) => (resolveCy = resolve));
 
 export default {
   data() {
     return {
       prevSelected: [],
       showCodes: false,
-      showCodeGroups: true
-    }
+      showCodeGroups: true,
+    };
   },
   computed: {
     ...mapState({
-      elements: state => state.network.elementsToVisualize,
-      config: state => state.network.cytoscapeConfig
+      elements: (state) => state.network.elementsToVisualize,
+      config: (state) => state.network.cytoscapeConfig,
     }),
   },
   props: {},
@@ -62,7 +62,7 @@ export default {
 
       let neighborhood = cy.$(`#${node.id}`).closedNeighborhood();
 
-      let ids = neighborhood.map(el => `#${el.id()}`).join(', ');
+      let ids = neighborhood.map((el) => `#${el.id()}`).join(", ");
       cy.$(ids).toggleClass("selected");
 
       this.prevSelected = ids;
@@ -100,7 +100,7 @@ export default {
       } else {
         cy.style(styles.styleShowAll);
       }
-    }
-  }
+    },
+  },
 };
 </script>

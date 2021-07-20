@@ -1,6 +1,10 @@
 import cytoscape from "cytoscape";
 import {
-  get, join, size, isEmpty, cloneDeep
+  get,
+  join,
+  size,
+  isEmpty,
+  cloneDeep
 } from "lodash";
 
 import config from "@/assets/graph-config";
@@ -121,7 +125,7 @@ const getters = {
     const elementsWithoutCodes = cy.$(ids).filter((el) => {
       return !(el.classes().includes("code") || el.classes().includes("code-group-link") || el.classes().includes("code-group-distance-link"))
     });
-    
+
     const ccn = elementsWithoutCodes.closenessCentralityNormalized({
       directed: false
     });
@@ -131,7 +135,7 @@ const getters = {
     const dcn = elementsWithoutCodes.degreeCentralityNormalized({
       directed: false
     });
-    
+
     result = result.map(el => {
       return {
         id: el.id(),

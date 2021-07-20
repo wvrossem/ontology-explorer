@@ -1,27 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <b-navbar 
-        spaced
-        shadow>
+      <b-navbar spaced shadow>
         <template slot="brand">
           <b-navbar-item tag="router-link" :to="{ path: '/' }">
-            <img
-              src="logoPC.jpg"
-              alt="Processing Citizenship"
-            />
+            <img src="logoPC.jpg" alt="Processing Citizenship" />
           </b-navbar-item>
         </template>
-        <hr class="navbar-divider">
+        <hr class="navbar-divider" />
         <template slot="start">
           <router-link class="navbar-item" to="/">Home</router-link>
-          <hr class="navbar-divider">
+          <hr class="navbar-divider" />
           <router-link class="navbar-item" to="/upload">Upload</router-link>
-          <hr class="navbar-divider">
-          <router-link class="navbar-item" to="/analysis">Network analysis</router-link>
-          <hr class="navbar-divider">
-          <router-link class="navbar-item" to="/visualization">Network visualization</router-link>
-          <hr class="navbar-divider">
+          <hr class="navbar-divider" />
+          <router-link class="navbar-item" to="/analysis"
+            >Network analysis</router-link
+          >
+          <hr class="navbar-divider" />
+          <router-link class="navbar-item" to="/visualization"
+            >Network visualization</router-link
+          >
+          <hr class="navbar-divider" />
           <router-link class="navbar-item" to="/about">About</router-link>
         </template>
       </b-navbar>

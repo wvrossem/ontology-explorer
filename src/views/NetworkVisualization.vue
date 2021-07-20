@@ -42,10 +42,16 @@
             </a>
             <p class="panel-heading">Options</p>
             <label class="panel-block">
-              <b-switch v-model="showCodes" @input="onChangeShowCodes($event)">Show categories</b-switch>
+              <b-switch v-model="showCodes" @input="onChangeShowCodes($event)"
+                >Show categories</b-switch
+              >
             </label>
             <label class="panel-block">
-              <b-switch v-model="showCodeGroups" @input="onChangeShowCodeGroups($event)">Show code groups</b-switch>
+              <b-switch
+                v-model="showCodeGroups"
+                @input="onChangeShowCodeGroups($event)"
+                >Show code groups</b-switch
+              >
             </label>
           </nav>
         </div>
@@ -63,32 +69,29 @@ import Graph from "@/components/Graph.vue";
 
 export default {
   components: {
-    Graph
+    Graph,
   },
   data() {
     return {
       showCodes: false,
-      showCodeGroups: true
-    }
+      showCodeGroups: true,
+    };
   },
   computed: {
     ...mapGetters({
       nrOfElements: "network/nrOfElements",
       isModelInitialized: "network/isModelInitialized",
-      getOperationResult: "network/getOperationResult"
-    })
+      getOperationResult: "network/getOperationResult",
+    }),
   },
   methods: {
-    ...mapActions([
-      'network/switchShowCodes',
-      'network/switchShowCodeGroups',
-    ]),
+    ...mapActions(["network/switchShowCodes", "network/switchShowCodeGroups"]),
     onChangeShowCodes(value) {
       this.$refs.graphRef.switchShowCodes(value);
     },
     onChangeShowCodeGroups(value) {
       this.$refs.graphRef.switchShowCodeGroups(value);
-    }
-  }
+    },
+  },
 };
 </script>
