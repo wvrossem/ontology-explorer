@@ -101,10 +101,9 @@
 
 <script>
 import { isEmpty } from "lodash";
-import { mapState, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 import { processXMLProjectString } from "../util/load_atlas_xml";
 import { transformAtlasToCyto } from "../util/transform_atlas_to_cyto";
-import fs from "fs";
 
 import natural from "natural";
 

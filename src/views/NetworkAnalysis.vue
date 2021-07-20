@@ -87,7 +87,6 @@
 import NodeTable from "@/components/NodeTable.vue";
 import AnalysisOptions from "@/components/AnalysisOptions.vue";
 import { mapState, mapGetters } from "vuex";
-import clone from "lodash/clone";
 import head from "lodash/head";
 import round from "lodash/round";
 import isEmpty from "lodash/isEmpty";

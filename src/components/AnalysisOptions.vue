@@ -57,8 +57,7 @@
 </template>
 
 <script>
-import { get, isEmpty } from "lodash";
-import { mapState, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "AnalysisOptions",

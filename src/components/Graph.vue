@@ -19,11 +19,7 @@
 <script>
 import styles from "@/assets/graph-config-styles";
 
-import { mapState, mapGetters } from "vuex";
-import get from "lodash/get";
-import head from "lodash/head";
-import join from "lodash/join";
-import isBoolean from "lodash/isBoolean";
+import { mapState } from "vuex";
 
 import cola from "cytoscape-cola";
 import coseBilkent from "cytoscape-cose-bilkent";

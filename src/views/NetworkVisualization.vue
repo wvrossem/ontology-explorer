@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import Graph from "@/components/Graph.vue";
 
 export default {
