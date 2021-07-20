@@ -66,8 +66,8 @@ export default {
       selectedSets1: [],
       selectedSets2: [],
       selectedOperation: "union",
-      showCodes: true,
-      showCategoryGroups: false,
+      showCodes: false,
+      showCategoryGroups: true,
     };
   },
   computed: {
