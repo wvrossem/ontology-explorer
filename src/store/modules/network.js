@@ -62,9 +62,6 @@ const getters = {
       return !el.hasClass("code-document-group-link");
     }));
 
-    // console.log(join(neighbourhood1.map(el => `#${el.data("id")}`), ", "));
-    // console.log(join(neighbourhood2.map(el => `#${el.data("id")}`), ", "));
-
     let result;
 
     if (operation == "intersection") {
@@ -150,7 +147,6 @@ const getters = {
 
     result = result.filter(el => el.group === "nodes");
 
-    // this.$emit("set-operation-results", result);
     return result;
   },
 }
