@@ -20,40 +20,41 @@
   </a>
 </p>
 
-> SPA that allows comparing and analyzing heterogeneous data models.
-
-### 🏠 [Homepage](https://processingcitizenship.eu/)
+> Single Page Application that allows comparing and analyzing heterogeneous data models.
 
 ### ✨ [Demo](https://processingcitizenship.eu/ontology-explorer/)
 
-## Prerequisites
+## Scientific Article
 
-- npm >=6.14.x
-- node >=14.04.x
+This software is described in detail in the following scientific article:
 
-## Install
+> Van Rossem, W., & Pelizza, A. (2022). The ontology explorer: A method to make visible data infrastructures for population management. Big Data & Society, 9(1). <https://doi.org/10.1177/20539517221104087>
 
-```sh
-npm install
-```
+Please refer to the article for a comprehensive overview of the methodology and theoretical background behind the Ontology Explorer method and software.
 
-## Usage
+If you use the Ontology Explorer in your research work or projects, we kindly request that you cite the corresponding scientific article.
 
-```sh
-npm run serve
-```
+## Documentation
+
+For detailed documentation and usage instructions of the software tool, please refer to the [documentation](https://wvrossem.github.io/ontology-explorer/):
+
+* [Installation](https://wvrossem.github.io/ontology-explorer/installation.html)
+* [Build](https://wvrossem.github.io/ontology-explorer/build.html)
+* [Upload](https://wvrossem.github.io/ontology-explorer/upload.html)
+* [Network Analysis](https://wvrossem.github.io/ontology-explorer/network-analysis.html)
+* [Network Visualization](https://wvrossem.github.io/ontology-explorer/network-visualization.html)
 
 ## Authors
 
-👤 **Wouter Van Rossem**
+👤 **Wouter Van Rossem** is a researcher on the intersection between social science and computer science. He developed this software for the European Research Council (ERC) funded project, Processing Citizenship.
 
-* Website: https://www.woutervanrossem.eu
+* Website: <https://www.woutervanrossem.eu>
 * Twitter: [@wvrossem](https://twitter.com/wvrossem)
 * Github: [@wvrossem](https://github.com/wvrossem)
 
-🏫 **Processing Citizenship**
+🏫 **Processing Citizenship**: The Processing Citizenship project examined how data infrastructures and practices for foreign population management shape the European order. The Ontology Explorer contributed by providing a semantic method and JavaScript-based open-source tool to analyse data models underpinning information systems in population management.
 
-* Website: https://processingcitizenship.eu/
+* Website: <https://processingcitizenship.eu/>
 * Twitter: [@ProcessCitizens](https://twitter.com/ProcessCitizens)
 
 ## 🤝 Contributing
@@ -70,8 +71,5 @@ This project has received funding from the European Research Council (ERC) under
 
 ## 📝 License
 
-Copyright © 2021 [Processing Citizenship](https://processingcitizenship.eu/).<br />
+Copyright © 2021 Wouter Van Rossem & [Processing Citizenship](https://processingcitizenship.eu/).<br />
 This project is [CC-BY-SA-4.0](https://github.com/wvrossem/ontology-explorer/blob/master/LICENSE) licensed.
-
-***
-_This README was generated with the help of [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
