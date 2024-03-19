@@ -1,4 +1,4 @@
-# Documentation
+# The Ontology Explorer Documentation
 
 Welcome to the documentation for Ontology Explorer! This documentation provides guidance on installation, usage, and background information on the technical architecture of the project.
 

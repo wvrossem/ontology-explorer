@@ -1,4 +1,9 @@
-# Network visualization
+---
+layout: default
+title: Network visualization
+parent: How-to guides
+nav_order: 5
+---
 
 Before proceeding, ensure that you have loaded your project and performed the network analysis as explained in the respective documentation pages.
 

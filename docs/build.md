@@ -1,4 +1,9 @@
-# Build and deploy
+---
+layout: default
+title: Build and deploy
+parent: How-to guides
+nav_order: 2
+---
 
 To prepare Ontology Explorer application for publishing a website, you’ll need to follow these steps:
 

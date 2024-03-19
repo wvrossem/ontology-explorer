@@ -1,4 +1,9 @@
-# Network analysis
+---
+layout: default
+title: Network analysis
+parent: How-to guides
+nav_order: 4
+---
 
 Before starting the network analysis, ensure that you have uploaded your Atlas.ti project as explained in the Upload page document.
 

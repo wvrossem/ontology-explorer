@@ -1,4 +1,9 @@
-# Ontology Explorer Tutorial
+---
+layout: default
+title: Ontology Explorer tool tutorial
+parent: Tutorials
+nav_order: 2
+---
 
 This tutorial will guide you through using the Ontology Explorer application for analyzing and visualizing data from Atlas.ti projects.
 

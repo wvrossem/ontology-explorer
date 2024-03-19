@@ -1,4 +1,9 @@
-# Upload
+---
+layout: default
+title: Upload
+parent: How-to guides
+nav_order: 3
+---
 
 The Upload page of the Ontology Explorer allows users to upload an Atlas.ti project exported as an XML file and transform it into a network representation. Below are the steps to upload and transform the XML file:
 
