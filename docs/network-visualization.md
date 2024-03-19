@@ -5,6 +5,8 @@ parent: How-to guides
 nav_order: 5
 ---
 
+# Network visualization
+
 Before proceeding, ensure that you have loaded your project and performed the network analysis as explained in the respective documentation pages.
 
 The Network Visualization page generates a force-directed graph of the output of the analysis performed on the data analysis step.

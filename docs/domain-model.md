@@ -5,6 +5,8 @@ parent: Reference
 nav_order: 1
 ---
 
+# Domain model
+
 The following diagram visually represents the interconnected entities within the domain model of an ATLAS.ti project. At the core of the model is the ATLAS. ti project, which encompasses ``Document groups``, ``Documents``, ``Code Groups``, ``Codes``, and ``Quotes``.
 
 ``Document groups`` typically represent individual systems under analysis and may contain multiple ``Documents`` detailing the data model of a system.

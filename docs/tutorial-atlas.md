@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Tutorial for starting a project on coding EU information systems for migration and border control
+title: ATLAS.ti coding tutorial
 parent: Tutorials
 nav_order: 1
 ---
+
+# Tutorial for coding data models using ATLAS.ti
 
 Welcome to the Ontology Explorer tutorial for analyzing EU regulations related to migration and border control. In this tutorial, you will learn how to create an ATLAS.ti project for importing into the Ontology Explorer. This tutorial serves as a simplified example of how to collect, import, code, and group data describing data models using ATLAS.ti software, similar to what is described in our scientific paper Van Rossem and Pelizza (2022).
 

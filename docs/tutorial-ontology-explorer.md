@@ -5,6 +5,8 @@ parent: Tutorials
 nav_order: 2
 ---
 
+# Ontology explorer tool tutorial
+
 This tutorial will guide you through using the Ontology Explorer application for analyzing and visualizing data from Atlas.ti projects.
 
 **Note:** Before starting, ensure you have an Atlas.ti project file ready. If you haven't created one yet, refer to the tutorial page on starting a project for coding EU information systems for migration and border control. Alternatively, you can use one of the sample projects provided.

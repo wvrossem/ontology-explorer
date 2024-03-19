@@ -1,4 +1,10 @@
-# The Ontology Explorer Documentation
+---
+layout: default
+title: Home
+nav_order: 1
+---
+
+# The Ontology Explorer documentation
 
 Welcome to the documentation for Ontology Explorer! This documentation provides guidance on installation, usage, and background information on the technical architecture of the project.
 

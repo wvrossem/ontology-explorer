@@ -5,6 +5,8 @@ parent: How-to guides
 nav_order: 2
 ---
 
+# Build and deploy
+
 To prepare Ontology Explorer application for publishing a website, you’ll need to follow these steps:
 
 ## 1. Run the build command

@@ -5,6 +5,8 @@ parent: Reference
 nav_order: 2
 ---
 
+# Vue.js application architecture
+
 The Ontology Explorer is a Vue.js application. It's architecture utilizes various building blocks to create a user interface for analyzing and visualizing data models from ATLAS.ti projects. The following is a breakdown of these elements.
 
 ## Router

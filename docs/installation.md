@@ -5,6 +5,8 @@ parent: How-to guides
 nav_order: 1
 ---
 
+# Installation
+
 To run the Ontology Explorer locally on your machine, you'll need to follow these steps:
 
 ## 1. Prerequisites

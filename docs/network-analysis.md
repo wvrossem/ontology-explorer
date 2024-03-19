@@ -5,6 +5,8 @@ parent: How-to guides
 nav_order: 4
 ---
 
+# Network analysis
+
 Before starting the network analysis, ensure that you have uploaded your Atlas.ti project as explained in the Upload page document.
 
 By following the following steps, you can perform network analysis on your Atlas.ti project data models using set operations and explore the relationships within your data.
