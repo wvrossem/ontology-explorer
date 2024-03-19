@@ -36,13 +36,7 @@ If you use the Ontology Explorer in your research work or projects, we kindly re
 
 ## Documentation
 
-For detailed documentation and usage instructions of the software tool, please refer to the [documentation](https://wvrossem.github.io/ontology-explorer/):
-
-* [Installation](https://wvrossem.github.io/ontology-explorer/installation.html)
-* [Build](https://wvrossem.github.io/ontology-explorer/build.html)
-* [Upload](https://wvrossem.github.io/ontology-explorer/upload.html)
-* [Network Analysis](https://wvrossem.github.io/ontology-explorer/network-analysis.html)
-* [Network Visualization](https://wvrossem.github.io/ontology-explorer/network-visualization.html)
+If you need instructions on how to use the software tool or access reference materials about it, please visit the [documentation](https://wvrossem.github.io/ontology-explorer/).
 
 ## Authors
 

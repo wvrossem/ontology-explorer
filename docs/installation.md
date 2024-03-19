@@ -9,7 +9,7 @@ Before you begin, ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (>=14.04.x)
 - [npm](https://www.npmjs.com/)
 
-## 2. Clone the Repository
+## 2. Clone the repository
 
 Clone the Ontology Explorer repository to your local machine:
 
@@ -19,7 +19,7 @@ git clone https://github.com/wvrossem/ontology-explorer.git
 
 Or download an archive of the project at: <https://github.com/wvrossem/ontology-explorer/archive/refs/heads/main.zip>
 
-## 3. Install Dependencies
+## 3. Install dependencies
 
 Navigate to the project directory and install the dependencies using npm:
 
@@ -27,7 +27,7 @@ Navigate to the project directory and install the dependencies using npm:
 npm install
 ```
 
-## 4. Start the Development Server
+## 4. Start the development server
 
 Once the dependencies are installed, you can start the development server:
 

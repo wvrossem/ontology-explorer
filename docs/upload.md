@@ -6,7 +6,7 @@ The Upload page of the Ontology Explorer allows users to upload an Atlas.ti proj
 
 Before uploading, you need to export the complete Atlas.ti project to an XML file. This can be done using the built-in functionality of the software. The exported XML file will contain the project elements needed for processing. Refer to the following video for a demonstration of this process on macOS: [Exporting Atlas.ti Project to XML (macOS)](https://github.com/wvrossem/ontology-explorer/raw/main/src/assets/export_project.mp4)
 
-## 2. Upload the XML File
+## 2. Upload the XML file
 
 After exporting the Atlas.ti project to XML, proceed to upload the XML file using the input element provided below. Follow these steps:
 
