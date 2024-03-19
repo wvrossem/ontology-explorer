@@ -1,0 +1,6 @@
+
+# Jekyll theme
+theme: jekyll-theme-cayman
+
+# Enable mermaid diagrams
+mermaid: true
